@@ -19,6 +19,6 @@ Aquí podrá consultar que [tecnología](https://github.com/BilalKxK99/GameStore
 Asignatura *Infraestructura virtual* de 4º curso del grado de Ingeniería Informática.
 
 
-# Autor
+## Autor
 
 Mohamed Bilal Chekfeh Al Sabbagh
