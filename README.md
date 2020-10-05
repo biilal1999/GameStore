@@ -16,7 +16,7 @@ Aquí podrá consultar que [tecnología](https://github.com/BilalKxK99/GameStore
 
 ## Curso de desarrollo
 
-Asignatura *Infraestructura virtual* de 4º curso del grado de Ingeniería Informática.
+Asignatura *Infraestructura virtual* de 4º curso del grado de Ingeniería Informática en la especialidad de Tecnologías de la Información.
 
 
 ## Autor
