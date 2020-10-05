@@ -9,7 +9,7 @@
     - Añadir archivo .gitignore
     - Añadir clave pública y privada SSH
     - Modificar archivo [README.md](https://github.com/BilalKxK99/GameStore/blob/master/README.md) para añadir la descripción general del proyecto 
-- Modificar [hito0.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-0.md) y hacer *Pull Request* con enlace a nuestro proyecto
+- Modificar [hito-0.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-0.md) y hacer *Pull Request* con enlace a nuestro proyecto
 
 
 ## Hito 1: Estructura general del proyecto
@@ -22,4 +22,4 @@
 - Crear carpeta **src/**
     - Crear fichero .js con código correspondiente a la estructura de la clase
 - Volver a modificar el archivo [README.md](https://github.com/BilalKxK99/GameStore/blob/master/README.md) para añadir los links restantes
-- Modificar [hito1.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-1.md) y hacer *Pull Request* con enlace a nuestro proyecto
+- Modificar [hito-1.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-1.md) y hacer *Pull Request* con enlace a nuestro proyecto
