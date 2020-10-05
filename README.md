@@ -11,7 +11,7 @@ Implementaremos el microservicio usando el lenguaje Node
 
 ## Detalles más avanzados
 
-Aquí podrá consultar que [tecnología](https://github.com/BilalKxK99/GameStore) usamos en el desarrollo de nuestro proyecto 'Game Store'.
+Aquí podrá consultar que [tecnología](https://github.com/BilalKxK99/GameStore/blob/master/docs/herramientas.md) usamos en el desarrollo de nuestro proyecto 'Game Store'.
 
 
 ## Curso de desarrollo
