@@ -39,9 +39,9 @@ Los issues que hemos ido abriendo y cerrando durante la realización del proyect
 
 Además, tambíen pueden ver los issues que son historias de usuario:
 
-    - [HU01](https://github.com/BilalKxK99/GameStore/issues/12)
-    - [HU02](https://github.com/BilalKxK99/GameStore/issues/13)
-    * [HU04](https://github.com/BilalKxK99/GameStore/issues/14)
+- [HU01](https://github.com/BilalKxK99/GameStore/issues/12)
+- [HU02](https://github.com/BilalKxK99/GameStore/issues/13)
+- [HU04](https://github.com/BilalKxK99/GameStore/issues/14)
 
 
 ## Curso de desarrollo
