@@ -27,7 +27,7 @@ Aquí podrán consultar que [tecnología](https://github.com/BilalKxK99/GameStor
 
 ## Documentación para la realización del proyecto
 
-Estos son los [pasos](https://github.com/BilalKxK99/GameStore/blob/master/docs/PasosProyecto.md) llevados a cabo para la realización de los hitos. Dichos pasos se irán actualizando progresivamente conforme sigamos realizando más hitos.
+Estos son los [pasos](https://github.com/BilalKxK99/GameStore/blob/master/docs/PasosProyecto.md) llevados a cabo para la realización del proyecto. Dichos pasos se irán actualizando progresivamente conforme sigamos realizando las demás prácticas.
 
 
 ## Tareas
