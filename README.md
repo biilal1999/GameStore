@@ -30,6 +30,19 @@ Aquí podrán consultar que [tecnología](https://github.com/BilalKxK99/GameStor
 Estos son los [pasos](https://github.com/BilalKxK99/GameStore/blob/master/docs/PasosProyecto.md) llevados a cabo para la realización de los hitos. Dichos pasos se irán actualizando progresivamente conforme sigamos realizando más hitos.
 
 
+## Tareas
+
+Los issues que hemos ido abriendo y cerrando durante la realización del proyecto los pueden consultar [aquí](https://github.com/BilalKxK99/GameStore/issues)
+
+
+## Historias de usuario
+
+Además, tambíen pueden ver los issues que son historias de usuario:
+
+    - [HU01](https://github.com/BilalKxK99/GameStore/issues/12)
+    - [HU02](https://github.com/BilalKxK99/GameStore/issues/13)
+    * [HU04](https://github.com/BilalKxK99/GameStore/issues/14)
+
 
 ## Curso de desarrollo
 
