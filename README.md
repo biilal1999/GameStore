@@ -4,7 +4,7 @@
 
 Nuestro microservicio consistirá en informar sobre las fechas de lanzamiento, descuentos y la posibilidad de reservar el videojuego.
 
-Implementaremos el microservicio usando el lenguaje Node.js
+Implementaremos el microservicio usando el lenguaje Ruby
 
 
 ## Utilidad del proyecto
