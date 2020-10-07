@@ -3,7 +3,7 @@
 1. **Lenguaje de programación**: He decidido desarrollar el proyecto utilizando el lenguaje *Node.js* , debido a que es un lenguaje muy interesante en el ámbito laboral con cada vez más salida y, como todavía no he trabajado con él, creo que es una oportunidad muy buena para empezar a cogerle manejo. Por no hablar de las diversas ventajas que tiene, como su facilidad para trabajar con él en segundo plano de forma asíncrona y su gran utilidad en aplicaciones que se ejecutan en dispositivos distribuidos en tiempo real.
 
 
-2. **Base de Datos**: A pesar de la gran utilidad de MySQL y de las infinitas opciones de consulta que puedes realizar con dicho servidor de base de datos, me he decantado finalmente por *MongoDB*. La razón es sencilla, pues para microservicios, es decir, aplicaciones que no necesiten tantas operaciones, es mucho más eficiente en cuanto a relación calidad/coste que MySQL. Además, realiza más operaciones de lectura por segundo.
+2. **Base de Datos**: Buscaremos un sistema de base de datos que se pueda adaptar bien a este microservicio en cuanto a la eficiencia, es decir, que consuma los recursos necesarios para la cantidad de operaciones de lectura y escritura que se suelen hacer en aplicaciones de esta pequeña complejidad.
 
 
 3. **Sistema de log**: Usaremos un sistema de log para almacenar todo el historial de usuario y administrador que se vaya realizando en el proyecto. Como punto de partida, usaremos un fichero creado a mano solo accesible al administrador.
