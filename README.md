@@ -2,11 +2,14 @@
 
 ## Descripción general del proyecto
 
-Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo encontramos a un precio no deseado o, directamente, agotado. Esto suele suceder debido a que cuando dichos productos están en oferta, *se venden como pan caliente*.
-
 Nuestro microservicio consistirá en informar sobre las fechas de lanzamiento, descuentos y la posibilidad de reservar el videojuego.
 
 Implementaremos el microservicio usando el lenguaje Node.js
+
+
+## Utilidad del proyecto
+
+Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo encontramos a un precio no deseado o, directamente, agotado. Esto suele suceder debido a que cuando dichos productos están en oferta, *se venden como pan caliente*.
 
 
 ## Ubicaciones
