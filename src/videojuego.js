@@ -8,7 +8,6 @@ class Videojuego{
 		var reservado = false;
 	}
 
-
 	consultarFechaLanzamiento(){
 	}
 
