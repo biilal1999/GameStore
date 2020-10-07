@@ -1,6 +1,6 @@
 # Herramientas a utilizar
 
-1. **Lenguaje de programación**: He decidido desarrollar el proyecto utilizando el lenguaje *Node.js* , debido a que es un lenguaje muy interesante en el ámbito laboral con cada vez más salida y, como todavía no he trabajado con él, creo que es una oportunidad muy buena para empezar a cogerle manejo. Por no hablar de las diversas ventajas que tiene, como su facilidad para trabajar con él en segundo plano de forma asíncrona y su gran utilidad en aplicaciones que se ejecutan en dispositivos distribuidos en tiempo real.
+1. **Lenguaje de programación**: He decidido desarrollar el proyecto utilizando el lenguaje Ruby. Dicho lenguaje, que ya conozco un poco de cursos pasados, me pareció muy interesante para seguir profundizando en él. Además, Ruby cuenta con más de 60.000 bibliotecas que te permite un desarrollo de tu aplicación de forma más veloz. Y, puesto que esta asignatura principalmente trata sobre DevOps, no sobra recalcar que hoy en día existe una gran demanda de ingenieros desarrolladores de DevOps mediante el lenguaje Ruby.
 
 
 2. **Base de Datos**: Buscaremos un sistema de base de datos que se pueda adaptar bien a este microservicio en cuanto a la eficiencia, es decir, que consuma los recursos necesarios para la cantidad de operaciones de lectura y escritura que se suelen hacer en aplicaciones de esta pequeña complejidad.
