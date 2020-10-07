@@ -16,19 +16,19 @@ class Videojuego
         
         
         
-        def consultarFechaLanzamiento()
+        def consultarFechaLanzamiento()                                           # Corresponde a la HU01
             
         end
         
         
         
-        def consultarDescuento()
+        def consultarDescuento()                                                  # Corresponde a la HU02
             
         end
         
         
         
-        def reservarVideojuego (dniComprador)
+        def reservarVideojuego (dniComprador)                                     # Corresponde a la HU03
             
         end
         
