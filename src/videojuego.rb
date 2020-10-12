@@ -31,7 +31,9 @@ class Videojuego
         
         
         def consultarPrecioFinal()                                                # Corresponde a la HU02
-            
+            precioFinal = @precioInicial - (@precioInicial * @descuento)
+
+	    return precioFinal
         end
         
         
