@@ -47,6 +47,7 @@ class Videojuego
 
 	    else
 		puts 'El videojuego ya está reservado'
+	    end
         end
         
         
