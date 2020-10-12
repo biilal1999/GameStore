@@ -1,3 +1,5 @@
+require 'date'
+
 class Videojuego
     
     attr_accessor:nombreVideojuego
@@ -19,7 +21,11 @@ class Videojuego
         
         
         def consultarDiasRestantes()                                              # Corresponde a la HU01
-            
+            now = Date.today
+	    dias_restantes = @fechaLanzamiento - now
+	    dias = dias_restantes.to_i
+
+	    return dias
         end
         
         
