@@ -7,6 +7,7 @@ class Videojuego
     attr_accessor:descuento
     attr_accessor:reservado
     attr_reader:precioInicial
+    attr_accessor:dniUsuario
         
         
         def initialize (nombre, fecha, desc, precio)
@@ -15,6 +16,7 @@ class Videojuego
             @descuento = desc
             @reservado = false
 	    @precioInicial = precio
+	    @dniUsuario = ""
             
         end
         
@@ -39,7 +41,12 @@ class Videojuego
         
         
         def reservarVideojuego (dniComprador)                                     # Corresponde a la HU03
-            
+            if @reservado == false
+	    	@dniUsuario = dniComprador
+		@reservado = true
+
+	    else
+		puts 'El videojuego ya está reservado'
         end
         
         
