@@ -45,7 +45,7 @@ class Videojuego
                 suma = suma + edad
             end
             
-            media = (suma * 1.0 / ventas)
+            media = ((suma * 1.0) / ventas)
             
             return media
         end
