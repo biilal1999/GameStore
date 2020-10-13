@@ -40,7 +40,6 @@ class Videojuego
         def consultarMediaEdad() 	                                          # Corresponde a la HU03
             suma = 0
             ventas = @edadesVentas.length
-            puts ventas
             
             for edad in @edadesVentas
                 suma = suma + edad
