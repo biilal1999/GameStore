@@ -9,5 +9,11 @@ describe Videojuego do
 		end
 	end
 
+	describe '#consultarPrecioFinal' do
+		it 'precio final' do
+			expect(vi.consultarPrecioFinal()).to eq(37.5)
+		end
+	end
+	
 end
 
