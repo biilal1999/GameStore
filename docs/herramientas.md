@@ -9,7 +9,11 @@
 3. **Sistema de log**: Usaremos un sistema de log para almacenar todo el historial de usuario y administrador que se vaya realizando en el proyecto. Como punto de partida, usaremos un fichero creado a mano solo accesible al administrador.
 
 
-4. **Posibles cambios**: Es posible, refiriéndome sobre todo el apartado del log, que cambie alguna herramienta de las mencionadas anteriormente si me surge algún problema con las anteriores. 
+4. **Programa para testing**: Como programa para *testear* los métodos de nuestra clase vamos a usar [*RSpec*](https://rspec.info/). He escogido esta herramienta principalmente por su gran facilidad para probar código, además de que está especificada en el [repositorio](https://jj.github.io/curso-tdd/temas/tests-unitarios.html) de GitHub de la asignatura como herramienta muy utilizada para programadores de *Ruby on Rails*, que es el lenguaje que estamos usando. Por último, *RSpec* tiene un gran soporte de especificaciones que prueban la API desde el punto de vista de un usuario.
+
+
+5. **Posibles cambios**: Es posible, refiriéndome sobre todo el apartado del log, que cambie alguna herramienta de las mencionadas anteriormente si me surge algún problema con las anteriores. 
+
 
 
 
