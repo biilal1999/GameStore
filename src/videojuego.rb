@@ -5,19 +5,16 @@ class Videojuego
     attr_accessor:nombreVideojuego
     attr_accessor:fechaLanzamiento
     attr_accessor:descuento
-    attr_accessor:reservado
+    attr_accessor:edadesVentas
     attr_reader:precioInicial
-    attr_accessor:dniUsuario
         
         
         def initialize (nombre, fecha, desc, precio)
             @nombreVideojuego = nombre
             @fechaLanzamiento = fecha
             @descuento = desc
-            @reservado = false
+            @edadesVentas = []
 	    @precioInicial = precio
-	    @dniUsuario = ""
-            
         end
         
         
@@ -40,14 +37,18 @@ class Videojuego
         
         
         
-        def reservarVideojuego (dniComprador)                                     # Corresponde a la HU03
-            if @reservado == false
-	    	@dniUsuario = dniComprador
-		@reservado = true
-
-	    else
-		puts 'El videojuego ya está reservado'
-	    end
+        def consultarMediaEdad() 	                                          # Corresponde a la HU03
+            suma = 0
+            ventas = @edadesVentas.length
+            puts ventas
+            
+            for edad in @edadesVentas
+                suma = suma + edad
+            end
+            
+            media = (suma * 1.0 / ventas)
+            
+            return media
         end
         
         
