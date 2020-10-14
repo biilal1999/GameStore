@@ -22,7 +22,13 @@ class Videojuego
         def consultarDiasRestantes()                                              # Corresponde a la HU01
             now = Date.today
 	    dias_restantes = @fechaLanzamiento - now
-	    dias = dias_restantes.to_i
+
+	    begin
+	       dias = dias_restantes.to_i
+	       raise 'Ya salió el juego' if dias < 0
+
+	    rescue => dias
+	    end
 
 	    return dias
         end
@@ -39,13 +45,19 @@ class Videojuego
         
         def consultarMediaEdad() 	                                          # Corresponde a la HU03
             suma = 0
-            ventas = @edadesVentas.length
-            
-            for edad in @edadesVentas
-                suma = suma + edad
-            end
-            
-            media = ((suma * 1.0) / ventas)
+             
+	    begin
+               ventas = @edadesVentas.length
+	       raise 'No hay ventas de momento' if ventas == 0
+
+	       for edad in @edadesVentas
+		   suma = suma + edad
+	       end
+		    
+	       media = ((suma * 1.0) / ventas)
+
+	    rescue => media
+ 	    end
             
             return media
         end
@@ -55,6 +67,10 @@ class Videojuego
 	    @edadesVentas.push(edad)
 	end
     
+	vi = Videojuego.new("", Date.new(2020, 10, 17), 0.5, 25)
+	#puts vi.consultarDiasRestantes()
+	vi.addVenta(17)
+	puts vi.consultarMediaEdad()
         
 end
     
