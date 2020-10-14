@@ -2,10 +2,10 @@ require 'date'
 
 class Videojuego
     
-    attr_accessor:nombreVideojuego
-    attr_accessor:fechaLanzamiento
-    attr_accessor:descuento
-    attr_accessor:edadesVentas
+    attr_reader:nombreVideojuego
+    attr_reader:fechaLanzamiento
+    attr_reader:descuento
+    attr_reader:edadesVentas
     attr_reader:precioInicial
         
         
@@ -49,7 +49,12 @@ class Videojuego
             
             return media
         end
-        
+    
+	
+	def addVenta (edad)                                                       # Añade edades al array cuando se realiza una venta
+	    @edadesVentas.push(edad)
+	end
+    
         
 end
     
