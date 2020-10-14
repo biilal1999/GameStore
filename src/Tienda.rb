@@ -26,10 +26,10 @@ class Tienda
 
 	
 	def obtenerSedes()									# Devuelve una cadena con todas las sedes
-		ubicaciones = ""
+		ubicaciones = "|"
 
 		for ubi in @ciudades
-			ubicaciones = ubicaciones + ubi.to_s + " | "
+			ubicaciones = ubicaciones + " " + ubi.to_s + " |"
 		end
 
 		return ubicaciones
@@ -37,10 +37,10 @@ class Tienda
 
 
 	def obtenerVideojuegos()								# Devuelve una cadena con los nombres de todos los videojuegos
-		productos = ""
+		productos = "|"
 
 		for vj in @videojuegos
-			productos = productos + vj.obtenerNombre() + " | "
+			productos = productos + " " + vj.obtenerNombre() + " |"
 		end
 
 		return productos
