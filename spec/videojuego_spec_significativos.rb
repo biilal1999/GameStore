@@ -14,6 +14,13 @@ describe Videojuego do													# Testear clase Videojuego
 		end
 	end
 
+	describe '#consultarPrecioFinal' do										# Testear método consultarPrecioFinal()  HU02
+		it 'precio final' do
+			expect(vi.consultarPrecioFinal()).to eq(37.5)								
+		end
+	end
+
+
 	
 end
 
