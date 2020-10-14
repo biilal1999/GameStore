@@ -62,6 +62,11 @@ class Videojuego
 		    
 		    return media
 		end
+
+
+		def obtenerNombre()																			
+			return @nombreVideojuego
+		end
 	    
 		
 		def addVenta (edad)                                                       # Añade edades al array cuando se realiza una venta
