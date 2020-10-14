@@ -2,6 +2,7 @@ require '../src/videojuego.rb'
 
 describe Videojuego do
 	vi = Videojuego.new("No se", Date.today, 0.25, 50)
+	vidjuego = Videojuego.new("No se", Date.new(2020, 10, 05), 0.25, 50)
 
 	describe '#consultarDiasRestantes' do
 		it 'dias restantes' do
