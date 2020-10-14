@@ -17,7 +17,9 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 
 	describe '#ciudades' do										# Testear ciudad con sede del array del ENUM 'Ciudades'
 		it 'sedes abiertas' do
-			expect(t.obtenerSedes())
+			expect(t.obtenerSedes()).to eq('| Granada | Barcelona |')
+		end
+	end
 
 end 
 
