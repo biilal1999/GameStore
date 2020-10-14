@@ -3,7 +3,7 @@ require 'date'
 
 class Videojuego
 	    
-	attr_reader:nombreVideojuego
+	    attr_reader:nombreVideojuego
 	    attr_reader:fechaLanzamiento
 	    attr_reader:descuento
 	    attr_reader:edadesVentas
