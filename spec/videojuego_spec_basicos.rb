@@ -1,5 +1,4 @@
 require '../src/Videojuego.rb'
-require 'date'
 
 
 describe Videojuego do										# Testeamos métodos básicos de GET
