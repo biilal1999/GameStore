@@ -1,4 +1,4 @@
-require '../src/videojuego.rb'
+require '../src/Videojuego.rb'
 
 describe Videojuego do
 	vi = Videojuego.new("No se", Date.today, 0.25, 50)
