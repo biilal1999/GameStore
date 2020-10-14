@@ -14,26 +14,6 @@ describe Videojuego do													# Testear clase Videojuego
 		end
 	end
 
-	describe '#consultarPrecioFinal' do										# Testear método consultarPrecioFinal()  HU02
-		it 'precio final' do
-			expect(vi.consultarPrecioFinal()).to eq(37.5)								
-		end
-	end
-
-
-	describe '#consultarMediaEdad' do										# Tester método consultarMediaEdad() HU03
-		vi.addVenta(18)
-		vi.addVenta(19)
-		vi.addVenta(23)
-		
-		it 'media de edad' do
-			expect(vi.consultarMediaEdad()).to eq(20)								# Testear caso correcto
-		end	
-
-		it 'excepción de media de edad' do
-			expect(vidjuego.consultarMediaEdad()).not_to be_a_kind_of(Float)					# Testear excepción
-		end	
 	
-	end
 end
 
