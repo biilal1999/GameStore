@@ -19,5 +19,6 @@ describe Videojuego do
 	end
 
 	
-	describe 
+	describe '#descuentos' do
+		it '
 end
