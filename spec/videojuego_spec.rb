@@ -5,7 +5,7 @@ describe Videojuego do
 	vidjuego = Videojuego.new("No se", Date.new(2020, 10, 05), 0.25, 50)
 
 	describe '#consultarDiasRestantes' do
-		it 'dias restantes' do
+		it 'excepción de dias restantes' do
 			expect(vidjuego.consultarDiasRestantes()).not_to be_a_kind_of(Numeric)
 		end
 	end
