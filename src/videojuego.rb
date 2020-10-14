@@ -66,7 +66,11 @@ class Videojuego
 	def addVenta (edad)                                                       # Añade edades al array cuando se realiza una venta
 	    @edadesVentas.push(edad)
 	end
-   
-
+    
+	vi = Videojuego.new("", Date.new(2020, 10, 17), 0.5, 25)
+	#puts vi.consultarDiasRestantes()
+	vi.addVenta(17)
+	puts vi.consultarMediaEdad()
+        
 end
     
