@@ -5,6 +5,13 @@ describe Videojuego do
 
 	describe '#consultarDiasRestantes' do
 		it 'dias restantes' do
+			expect(vidjuego.consultarDiasRestantes()).not_to be_a_kind_of(Numeric)
+		end
+	end
+
+	describe '#consultarDiasRestantes' do
+		
+		it 'dias restantes' do
 			expect(vi.consultarDiasRestantes()).to eq(0)
 		end
 	end
@@ -15,6 +22,7 @@ describe Videojuego do
 		end
 	end
 
+
 	describe '#consultarMediaEdad' do
 		vi.addVenta(18)
 		vi.addVenta(19)
@@ -23,6 +31,13 @@ describe Videojuego do
 		it 'media de edad' do
 			expect(vi.consultarMediaEdad()).to eq(20)
 		end	
-	end	
+	end
+
+	describe '#consultarMediaEdad' do
+		it 'excepción de media de edad' do
+			expect(vidjuego.consultarMediaEdad()).not_to be_a_kind_of(Float)
+		end	
+	end
+	
 end
 
