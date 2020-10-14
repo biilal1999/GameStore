@@ -15,17 +15,17 @@ class Tienda
 	end
 
 	
-	def addVideojuego (videojuego)
+	def addVideojuego (videojuego)							# Añade objeto videojuego al array
 		@videojuegos.push(videojuego)
 	end
 
 	
-	def addCiudad (ciudad)
+	def addCiudad (ciudad)								# Añade sede al array
 		@ciudades.push(ciudad)
 	end
 
 	
-	def obtenerSedes()
+	def obtenerSedes()									# Devuelve una cadena con todas las sedes
 		ubicaciones = ""
 
 		for ubi in @ciudades
@@ -36,7 +36,7 @@ class Tienda
 	end
 
 
-	def obtenerVideojuegos()
+	def obtenerVideojuegos()								# Devuelve una cadena con los nombres de todos los videojuegos
 		productos = ""
 
 		for vj in @videojuegos
@@ -45,6 +45,7 @@ class Tienda
 
 		return productos
 	end
+
 
 
 end
