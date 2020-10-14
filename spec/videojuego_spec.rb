@@ -16,9 +16,9 @@ describe Videojuego do
 	end
 
 	describe '#consultarMediaEdad' do
-		vi.edadesVentas.push(18)
-		vi.edadesVentas.push(19)
-		vi.edadesVentas.push(23)
+		vi.addVenta(18)
+		vi.addVenta(19)
+		vi.addVenta(23)
 		
 		it 'media de edad' do
 			expect(vi.consultarMediaEdad()).to eq(20)
