@@ -42,8 +42,8 @@ Aquí podrán consultar que [tecnología](https://github.com/BilalKxK99/GameStor
 
 Además, también puede consultar:
 
-+ Documentación, explicación y pruebas de **spec/**, **Gemfile**, [**Gemfile.lock**](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile.lock), [spec_helper.rb](https://github.com/BilalKxK99/GameStore/blob/master/spec/spec_helper.rb) y [.rspec](https://github.com/BilalKxK99/GameStore/blob/master/.rspec) es decir, de las dependencias.
-+ Documentación, explicació, prueba y **JUSTIFICACIÓN** de la herramienta de construcción *Rakefile*
++ Documentación, explicación y pasos de **spec/**, **Gemfile**, [**Gemfile.lock**](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile.lock), [spec_helper.rb](https://github.com/BilalKxK99/GameStore/blob/master/spec/spec_helper.rb) y [.rspec](https://github.com/BilalKxK99/GameStore/blob/master/.rspec) es decir, de las [dependencias](https://github.com/BilalKxK99/GameStore/blob/master/docs/Dependencias.md).
++ Documentación, explicación, pruebas y **JUSTIFICACIÓN** de la herramienta de construcción *Rakefile*
 
 
 ## Pasos para la realización del proyecto
