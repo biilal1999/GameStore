@@ -1,5 +1,5 @@
-require '../src/Tienda.rb'
-require '../src/Videojuego.rb'
+require_relative '../src/Tienda.rb'
+require_relative '../src/Videojuego.rb'
 
 
 
