@@ -15,6 +15,6 @@ desc "Ejecutar los tests"
 
 
 RSpec::Core::RakeTask.new("test") do |t|
-	t.pattern = ['spec/*_spec_*.rb']
+	t.pattern = ['spec/tests/*_spec_*.rb']
 	t.verbose = false
 end

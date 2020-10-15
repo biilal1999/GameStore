@@ -1,4 +1,4 @@
-require_relative '../src/Videojuego.rb'
+require_relative '../../src/Videojuego.rb'
 
 describe Videojuego do													# Testear clase Videojuego
 	vi = Videojuego.new("FIFA", Date.today, 0.25, 50)						

@@ -1,4 +1,4 @@
-require_relative '../src/Videojuego.rb'
+require_relative '../../src/Videojuego.rb'
 
 
 
