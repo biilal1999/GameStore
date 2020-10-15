@@ -26,17 +26,29 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 [iv.yaml](https://github.com/BilalKxK99/GameStore/blob/master/iv.yaml)
 
 
+## Fichero de dependencias
+
+[Gemfile](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile)
+
+
+## Fichero de herramienta de construcción
+
+Automatizador de tareas [Rakefile](https://github.com/BilalKxK99/GameStore/blob/master/Rakefile)
+
+
 ## Herramientas para el desarrollo
 
 Aquí podrán consultar que [tecnología](https://github.com/BilalKxK99/GameStore/blob/master/docs/herramientas.md), es decir, herramientas, usamos en el desarrollo de nuestro proyecto *Game Store*.
+
+Además, también puede consultar:
+
++ Documentación, explicación y pruebas de **spec/**, **Gemfile** y **Gemfile.lock** , es decir, de las dependencias
++ Documentación, explicació, prueba y **JUSTIFICACIÓN** de la herramienta de construcción *Rakefile*
 
 
 ## Pasos para la realización del proyecto
 
 Estos son los [pasos](https://github.com/BilalKxK99/GameStore/blob/master/docs/PasosProyecto.md) llevados a cabo para la realización del proyecto. Dichos pasos se irán actualizando progresivamente conforme sigamos realizando las demás prácticas.
-
-
-## Descripción de
 
 
 ## Milestones
