@@ -42,7 +42,7 @@ Aquí podrán consultar que [tecnología](https://github.com/BilalKxK99/GameStor
 
 Además, también puede consultar:
 
-+ Documentación, explicación y pruebas de **spec/**, **Gemfile** y **Gemfile.lock** , es decir, de las dependencias
++ Documentación, explicación y pruebas de **spec/**, **Gemfile** y [**Gemfile.lock**](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile.lock) , es decir, de las dependencias.
 + Documentación, explicació, prueba y **JUSTIFICACIÓN** de la herramienta de construcción *Rakefile*
 
 
