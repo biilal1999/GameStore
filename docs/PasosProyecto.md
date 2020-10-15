@@ -20,6 +20,11 @@
     - Crear, y cerrar, las historias de usuario 
 - Añadir fichero [iv.yaml](https://github.com/BilalKxK99/GameStore/blob/master/iv.yaml)
 - Crear carpeta **src/**
-    - Crear fichero .js con código correspondiente a la estructura de la clase
+    - Crear fichero .rb con código correspondiente a la estructura de la clase
 - Volver a modificar el archivo [README.md](https://github.com/BilalKxK99/GameStore/blob/master/README.md) para añadir los links restantes
 - Modificar [hito-1.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-1.md) y hacer *Pull Request* con enlace a nuestro proyecto
+
+
+## Hito 2: Tests
+
+
