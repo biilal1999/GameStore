@@ -31,9 +31,12 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 Aquí podrán consultar que [tecnología](https://github.com/BilalKxK99/GameStore/blob/master/docs/herramientas.md), es decir, herramientas, usamos en el desarrollo de nuestro proyecto *Game Store*.
 
 
-## Documentación para la realización del proyecto
+## Pasos para la realización del proyecto
 
 Estos son los [pasos](https://github.com/BilalKxK99/GameStore/blob/master/docs/PasosProyecto.md) llevados a cabo para la realización del proyecto. Dichos pasos se irán actualizando progresivamente conforme sigamos realizando las demás prácticas.
+
+
+## Descripción de
 
 
 ## Milestones
