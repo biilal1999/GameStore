@@ -27,4 +27,10 @@
 
 ## Hito 2: Tests
 
-- 
+- Añadir la carpeta [**spec/**](https://github.com/BilalKxK99/GameStore/tree/master/spec) y, dentro, la carpeta [**tests/**](https://github.com/BilalKxK99/GameStore/tree/master/spec/tests)
+    - Añadir dentro de la carpeta **tests/** los ficheros .rb con los tests, tanto unitarios como significativos, para probar los métodos de nuestra clase
+- Añadir a la carpeta [**src/**](https://github.com/BilalKxK99/GameStore/tree/master/src) más ficheros .rb con nuestras clases para el proyecto
+    - Implementar los métodos correspondientes a las historias de usuario en las clases ubicadas en la carpeta **src/** , además de otros métodos auxiliares para nuestras clases
+- Añadir los ficheros ficheros [Gemfile](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile) y [Gemfile.lock](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile.lock) para manejar nuestras dependencias en Ruby
+- Crear fichero [Rakefile](https://github.com/BilalKxK99/GameStore/blob/master/Rakefile) para automatizar la ejecución de tareas (tests y dependencias) de nuestro proyecto en *Ruby On Rails*
+- Actualizar el archivo [herramientas.md](https://github.com/BilalKxK99/GameStore/blob/master/docs/herramientas.md) para explicar herramientas como RVM, RSpec, Bundler o Rakefile
