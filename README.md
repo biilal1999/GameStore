@@ -15,7 +15,10 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 ## Ubicaciones
 
 + Nuestra carpeta de [documentos](https://github.com/BilalKxK99/GameStore/tree/master/docs)
+    + Nuestra carpeta de [imágenes](https://github.com/BilalKxK99/GameStore/tree/master/docs/img)
 + Nuestra carpeta de [código fuente](https://github.com/BilalKxK99/GameStore/tree/master/src)
++ Nuestra carpeta [spec](https://github.com/BilalKxK99/GameStore/tree/master/spec)
+    + Nuestra carpeta de [tests](https://github.com/BilalKxK99/GameStore/tree/master/spec/tests)
 
 
 ## Fichero iv.yaml
