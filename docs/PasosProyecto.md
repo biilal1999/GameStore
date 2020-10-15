@@ -33,4 +33,8 @@
     - Implementar los métodos correspondientes a las historias de usuario en las clases ubicadas en la carpeta **src/** , además de otros métodos auxiliares para nuestras clases
 - Añadir los ficheros ficheros [Gemfile](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile) y [Gemfile.lock](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile.lock) para manejar nuestras dependencias en Ruby
 - Crear fichero [Rakefile](https://github.com/BilalKxK99/GameStore/blob/master/Rakefile) para automatizar la ejecución de tareas (tests y dependencias) de nuestro proyecto en *Ruby On Rails*
+- Modificar fichero [iv.yaml](https://github.com/BilalKxK99/GameStore/blob/master/iv.yaml) con nuevas claves (lenguaje, test y taskfile)
 - Actualizar el archivo [herramientas.md](https://github.com/BilalKxK99/GameStore/blob/master/docs/herramientas.md) para explicar herramientas como RVM, RSpec, Bundler o Rakefile
+- Añadir capturas de pantalla de prueba de ejecución de Rakefile en la carpeta [**img/**](https://github.com/BilalKxK99/GameStore/tree/master/docs/img)
+- Modifichar el archivo [README.md](https://github.com/BilalKxK99/GameStore/blob/master/README.md) para añadir los links correspondientes a este hito
+- Modificar [hito-2.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-2.md) y hacer *Pull Request* con enlace a nuestro proyecto
