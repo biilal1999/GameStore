@@ -1,4 +1,6 @@
-entidad: src/videojuego.rb
+entidad: src/Videojuego.rb
+	 src/Tienda.rb
+	 src/Ciudades.rb
 
 lenguaje: ruby
 
