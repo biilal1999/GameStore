@@ -1,1 +1,10 @@
 entidad: src/videojuego.rb
+
+lenguaje: ruby
+
+test:
+	spec/tests/tienda_spec_basicos.rb
+	spec/tests/videojuego_spec_basicos.rb
+	spec/tests/videojuego_spec_significativos.rb
+
+taskfile: Rakefile
