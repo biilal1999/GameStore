@@ -1,12 +1,4 @@
 entidad: src/Videojuego.rb
-	 src/Tienda.rb
-	 src/Ciudades.rb
-
 lenguaje: ruby
-
-test:
-	spec/tests/tienda_spec_basicos.rb
-	spec/tests/videojuego_spec_basicos.rb
-	spec/tests/videojuego_spec_significativos.rb
-
+test: spec/tests/tienda_spec_basicos.rb
 taskfile: Rakefile
