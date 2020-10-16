@@ -36,6 +36,11 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 Automatizador de tareas [Rakefile](https://github.com/BilalKxK99/GameStore/blob/master/Rakefile)
 
 
+### Justificación de construcción de la herramienta de construcción Rakefile
+
+[Justificación y comandos](https://github.com/BilalKxK99/GameStore/blob/master/docs/JustifiacionHerramientaConstruccion.md#justificaci%C3%B3n-de-la-configuraci%C3%B3n-de-rakefile)
+
+
 ## Herramientas para el desarrollo
 
 Aquí podrán consultar que [tecnología](https://github.com/BilalKxK99/GameStore/blob/master/docs/herramientas.md), es decir, herramientas, usamos en el desarrollo de nuestro proyecto *Game Store*.
@@ -43,7 +48,7 @@ Aquí podrán consultar que [tecnología](https://github.com/BilalKxK99/GameStor
 Además, también puede consultar:
 
 + Documentación, explicación y pasos de **spec/**, **Gemfile**, [**Gemfile.lock**](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile.lock), [spec_helper.rb](https://github.com/BilalKxK99/GameStore/blob/master/spec/spec_helper.rb) y [.rspec](https://github.com/BilalKxK99/GameStore/blob/master/.rspec) es decir, de las [dependencias](https://github.com/BilalKxK99/GameStore/blob/master/docs/Dependencias.md).
-+ Documentación, explicación, pruebas y **JUSTIFICACIÓN** de la herramienta de construcción *Rakefile*
++ Documentación, explicación, pruebas y **JUSTIFICACIÓN** de la herramienta de construcción [*Rakefile*](https://github.com/BilalKxK99/GameStore/blob/master/docs/JustifiacionHerramientaConstruccion.md)
 
 
 ## Pasos para la realización del proyecto
