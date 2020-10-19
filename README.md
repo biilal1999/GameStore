@@ -31,25 +31,23 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 [Gemfile](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile)
 
 
+### Fichero de control de versiones
+
+[Gemfile.lock](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile.lock)
+
+
 ## Fichero de herramienta de construcción
 
 Automatizador de tareas [Rakefile](https://github.com/BilalKxK99/GameStore/blob/master/Rakefile)
 
 
-### Justificación de construcción de la herramienta de construcción Rakefile
-
-[Justificación y comandos](https://github.com/BilalKxK99/GameStore/blob/master/docs/JustifiacionHerramientaConstruccion.md#justificaci%C3%B3n-de-la-configuraci%C3%B3n-de-rakefile)
-
-
 ## Herramientas para el desarrollo
 
-Aquí podrán consultar que [tecnología](https://github.com/BilalKxK99/GameStore/blob/master/docs/herramientas.md), es decir, herramientas, usamos en el desarrollo de nuestro proyecto *Game Store*.
+Aquí podrán consultar:
 
-Además, podrán consultar:
-
-+ Las herramientas que utilizamos en el desarrollo de nuestro proyecto, y su correspondiente **JUSTIFICACIÓN** (*Ruby*, *RSpec*, *Rakefile*, etc.).
-+ Documentación, explicación y comandos de **spec/**, **Gemfile**, [**Gemfile.lock**](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile.lock), [spec_helper.rb](https://github.com/BilalKxK99/GameStore/blob/master/spec/spec_helper.rb) y [.rspec](https://github.com/BilalKxK99/GameStore/blob/master/.rspec) es decir, de las [dependencias](https://github.com/BilalKxK99/GameStore/blob/master/docs/Dependencias.md).
-+ Comandos, pruebas y **JUSTIFICACIÓN** de cómo hemos configurado la herramienta de construcción [*Rakefile*](https://github.com/BilalKxK99/GameStore/blob/master/docs/JustifiacionHerramientaConstruccion.md).
++ Las [herramientas](https://github.com/BilalKxK99/GameStore/blob/master/docs/herramientas.md) que utilizamos en el desarrollo de nuestro proyecto, y su correspondiente **JUSTIFICACIÓN** (*Ruby*, *RSpec*, *Rakefile*, etc.).
++ [Documentación, utilidad y comandos](https://github.com/BilalKxK99/GameStore/blob/master/docs/Dependencias.md) de **spec/**, **Gemfile**, [spec_helper.rb](https://github.com/BilalKxK99/GameStore/blob/master/spec/spec_helper.rb) y [.rspec](https://github.com/BilalKxK99/GameStore/blob/master/.rspec) es decir, de las dependencias.
++ [Comandos, pruebas y **JUSTIFICACIÓN**](https://github.com/BilalKxK99/GameStore/blob/master/docs/JustifiacionHerramientaConstruccion.md) de cómo hemos configurado la herramienta de construcción *Rakefile*.
 
 
 ## Pasos para la realización del proyecto
