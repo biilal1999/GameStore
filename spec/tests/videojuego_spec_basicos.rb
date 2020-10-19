@@ -1,7 +1,6 @@
 require_relative '../../src/Videojuego.rb'
 
 
-
 describe Videojuego do										# Testeamos métodos básicos de GET
 	vi = Videojuego.new("COD", Date.new(2020, 10, 18), 0.15, 70)
 
