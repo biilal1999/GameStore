@@ -1,4 +1,5 @@
 require_relative '../../src/Videojuego.rb'
+
 describe Videojuego do													# Testear clase Videojuego
 	vi = Videojuego.new("FIFA", Date.today, 0.25, 50)						
 	vidjuego = Videojuego.new("FIFA", Date.new(2020, 10, 05), 0.25, 50)
