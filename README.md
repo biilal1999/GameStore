@@ -26,14 +26,14 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 [iv.yaml](https://github.com/BilalKxK99/GameStore/blob/master/iv.yaml)
 
 
-## Fichero de dependencias
 
-[Gemfile](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile)
+## Dependencias
+
++ Fichero de dependencias [Gemfile](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile)
++ Fichero de control de versiones [Gemfile.lock](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile.lock)
 
 
-### Fichero de control de versiones
-
-[Gemfile.lock](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile.lock)
+Además, pueden ver la [documentación, utilidad y comandos](https://github.com/BilalKxK99/GameStore/blob/master/docs/Dependencias.md) de **spec/**, **Gemfile** y **Gemfile.lock**
 
 
 ## Fichero de herramienta de construcción
@@ -46,7 +46,6 @@ Automatizador de tareas [Rakefile](https://github.com/BilalKxK99/GameStore/blob/
 Aquí podrán consultar:
 
 + Las [herramientas](https://github.com/BilalKxK99/GameStore/blob/master/docs/herramientas.md) que utilizamos en el desarrollo de nuestro proyecto, y su correspondiente **JUSTIFICACIÓN** (*Ruby*, *RSpec*, *Rakefile*, etc.).
-+ [Documentación, utilidad y comandos](https://github.com/BilalKxK99/GameStore/blob/master/docs/Dependencias.md) de **spec/**, **Gemfile**, [spec_helper.rb](https://github.com/BilalKxK99/GameStore/blob/master/spec/spec_helper.rb) y [.rspec](https://github.com/BilalKxK99/GameStore/blob/master/.rspec) es decir, de las dependencias.
 + [Comandos, pruebas y **JUSTIFICACIÓN**](https://github.com/BilalKxK99/GameStore/blob/master/docs/JustifiacionHerramientaConstruccion.md) de cómo hemos configurado la herramienta de construcción *Rakefile*.
 
 
