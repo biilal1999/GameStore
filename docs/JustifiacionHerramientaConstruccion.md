@@ -1,35 +1,4 @@
-# Herramienta de construcción Rakefile
-
-
-## Comandos
-
-Una vez tenemos nuestro manejador de dependencias **Bundler** instalado y puesto en marcha, lo que implica que se genere el archivo **Gemfile**, tal y como está detallado en el apartado de [comandos](https://github.com/BilalKxK99/GameStore/blob/master/docs/Dependencias.md#comandos-para-la-instalaci%C3%B3n-y-puesta-en-marcha-del-manejador-bundler) del fichero de explicación de [dependencias](https://github.com/BilalKxK99/GameStore/blob/master/docs/Dependencias.md) , debemos ejecutar los siguientes comandos para la instalación de **Rakefile** :
-
-+ `bundle add rake` para añadir la gema al fichero **Gemfile**
-+ `bundle install` para instalar la gema *Rake*
-
-
-## Pruebas
-
-
-### Instalando dependencias 
-
-Con **Bundler** y con **Rakefile**
-
-
-![Dependencias](https://github.com/BilalKxK99/GameStore/blob/master/docs/img/InstalarDependencias.png)
-
-
-### Ejecutando tests
-
-Con **RSpec** y con **Rakefile**
-
-
-![Tests](https://github.com/BilalKxK99/GameStore/blob/master/docs/img/Tests.png)
-
-
-
-## Justificación de la configuración de Rakefile
+# Justificación de la configuración de Rakefile
 
 Para cubrir la **rúbrica 1** del **hito 2** hemos configurado nuestra herramienta de construcción y automatización de ejecución de tareas [**RAKEFILE**](https://github.com/BilalKxK99/GameStore/blob/master/Rakefile) y, a continuación, explicaré dicha construcción.
 
@@ -47,16 +16,16 @@ Para cubrir la **rúbrica 1** del **hito 2** hemos configurado nuestra herramien
 6. Por último, el comando `t.verbose = false` , como indico en los comentarios del archivo *Rakefile*, desactiva la salida por la terminal de información de ejecución referida a rutas de programas y librerías de **RSpec** en nuestro equipo.
 
 
-### Ver tareas disponibles en Rakefile
+## Ver tareas disponibles en Rakefile
 
 `rake -T`
 
 
-### Ejecutar instalación de dependencias
+## Ejecutar instalación de dependencias
 
 `rake install`
 
 
-### Ejecutar tests
+## Ejecutar tests
 
 `rake test`
