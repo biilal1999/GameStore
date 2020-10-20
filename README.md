@@ -36,7 +36,7 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 Además, pueden ver la [documentación, utilidad y comandos](https://github.com/BilalKxK99/GameStore/blob/master/docs/Dependencias.md) de **spec/**, **Gemfile** y **Gemfile.lock**
 
 
-## Fichero de herramienta de construcción
+## Fichero de gestor de tareas
 
 Automatizador de tareas [Rakefile](https://github.com/BilalKxK99/GameStore/blob/master/Rakefile)
 
