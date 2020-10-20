@@ -54,6 +54,11 @@ Además, pueden consultar la utilidad, comandos y pruebas de Rakefile [aquí](ht
 [Aquí](https://github.com/BilalKxK99/GameStore/blob/master/docs/herramientas.md) podrán consultar la razón por la que utilizamos el lenguaje *Ruby*, además de otras herramientas como el gestor de versiones o el sistema de log.
 
 
+## Marco de test y biblioteca de aserciones
+
+Hemos usado **RSpec** como marco para tests y como biblioteca para aserciones (ya incluida). Puede ver [aquí](https://github.com/BilalKxK99/GameStore/blob/master/docs/ProgramaTesting.md) la explicación.
+
+
 ## Pasos para la realización del proyecto
 
 Estos son los [pasos](https://github.com/BilalKxK99/GameStore/blob/master/docs/PasosProyecto.md) llevados a cabo para la realización del proyecto. Dichos pasos se irán actualizando progresivamente conforme sigamos realizando las demás prácticas.
