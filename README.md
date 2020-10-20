@@ -33,7 +33,9 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 + Fichero de control de versiones [Gemfile.lock](https://github.com/BilalKxK99/GameStore/blob/master/Gemfile.lock)
 
 
-Además, pueden ver la [documentación, utilidad y comandos](https://github.com/BilalKxK99/GameStore/blob/master/docs/Dependencias.md) de **spec/**, **Gemfile** y **Gemfile.lock**
+### Gestor de dependencias
+
+**Bundler** es nuestro gestor de dependencias. Puede consultar [aquí](https://github.com/BilalKxK99/GameStore/blob/master/docs/Dependencias.md) la justificación de su uso y su documentación, además de las explicaciones de **spec/**, **Gemfile** y **Gemfile.lock**.
 
 
 ## Fichero de gestor de tareas
@@ -43,10 +45,7 @@ Automatizador de tareas [Rakefile](https://github.com/BilalKxK99/GameStore/blob/
 
 ## Herramientas para el desarrollo
 
-Aquí podrán consultar:
-
-+ Las [herramientas](https://github.com/BilalKxK99/GameStore/blob/master/docs/herramientas.md) que utilizamos en el desarrollo de nuestro proyecto, y su correspondiente **JUSTIFICACIÓN** (*Ruby*, *RSpec*, *Rakefile*, etc.).
-+ [Comandos, pruebas y **JUSTIFICACIÓN**](https://github.com/BilalKxK99/GameStore/blob/master/docs/JustifiacionHerramientaConstruccion.md) de cómo hemos configurado la herramienta de construcción *Rakefile*.
+[Aquí](https://github.com/BilalKxK99/GameStore/blob/master/docs/herramientas.md) podrán consultar la razón por la que utilizamos el lenguaje *Ruby*, además de otras herramientas como el gestor de versiones o el sistema de log.
 
 
 ## Pasos para la realización del proyecto
