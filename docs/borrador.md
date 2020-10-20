@@ -1,6 +1,3 @@
-5. **Programa para testing**: Como programa para *testear* los métodos de nuestra clase vamos a usar [*RSpec*](https://rspec.info/). He escogido esta herramienta principalmente por su gran facilidad para probar código, además de que está especificada en el [repositorio](https://jj.github.io/curso-tdd/temas/tests-unitarios.html) de GitHub de la asignatura como herramienta muy utilizada para programadores de *Ruby on Rails*, que es el lenguaje que estamos usando. Por último, *RSpec* tiene un gran soporte de especificaciones que prueban la API desde el punto de vista de un usuario.
-
-
 6. **Manejador de dependencias**: Hemos decidido utilizar *Bundler* como gestor de dependencias de Ruby. Es decir, instalar todas las *gemas* de Ruby por separado es bastante engorroso, sin embargo, utilizando *Bundler* podemos instalar de forma 'conjunta' varias dependencias y, lo que es más importante, llevar un control de las mismas. Esta es la [documentación](https://help.dreamhost.com/hc/es/articles/115001070131-Usar-Bundler-para-instalar-Ruby-gems) en la que me he basado. He escogido este manejador básicamente porque ha sido el único manejador para gemas de Ruby que he visto que en internet había la información suficiente, pudiéndome ayudar así de posibles errores.
 
 

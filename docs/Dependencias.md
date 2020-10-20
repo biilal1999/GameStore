@@ -1,5 +1,8 @@
 # Dependencias del proyecto
 
+## ¿Por qué Bundler?
+
+Hemos decidido utilizar *Bundler* como gestor de dependencias de Ruby. Es decir, instalar todas las *gemas* de Ruby por separado es bastante engorroso, sin embargo, utilizando *Bundler* podemos instalar de forma 'conjunta' varias dependencias y, lo que es más importante, llevar un control de las mismas. He escogido este manejador básicamente porque ha sido el único manejador para gemas de Ruby que he visto que en internet había la información suficiente, pudiéndome ayudar así de posibles errores.
 
 ## Documentación
 
