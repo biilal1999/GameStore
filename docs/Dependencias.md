@@ -21,17 +21,7 @@ Para la instalación de RSpec y Rake, ejecutamos el comando `bundle install` y s
 
 ### spec/
 
-La carpeta [spec/](https://github.com/BilalKxK99/GameStore/tree/master/spec) es generada una vez hemos instalado la gema de *RSpec*. Esta carpeta, en donde irán los tests que programemos, contiene por defecto el fichero *spec_helper.rb*.
-
-
-### spec_helper.rb
-
-El fichero [spec_helper.rb](https://github.com/BilalKxK99/GameStore/blob/master/spec/spec_helper.rb) contiene la configuración de la herramienta **RSpec**. Esta configuración con sus correspondientes directivas indican, entre otras cosas, la carpeta principal donde irán los tests que ejecutemos con RSpec. En principio, para utilizar la configuración y módulos de **spec_helper.rb** es necesario importar dicho fichero en cada archivo que vayamos a *testear*, pero sin embargo podemos evitar esto último gracias al fichero oculto *.rspec*.
-
-
-### .rspec
-
-El fichero [.rspec](https://github.com/BilalKxK99/GameStore/blob/master/.rspec) solamente contiene la línea `require --spec_helper`. Esta simple línea, como hemos comentado anteriormente, hace que cuando vayamos a ejecutar un fichero de *testing* con **RSpec**, no tengamos que cargar el archivo **spec_helper.rb**. Dado que conozco su utilidad y es bastante simple, he decidido incluir en el proyecto este archivo *oculto*.
+La carpeta [spec/](https://github.com/BilalKxK99/GameStore/tree/master/spec) es generada una vez hemos instalado la gema de *RSpec*.
 
 
 ### Gemfile
