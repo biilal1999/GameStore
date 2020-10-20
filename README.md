@@ -26,6 +26,10 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 [iv.yaml](https://github.com/BilalKxK99/GameStore/blob/master/iv.yaml)
 
 
+## Justificación de la herramienta de construcción RAKE
+
+[Aquí](https://github.com/BilalKxK99/GameStore/blob/master/docs/JustifiacionHerramientaConstruccion.md) pueden consultar la justificación de la configuración de la herramienta de construcción Rake.
+
 
 ## Dependencias
 
