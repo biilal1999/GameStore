@@ -40,7 +40,9 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 
 ## Fichero de gestor de tareas
 
-Automatizador de tareas [Rakefile](https://github.com/BilalKxK99/GameStore/blob/master/Rakefile)
++ Automatizador de tareas [Rakefile](https://github.com/BilalKxK99/GameStore/blob/master/Rakefile)
+
+Además, pueden consultar la utilidad, comandos y pruebas de Rakefile [aquí](https://github.com/BilalKxK99/GameStore/blob/master/docs/GestorTareas.md)
 
 
 ## Herramientas para el desarrollo
