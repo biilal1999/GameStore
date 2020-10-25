@@ -10,9 +10,14 @@ LABEL maintainer "Bilal Chekfeh <bilal99@correo.ugr.es>"
 
 # Creamos variable de entorno para el directorio de trabajo
 
-ENV PROJECT_DIR=/app/
+ENV PROJECT_DIR=/app
 
-							
+
+# Establecemos directorio de trabajo
+
+WORKDIR $PROJECT_DIR							
+
+
 # Copiamos Gemfile al directorio de trabajo
 
 COPY Gemfile $PROJECT_DIR						
@@ -23,37 +28,18 @@ COPY Gemfile $PROJECT_DIR
 COPY Gemfile.lock $PROJECT_DIR						
 
 
-# Establecemos directorio de trabajo
-
-WORKDIR $PROJECT_DIR
-
-
 # Instalamos las dependencias incluidas en Gemfile
 
 RUN bundle install 						
 
 
-# Borramos los ficheros de dependencias
+# Copiamos el resto de archivos al directorio de trabajo
 
-RUN rm $PROJECT_DIR/Gemfile
-
-RUN rm $PROJECT_DIR/Gemfile.lock
+COPY . $PROJECT_DIR							
 
 
-# Utilizamos Volume para que no tengamos que reconstruir el contenedor cuando cambiemos un fichero del fuente
+# Ejecutamos en la terminal Rake con la tarea "test"
 
-VOLUME /test
-
-
-# Actualizamos directorio de trabajo
-
-WORKDIR /test							
-
-
-# Ejecutamos en la terminal Rake con la tarea "test" para que se ejecuten los tests
-
-CMD ["rake", "test"]						
-
-
+CMD ["rake", "test"]
 
 
