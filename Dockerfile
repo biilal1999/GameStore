@@ -1,18 +1,17 @@
 FROM ruby:2.7.2-alpine
 
-RUN gem install bundler
+WORKDIR ./src/app
 
-RUN bundle add rspec
+COPY Gemfile /src/app
 
-RUN bundle add rake
+COPY Gemfile.lock /src/app
 
-WORKDIR /src
+RUN bundle install 
 
-COPY Gemfile Gemfile.lock ./
-
-RUN bundle install
+COPY . /src/app
 
 CMD ["rake", "test"]
+
 
 
 
