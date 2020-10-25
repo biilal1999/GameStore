@@ -1,14 +1,14 @@
 FROM ruby:2.7.2-alpine
 
-WORKDIR ./src/app
+WORKDIR ./app
 
-COPY Gemfile /src/app
+COPY Gemfile /app/
 
-COPY Gemfile.lock /src/app
+COPY Gemfile.lock /app/
 
 RUN bundle install 
 
-COPY . /src/app
+COPY . /app/
 
 CMD ["rake", "test"]
 
