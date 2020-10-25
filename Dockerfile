@@ -17,12 +17,12 @@ WORKDIR $PROJECT_DIR
 							
 # Copiamos Gemfile al directorio de trabajo
 
-COPY Gemfile $PROJECT_DIR						
+COPY Gemfile ./						
 
 
 # Copiamos Gemfile.lock al directorio de trabajo
 
-COPY Gemfile.lock $PROJECT_DIR						
+COPY Gemfile.lock ./						
 
 
 # Establecemos directorio de trabajo
@@ -37,9 +37,9 @@ RUN bundle install
 
 # Borramos los ficheros de dependencias
 
-RUN rm $PROJECT_DIR/Gemfile
+RUN rm Gemfile
 
-RUN rm $PROJECT_DIR/Gemfile.lock
+RUN rm Gemfile.lock
 
 
 # Utilizamos Volume para que no tengamos que reconstruir el contenedor cuando cambiemos un fichero del fuente
