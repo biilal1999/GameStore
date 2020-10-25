@@ -70,6 +70,7 @@ Los [*Milestones*](https://github.com/BilalKxK99/GameStore/milestones) con issue
 
 - [Milestone 1](https://github.com/BilalKxK99/GameStore/milestone/1)
 - [Milestone 2](https://github.com/BilalKxK99/GameStore/milestone/2)
+- [Milestone 3](https://github.com/BilalKxK99/GameStore/milestone/3)
 
 
 ## Tareas
