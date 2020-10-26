@@ -12,6 +12,9 @@ LABEL maintainer "Bilal Chekfeh <bilal99@correo.ugr.es>"
 
 ENV PROJECT_DIR=/test
 
+
+# Establecemos directorio de trabajo
+
 WORKDIR $PROJECT_DIR
 
 							
@@ -23,11 +26,6 @@ COPY Gemfile $PROJECT_DIR
 # Copiamos Gemfile.lock al directorio de trabajo
 
 COPY Gemfile.lock $PROJECT_DIR						
-
-
-# Establecemos directorio de trabajo
-
-#WORKDIR $PROJECT_DIR
 
 
 # Instalamos las dependencias incluidas en Gemfile
@@ -42,14 +40,14 @@ RUN rm $PROJECT_DIR/Gemfile
 RUN rm $PROJECT_DIR/Gemfile.lock
 
 
-# Utilizamos Volume para que no tengamos que reconstruir el contenedor cuando cambiemos un fichero del fuente
+# Añadimos usuario sin privilegios de superusuario
 
-# VOLUME /test
+RUN adduser -D usuarionormal
 
 
-# Actualizamos directorio de trabajo
+# Ejecutamos los tests con dicho usuario
 
-#WORKDIR /test							
+User usuarionormal					
 
 
 # Ejecutamos en la terminal Rake con la tarea "test" para que se ejecuten los tests
