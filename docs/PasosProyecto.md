@@ -38,3 +38,9 @@
 - Añadir capturas de pantalla de prueba de ejecución de Rakefile en la carpeta [**img/**](https://github.com/BilalKxK99/GameStore/tree/master/docs/img)
 - Modifichar el archivo [README.md](https://github.com/BilalKxK99/GameStore/blob/master/README.md) para añadir los links correspondientes a este hito
 - Modificar [hito-2.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-2.md) y hacer *Pull Request* con enlace a nuestro proyecto
+
+
+## Hito 3: Creación de un contenedor para pruebas
+
+- Elegir la imagen basa para nuestro contenedor Docker que vamos a usar
+- 
