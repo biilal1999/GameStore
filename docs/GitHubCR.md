@@ -21,7 +21,7 @@ En esta imagen podemos ver:
 
 1. El paquete montado
 
-2. El comando para descargarlo
+2. El comando para descargarlo, el cual es `docker pull ghcr.io/biilal1999/gamestore:latest`
 
 3. El repositorio fuente de GitHub
 
