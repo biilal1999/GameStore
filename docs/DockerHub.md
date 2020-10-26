@@ -16,7 +16,7 @@ La documentación que me ha ayudado a configurar mi repositorio en Docker Hub pa
 
 1. Primero, nos bajaremos el repositorio con el comando `docker pull biilal1999/gamestore` .
 
-2. Luego, desde la carpeta local clonada del repositorio, testearemos el contenedor con la orden **docker run -t -v `pwd`:/test biilal1999/gamestore:latest** .
+2. Luego, desde la carpeta local clonada del repositorio, testearemos el contenedor con la orden que nos proporciona el profesor, [aquí](https://github.com/biilal1999/GameStore/blob/master/docs/img/DockerHubPrueba.png) pueden ver una muestra de la ejecución.
 
 
 ## Pruebas de la configuración de Docker Hub
@@ -30,15 +30,18 @@ La documentación que me ha ayudado a configurar mi repositorio en Docker Hub pa
 ![LinksAccounts](https://github.com/biilal1999/GameStore/blob/master/docs/img/LinkAccounts.png)
 
 
+
 ### Prueba de las construcciones realizadas en Docker Hub a raíz de GitHub
 
 
 ![DockerHubBuilds](https://github.com/biilal1999/GameStore/blob/master/docs/img/DockerHubBuilds.png)
 
 
+
 ### Captura de nuestro apartado de Webhooks en Git Hub
 
 ![Webhook](https://github.com/biilal1999/GameStore/blob/master/docs/img/Webhook.png)
+
 
 
 ### Prueba de descarga y testeo del contenedor en la terminal
