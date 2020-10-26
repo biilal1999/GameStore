@@ -18,3 +18,6 @@ jobs:
       - name: Publish to GitHub Container Registry
         run: docker push ghcr.io/biilal1999/gamestore:latest
 
+      - name: Run tests
+        run: docker run -t -v `pwd`:/test ghcr.io/biilal1999/gamestore:latest
+
