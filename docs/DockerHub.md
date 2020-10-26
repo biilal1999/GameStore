@@ -16,7 +16,7 @@ La documentación que me ha ayudado a configurar mi repositorio en Docker Hub pa
 
 1. Primero, nos bajaremos el repositorio con el comando `docker pull biilal1999/gamestore` .
 
-2. Luego, desde la carpeta local clonada del repositorio, testearemos el contenedor con la orden `docker run -t -v ```pwd```:/test biilal1999/gamestore:latest` .
+2. Luego, desde la carpeta local clonada del repositorio, testearemos el contenedor con la orden `docker run -t -v ` ``pwd`` `:/test biilal1999/gamestore:latest` .
 
 
 ## Pruebas de la configuración de Docker Hub
