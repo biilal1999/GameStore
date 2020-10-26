@@ -47,7 +47,7 @@ RUN adduser -D usuarionormal
 
 # Ejecutamos los tests con dicho usuario
 
-User usuarionormal					
+USER usuarionormal					
 
 
 # Ejecutamos en la terminal Rake con la tarea "test" para que se ejecuten los tests
