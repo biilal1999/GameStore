@@ -21,3 +21,4 @@ jobs:
       - name: Run tests
         run: docker run -t -v `pwd`:/test ghcr.io/biilal1999/gamestore:latest
 
+
