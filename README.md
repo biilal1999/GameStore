@@ -57,7 +57,7 @@ En cuanto a la elección de la imagen base para nuestro contenedor, hemos decidi
 
 + Nuestro [repositorio](https://github.com/users/biilal1999/packages/container/package/gamestore) en **GitHub Container Registry**
 
-+ [Documentación, pasos y pruebas](https://github.com/biilal1999/GameStore/blob/master/docs/GitHubCR.md) de DGitHub Container Registry
++ [Documentación, pasos y pruebas](https://github.com/biilal1999/GameStore/blob/master/docs/GitHubCR.md) de GitHub Container Registry
 
 
 ## Justificación de la herramienta de construcción RAKE
