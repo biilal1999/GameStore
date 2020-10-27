@@ -28,6 +28,7 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 
 ## Rúbricas Docker
 
+
 ### Imágenes base
 
 [Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/ComparativaImagenes.md) pueden ver la comparativa de tamaños y velocidades (usando **build** y **time**) de las imágenes base **ruby:2.6.6-slim** y **ruby:2.7.2-alpine**.
@@ -36,6 +37,13 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 #### Elección de la imagen base
 
 En cuanto a la elección de la imagen base para nuestro contenedor, hemos decidido utilizar **ruby:2.7.2-alpine** , pues como se puede apreciar en la comparativa linkeada anteriormente, tarda 4 décimas menos de segundo en ejecutar y, además, ocupa prácticamente 100 MB menos que la versíón de *slim*. Además, **ruby:2.7.2-alpine**, que deriva de una versión de Alpine Linux, es versión oficial y se utiliza bastante en equipos de desarrollo con *Ruby on Rails*.
+
+
+### Dockerfile
+
++ Fichero [Dockerfile](https://github.com/biilal1999/GameStore/blob/master/Dockerfile)
+
++ [Documentación y explicación](https://github.com/biilal1999/GameStore/blob/master/docs/ExplicacionDockerfile.md) de Dockerfile
 
 
 ## Justificación de la herramienta de construcción RAKE
