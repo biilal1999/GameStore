@@ -3,10 +3,12 @@
 
 ## Documentación
 
-[Aquí](https://www.docker.com/blog/docker-support-for-the-new-github-container-registry/) podemos consultar la documentación que me ha ayudado para subir nuestro contenedor a *GitHub Container Registry*.
+[Aquí](https://docs.github.com/es/free-pro-team@latest/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages) podemos consultar la documentación que me ha ayudado para subir nuestro contenedor a *GitHub Container Registry*, además de información útil sobre *tokens*.
 
 
-## Subida al sistema de contenedores
+## Pasos para la subida al sistema de contenedores
+
+Utilizando las **buenas prácticas** para hacerlo, seguimos los siguientes pasos:
 
 Una vez hacemos **git push** a nuestro repositorio, se ejecuta el fichero [**GitHub Actions**](https://github.com/biilal1999/GameStore/blob/master/.github/workflows/github-docker-actions.yml) y, se sube a *DockerHub Cointainer Registry* nuestro paquete, tal y como se puede ver [aquí](https://github.com/users/biilal1999/packages/container/package/gamestore).
 
