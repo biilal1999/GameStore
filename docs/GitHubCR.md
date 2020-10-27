@@ -10,14 +10,36 @@
 
 Utilizando las **buenas prácticas** para hacerlo, seguimos los siguientes pasos:
 
-Una vez hacemos **git push** a nuestro repositorio, se ejecuta el fichero [**GitHub Actions**](https://github.com/biilal1999/GameStore/blob/master/.github/workflows/github-docker-actions.yml) y, se sube a *DockerHub Cointainer Registry* nuestro paquete, tal y como se puede ver [aquí](https://github.com/users/biilal1999/packages/container/package/gamestore).
+1. Generamos un **token** para nuestra cuenta de GitHub y lo almacenamos en un archivo *TOKEN.txt* localmente en nuestro PC.
 
-Una vez hecho eso, enlazamos el paquete con nuestro repositorio de GitHub [GameStore](https://github.com/biilal1999/GameStore).
+2. Hacemos **login** en *GitHub Container Registry* ayudándonos del *token* que creamos, con el comando `cat ~/TOKEN.txt | docker login https://docker.pkg.github.com -u biilal1999 --password-stdin` 
 
-Además, en *package settings*, establecemos como público el paquete para permitir su posterior descarga.
+3. Construimos una **imagen** para nuestro contenedor ejecutando el comando `docker build -t ghcr.io/biilal1999/gamestore:latest .`
+
+4. Subimos la imagen a nuestro *GitHub Container Registry* utilizando el comando `docker push ghcr.io/biilal1999/gamestore:latest`
+
+    + Una vez finalizado todo esto, podemos ver ya nuestro paquete [aquí](https://github.com/users/biilal1999/packages/container/package/gamestore).
+
+5. Enlazamos el paquete con nuestro repositorio de GitHub [**GameStore**](https://github.com/biilal1999/GameStore).
+
+6. Por último, en **package settings** establecemos como público el paquete para permitir su posterior descarga.
+
 
 
 ## Pruebas
+
+
+### Token generado
+
+Token con permisos de lectura y escritura en repositorios
+
+
+![Token](https://github.com/biilal1999/GameStore/blob/master/docs/img/Token.png)
+
+
+
+
+### Paquete subido
 
 En esta imagen podemos ver:
 
