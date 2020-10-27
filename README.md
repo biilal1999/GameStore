@@ -43,7 +43,14 @@ En cuanto a la elección de la imagen base para nuestro contenedor, hemos decidi
 
 + Fichero [Dockerfile](https://github.com/biilal1999/GameStore/blob/master/Dockerfile)
 
-+ [Documentación y explicación](https://github.com/biilal1999/GameStore/blob/master/docs/ExplicacionDockerfile.md) de Dockerfile
++ [Documentación y explicación](https://github.com/biilal1999/GameStore/blob/master/docs/ExplicacionDockerfile.md) de **Dockerfile**
+
+
+### Docker Hub
+
++ Nuestro [repositorio](https://hub.docker.com/r/biilal1999/gamestore) en **Docker Hub**
+
++ [Documentación, pasos y pruebas](https://github.com/biilal1999/GameStore/blob/master/docs/DockerHub.md) de Docker Hub
 
 
 ## Justificación de la herramienta de construcción RAKE
