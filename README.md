@@ -26,6 +26,18 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 [iv.yaml](https://github.com/BilalKxK99/GameStore/blob/master/iv.yaml)
 
 
+## Rúbricas Docker
+
+### Imágenes base
+
+[Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/ComparativaImagenes.md) pueden ver la comparativa de tamaños y velocidades (usando **build** y **time**) de las imágenes base **ruby:2.6.6-slim** y **ruby:2.7.2-alpine**.
+
+
+#### Elección de la imagen base
+
+En cuanto a la elección de la imagen base para nuestro contenedor, hemos decidido utilizar **ruby:2.7.2-alpine** , pues como se puede apreciar en la comparativa linkeada anteriormente, tarda 4 décimas menos de segundo en ejecutar y, además, ocupa prácticamente 100 MB menos que la versíón de *slim*. Además, **ruby:2.7.2-alpine**, que deriva de una versión de Alpine Linux, es versión oficial y se utiliza bastante en equipos de desarrollo con *Ruby on Rails*.
+
+
 ## Justificación de la herramienta de construcción RAKE
 
 [Aquí](https://github.com/BilalKxK99/GameStore/blob/master/docs/JustifiacionHerramientaConstruccion.md) pueden consultar la justificación de la configuración de la herramienta de construcción Rake.
