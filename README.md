@@ -53,6 +53,13 @@ En cuanto a la elección de la imagen base para nuestro contenedor, hemos decidi
 + [Documentación, pasos y pruebas](https://github.com/biilal1999/GameStore/blob/master/docs/DockerHub.md) de Docker Hub
 
 
+### GitHub Container Registry
+
++ Nuestro [repositorio](https://github.com/users/biilal1999/packages/container/package/gamestore) en **GitHub Container Registry**
+
++ [Documentación, pasos y pruebas](https://github.com/biilal1999/GameStore/blob/master/docs/GitHubCR.md) de DGitHub Container Registry
+
+
 ## Justificación de la herramienta de construcción RAKE
 
 [Aquí](https://github.com/BilalKxK99/GameStore/blob/master/docs/JustifiacionHerramientaConstruccion.md) pueden consultar la justificación de la configuración de la herramienta de construcción Rake.
