@@ -43,7 +43,7 @@
 ## Hito 3: Creación de un contenedor para pruebas
 
 - Construir fichero [Dockerfile](https://github.com/biilal1999/GameStore/blob/master/docs/Dockerfile)
-- Crear [repositorio](https://hub.docker.com/r/biilal1999/gamestore) en **Docker Hub** enlazado con el de GitHub
+- Crear [repositorio](https://hub.docker.com/r/biilal1999/gamestore) en **Docker Hub** enlazado con el de *GitHub*
 - Crear [paquete](https://github.com/users/biilal1999/packages/container/package/gamestore) en **GitHub Container Registry** enlazado con el de GitHub
 - Añadir a la carpeta [**docs/**](https://github.com/biilal1999/GameStore/blob/master/docs)
     - [Archivo](https://github.com/biilal1999/GameStore/blob/master/docs/ComparativaImagenes.md) comparando imágenes base para nuestro contenedor
