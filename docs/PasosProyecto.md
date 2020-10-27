@@ -42,5 +42,15 @@
 
 ## Hito 3: Creación de un contenedor para pruebas
 
-- Elegir la imagen basa para nuestro contenedor Docker que vamos a usar
-- 
+- Construir fichero [Dockerfile](https://github.com/biilal1999/GameStore/blob/master/docs/Dockerfile)
+- Crear [repositorio](https://hub.docker.com/r/biilal1999/gamestore) en **Docker Hub** enlazado con el de GitHub
+- Crear [paquete](https://github.com/users/biilal1999/packages/container/package/gamestore) en **GitHub Container Registry** enlazado con el de GitHub
+- Añadir a la carpeta [**docs/**](https://github.com/biilal1999/GameStore/blob/master/docs)
+    - [Archivo](https://github.com/biilal1999/GameStore/blob/master/docs/ComparativaImagenes.md) comparando imágenes base para nuestro contenedor
+    - [Archivo](https://github.com/biilal1999/GameStore/blob/master/docs/ExplicacionDockerfile.md) explicando cómo hemos construido **Dockerfile**
+    - [Archivo](https://github.com/biilal1999/GameStore/blob/master/docs/DockerHub.md) explicando cómo hemos usado *Docker Hub*
+    - [Archivo](https://github.com/biilal1999/GameStore/blob/master/docs/GitHubCR.md) explicando cómo hemos usado *GitHub Container Registry*
+- Añadir capturas de pantalla de ejecución utilizando **docker run** en la carpeta [**img/**](https://github.com/biilal1999/GameStore/tree/master/docs/img)
+- Redactar en el archivo [README.md](https://github.com/biilal1999/GameStore/blob/master/README.md) la **justificación de la elección de nuestra imagen base**
+- Modifichar el archivo [README.md](https://github.com/biilal1999/GameStore/blob/master/README.md) para añadir los links correspondientes a este hito
+- Modificar [hito-3.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-3.md) y hacer *Pull Request* con enlace a nuestro proyecto
