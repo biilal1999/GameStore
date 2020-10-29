@@ -5,7 +5,7 @@ FROM ruby:2.7.2-alpine
 
 # Metadatos de información del encargado de mantenimiento
 
-LABEL maintainer "Bilal Chekfeh <bilal99@correo.ugr.es>"           
+LABEL maintainer "Bilal Chekfeh <bilal99@correo.ugr.es>"        
 
 
 # Creamos variable de entorno para el directorio de trabajo para ejecutar los tests
@@ -21,6 +21,11 @@ ENV HOME_DIR=/home/usuarionormal/
 # Añadimos usuario sin privilegios de superusuario
 
 RUN adduser -D usuarionormal
+
+
+# Damos privilegios de usuario a nuestro GEM_HOME , que es /usr/local/bundle  
+
+RUN chown usuarionormal $GEM_HOME && chmod 751 $GEM_HOME
 
 
 # Cambios a dicho usuario
