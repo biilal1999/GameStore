@@ -78,37 +78,11 @@ Además, hemos testeado en [tienda_espec_basicos.rb](https://github.com/biilal19
 Por último, hemos añadido **manejo de excepciones** en el *código fuente* y en loes *tests* tanto a estos métodos como a los anteriores, además de mejorar la organización del código.
 
 
-## Justificación de la herramienta de construcción RAKE
-
-[Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/JustifiacionHerramientaConstruccion.md) pueden consultar la justificación de la configuración de la herramienta de construcción Rake.
-
-
-## Dependencias
-
-+ Fichero de dependencias [Gemfile](https://github.com/biilal1999/GameStore/blob/master/Gemfile)
-+ Fichero de control de versiones [Gemfile.lock](https://github.com/biilal1999/GameStore/blob/master/Gemfile.lock)
-
-
-### Gestor de dependencias
-
-**Bundler** es nuestro gestor de dependencias. Puede consultar [aquí](https://github.com/biilal1999/GameStore/blob/master/docs/Dependencias.md) la justificación de su uso y su documentación, además de las explicaciones de **spec/**, **Gemfile** y **Gemfile.lock**.
-
-
 ## Fichero de gestor de tareas
 
 + Automatizador de tareas [Rakefile](https://github.com/biilal1999/GameStore/blob/master/Rakefile)
 
 Además, pueden consultar la utilidad, comandos y pruebas de Rakefile [aquí](https://github.com/biilal1999/GameStore/blob/master/docs/GestorTareas.md)
-
-
-## Herramientas para el desarrollo
-
-[Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/herramientas.md) podrán consultar la razón por la que utilizamos el lenguaje *Ruby*, además de otras herramientas como el gestor de versiones o el sistema de log.
-
-
-## Marco de test y biblioteca de aserciones
-
-Hemos usado **RSpec** como marco para tests y como biblioteca para aserciones (ya incluida). Puede ver [aquí](https://github.com/biilal1999/GameStore/blob/master/docs/ProgramaTesting.md) la explicación.
 
 
 ## Pasos para la realización del proyecto

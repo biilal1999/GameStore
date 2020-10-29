@@ -11,3 +11,8 @@ Para optimizar un poco nuestra imagen, hemos hecho lo siguiente:
 + Eliminamos los ficheros de dependencias (**Gemfile** y **Gemfile.lock**) una vez hemos instalado las gemas
 
 + No copiamos a los directorios de trabajo los archivos que no vamos a necesitar
+
+
+## Comentarios adicionales
+
+Se han valorado otras opciones como utilizar **.dockerignore** pero no ha resultado rentable, ya que de primeras no hemos copiado archivos innecesarios al directorio de trabajo.
