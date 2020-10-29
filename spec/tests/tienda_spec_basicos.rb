@@ -9,14 +9,14 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 
 	describe '#videojuegos' do									# Testear nombre del videojuego de instancia del array de instancias de la clase 'Videojuego'
 		it 'videojuegos disponibles' do
-			expect(t.obtenerVideojuegos()).to eq('| GTA |')
+			expect(t.obtenerVideojuegos()).to eq(["GTA"])
 		end
 	end
 
 
 	describe '#ciudades' do										# Testear ciudad con sede del array del ENUM 'Ciudades'
 		it 'sedes abiertas' do
-			expect(t.obtenerSedes()).to eq(:)
+			expect(t.obtenerSedes()).to eq([:Granada, :Barcelona])
 		end
 	end
 
