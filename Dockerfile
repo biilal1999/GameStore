@@ -67,6 +67,6 @@ WORKDIR $PROJECT_DIR
 
 # Ejecutamos en la terminal Rake con la tarea "test" para que se ejecuten los tests
 
-CMD ["rake", "test"]						
+CMD ["rake", "test"]
 
-
+												
