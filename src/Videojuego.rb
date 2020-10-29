@@ -27,7 +27,7 @@ class Videojuego
 		    dias = dias_restantes.to_i
 
                     if dias < 0
-                       raise ArgumentError.new("El juego ya salió anteriormente")
+                       raise StandardError.new("El juego ya salió anteriormente")
 		    end
 
 		    return dias
