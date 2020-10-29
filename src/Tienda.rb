@@ -4,29 +4,27 @@ require_relative 'Ciudades.rb'
 class Tienda
 		
 	attr_reader:videojuegos
-	attr_reader:ciudades
+	attr_reader:ciudad
 		
 
 	def initialize (ciu)
-		@ciudades = Array.new
-		@videojuegos = Array.new				# Array de objetos de la clase Videojuego
-		@ciudades.push(ciu)					# Array de valores de la clase ENUM Ciudades
+		@videojuegos = Array.new             			# Array de Array objetos de la clase Videojuego
+		@ciudad = ciu    					# Array de valores de la clase ENUM Ciudades
 			
 	end
 
 	
 	def addVideojuego (videojuego)							# Añade objeto videojuego al array
-		@videojuegos.push(videojuego)
-	end
-
-	
-	def addCiudad (ciudad)								# Añade sede al array
-		@ciudades.push(ciudad)
-	end
-
-	
-	def obtenerSedes()									# Devuelve una cadena con todas las sedes
-		return @ciudades
+		ind = indiceVideojuego(videojuego)
+		
+		if (ind == -1)							
+			fila = @videojuegos.size		
+			@videojuegos[fila] = Array.new
+			@videojuegos[fila].push(videojuego)
+			@videojuegos[fila].push(0)
+		else
+			@videojuegos[ind][1] = @videojuegos[ind][1] + 1
+		end
 	end
 
 
@@ -34,12 +32,27 @@ class Tienda
 		productos = Array.new
 
 		for vj in @videojuegos
-			productos.push(vj.obtenerNombre())
+			productos.push(vj[0].obtenerNombre())
 		end
 
 		return productos
 	end
 
+	
+	def indiceVideojuego(vid)									# Método para saber si en esta tienda ya tenemos ese videojuego
+		numFilas = @videojuegos.size
+		indice = -1
+
+		if numFilas > 0
+			for i in 0..numFilas
+				if (@videojuegos[i][0].obtenerNombre() == vid.obtenerNombre())
+					indice = i
+				end
+			end
+		end
+
+		return indice
+	end
 
 end
 

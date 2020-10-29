@@ -5,7 +5,6 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 	t = Tienda.new(Ciudades::GRANADA)
 	vi = Videojuego.new("GTA", Date.today, 0.3, 40)
 	t.addVideojuego(vi)
-	t.addCiudad(Ciudades::BARCELONA)
 
 	describe '#videojuegos' do									# Testear nombre del videojuego de instancia del array de instancias de la clase 'Videojuego'
 		it 'videojuegos disponibles' do
@@ -15,8 +14,8 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 
 
 	describe '#ciudades' do										# Testear ciudad con sede del array del ENUM 'Ciudades'
-		it 'sedes abiertas' do
-			expect(t.obtenerSedes()).to eq([:Granada, :Barcelona])
+		it 'sede de la tienda' do
+			expect(t.ciudad).to eq(:Granada)
 		end
 	end
 
