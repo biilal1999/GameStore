@@ -60,6 +60,19 @@ En cuanto a la elección de la imagen base para nuestro contenedor, hemos decidi
 + [Documentación, pasos y pruebas](https://github.com/biilal1999/GameStore/blob/master/docs/GitHubCR.md) de GitHub Container Registry
 
 
+### Avance de código
+
+Como avance de código hemos implementado métodos para [HU04](https://github.com/biilal1999/GameStore/issues/45) en [Tienda.rb](https://github.com/biilal1999/GameStore/tree/master/src/Tienda.rb) en concreto:
+
+> indiceVideojuego(vid)
+
+> masMuestras()
+
+Además, hemos testeado en [tienda_espec_basicos.rb](https://github.com/biilal1999/GameStore/tree/master/spec/tests/tienda_spec_basicos.rb) métodos correspondientes a la historia de usuario.
+
+Por último, hemos añadido **manejo de excepciones** en el *código fuente* y en loes *tests* tanto a estos métodos como a los anteriores, además de mejorar la organización del código.
+
+
 ## Justificación de la herramienta de construcción RAKE
 
 [Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/JustifiacionHerramientaConstruccion.md) pueden consultar la justificación de la configuración de la herramienta de construcción Rake.
