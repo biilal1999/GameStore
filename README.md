@@ -31,12 +31,12 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 
 ### Imágenes base
 
-[Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/ComparativaImagenes.md) pueden ver la comparativa de tamaños y velocidades (usando **build** y **time**) de las imágenes base **ruby:2.6.6-slim** y **ruby:2.7.2-alpine**.
+[Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/ComparativaImagenes.md) pueden ver la comparativa de tamaños y velocidades (usando **build** y **time**) de las imágenes base **ruby:2.6.6-slim**, **ruby:2.7.2-alpine**, **ruby:2.7.2-buster** y **ruby:3.0.0-preview1-alpine**.
 
 
 #### Elección de la imagen base
 
-En cuanto a la elección de la imagen base para nuestro contenedor, hemos decidido utilizar **ruby:2.7.2-alpine** , pues como se puede apreciar en la comparativa linkeada anteriormente, tarda 4 décimas menos de segundo en ejecutar y, además, ocupa prácticamente 100 MB menos que la versíón de *slim*. Además, **ruby:2.7.2-alpine**, que deriva de una versión de Alpine Linux, es versión oficial y se utiliza bastante en equipos de desarrollo con *Ruby on Rails*.
+[Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/ComparativaImagenes.md#decisi%C3%B3n-final-y-justificaci%C3%B3n-de-la-misma) pueden consultar la decisión final justificada de la elección de nuestra **imagen base**.
 
 
 ### Dockerfile
