@@ -69,4 +69,3 @@ WORKDIR $PROJECT_DIR
 
 CMD ["rake", "test"]						
 
-
