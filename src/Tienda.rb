@@ -8,9 +8,9 @@ class Tienda
 		
 
 	def initialize (ciu)
-		@ciudades = []
-		@videojuegos = []				# Array de objetos de la clase Videojuego
-		@ciudades.push(ciu)				# Array de valores de la clase ENUM Ciudades
+		@ciudades = Array.new
+		@videojuegos = Array.new				# Array de objetos de la clase Videojuego
+		@ciudades.push(ciu)					# Array de valores de la clase ENUM Ciudades
 			
 	end
 
@@ -26,21 +26,15 @@ class Tienda
 
 	
 	def obtenerSedes()									# Devuelve una cadena con todas las sedes
-		ubicaciones = "|"
-
-		for ubi in @ciudades
-			ubicaciones = ubicaciones + " " + ubi.to_s + " |"
-		end
-
-		return ubicaciones
+		return @ciudades
 	end
 
 
 	def obtenerVideojuegos()								# Devuelve una cadena con los nombres de todos los videojuegos
-		productos = "|"
+		productos = Array.new
 
 		for vj in @videojuegos
-			productos = productos + " " + vj.obtenerNombre() + " |"
+			productos.push(vj.obtenerNombre())
 		end
 
 		return productos
