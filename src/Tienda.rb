@@ -44,7 +44,7 @@ class Tienda
 		indice = -1
 
 		if numFilas > 0
-			for i in 0..numFilas
+			for i in 0..(numFilas - 1)
 				if (@videojuegos[i][0].obtenerNombre() == vid.obtenerNombre())
 					indice = i
 				end
@@ -54,5 +54,25 @@ class Tienda
 		return indice
 	end
 
+
+	def masMuestras()										# Corresponde a la HU04
+		if @videojuegos.size == 0
+			raise StandardError.new("No hay videojuegos actualmente en la tienda")
+		
+		else
+			res = @videojuegos[0][0].obtenerNombre()
+			num = @videojuegos[0][1]
+			
+			for i in 0..(@videojuegos.size - 1)
+				if @videojuegos[i][1] > num
+					num = @videojuegos[i][1]
+					res = @videojuegos[i][0].obtenerNombre()
+				end
+			end
+		end
+
+		return res
+	end
+			
 end
 
