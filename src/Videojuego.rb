@@ -45,19 +45,17 @@ class Videojuego
 		
 		def consultarMediaEdad() 	                                          # Corresponde a la HU03
 		    suma = 0
-		     
-		    begin
-		       ventas = @edadesVentas.length
-		       raise 'No hay ventas de momento' if ventas == 0
+		    ventas = @edadesVentas.length
 
-		       for edad in @edadesVentas
-			   suma = suma + edad
-		       end
+                    if ventas == 0
+                       raise StandardError.new("No hay ventas de momento para el videojuego")
+		    end
+
+		    for edad in @edadesVentas
+                       suma = suma + edad
+		    end
 			    
-		       media = ((suma * 1.0) / ventas)
-
-		    rescue => media
-	 	    end
+		    media = ((suma * 1.0) / ventas)
 		    
 		    return media
 		end
