@@ -39,6 +39,11 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 [Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/ComparativaImagenes.md#decisi%C3%B3n-final-y-justificaci%C3%B3n-de-la-misma) pueden consultar la decisión final justificada de la elección de nuestra **imagen base**.
 
 
+#### Optimización de la imagen base
+
+[Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/BuenasPracticasOptimizacion.md) puede consultar cómo hemos intentado optimizar nuestra imagen.
+
+
 ### Dockerfile
 
 + Fichero [Dockerfile](https://github.com/biilal1999/GameStore/blob/master/Dockerfile)
