@@ -13,7 +13,7 @@ LABEL maintainer "Bilal Chekfeh <bilal99@correo.ugr.es>"
 ENV PROJECT_DIR=/test
 
 
-# Creamos variable de entorno para el directorio de trabajo
+# Creamos variable de entorno para el directorio home del usuario sin privilegios
 
 ENV HOME_DIR=/home/usuarionormal/
 
