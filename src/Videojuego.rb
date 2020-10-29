@@ -24,11 +24,10 @@ class Videojuego
 		    now = Date.today
 		    dias_restantes = @fechaLanzamiento - now
 
-		    begin
-		       dias = dias_restantes.to_i
-		       raise 'Ya salió el juego' if dias < 0
+		    dias = dias_restantes.to_i
 
-		    rescue => dias
+                    if dias < 0
+                       raise ArgumentError.new("El juego ya salió anteriormente")
 		    end
 
 		    return dias
