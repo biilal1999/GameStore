@@ -38,6 +38,18 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 		end
 	end
 
+	describe '#indiceVideojuego' do
+		vj = Videojuego.new("COD", Date.today, 0.5, 60)
+		
+		it 'índice para el FIFA' do
+			expect(t.indiceVideojuego(vi)).to eq(1)						# Testear método auxiliar para HU04 con resultado correcto
+		end
+
+		it 'El COD no está en la lista' do
+			expect(t.indiceVideojuego(vj)).to eq(-1)					# Testear método auxiliar para HU04 con resultado incorrecto
+		end
+	end
+
 end 
 
 
