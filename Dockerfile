@@ -36,12 +36,11 @@ USER usuarionormal
 # Copiamos Gemfile a la carpeta /home del usuario sin privilegios
 
 COPY Gemfile $HOME_DIR
-COPY Gemfile.lock $HOME_DIR						
 
 
 # Copiamos Gemfile.lock a la carpeta /home del usuario sin privilegios
 
-#COPY Gemfile.lock $HOME_DIR	
+COPY Gemfile.lock $HOME_DIR	
 
 
 # Establecemos directorio de trabajo carpeta /home del usuario sin privilegios creado

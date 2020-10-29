@@ -1,4 +1,4 @@
-# Explicación sobre el fichero Dockerfile
+# Dockerfile usando buenas prácticas
 
 ## Documentación
 
@@ -7,6 +7,19 @@
 Para consultar la configuración de la imagen base, he consultado [aquí](https://hub.docker.com/layers/ruby/library/ruby/2.7.2-alpine/images/sha256-3507bbe518dc1b808d5f53bd7c0bc485a8c8adb110e5308be298cd224824e9cf?context=explore).
 
 Y para mirar cuál es nuestro $GEM_HOME , utilizamos en el *Dockerfile* **RUN ruby -e "-p ENV"**
+
+
+## Buenas prácticas en nuestro Dockerfile
+
++ Utilizar una imagen ligera (**alpine**, en nuestro caso) para optimizar en tamaño y que podamos tener control sobre los paquetes necesarios que utilizamos.
+
++ Definir variables con **ENV** para directorios de trabajo
+
++ Ejecutar tanto las instalaciones de las *dependencias* como el *task runner* como usuario, y **no como superusuario**.
+
++ Borrar archivos de dependencias cuando ya no los necesitamos
+
++ Darle propieda de usuario a nuestra carpeta **GEM_HOME**, donde por defecto se instalan las gemas.
 
 
 ## Justificación de la construcción de Dockerfile
