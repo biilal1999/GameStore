@@ -8,36 +8,14 @@ FROM ruby:2.7.2-alpine
 LABEL maintainer "Bilal Chekfeh <bilal99@correo.ugr.es>"           
 
 
-# Creamos variable de entorno para el directorio de trabajo
+# Creamos variable de entorno para el directorio de trabajo para ejecutar los tests
 
 ENV PROJECT_DIR=/test
 
 
-# Establecemos directorio de trabajo
+# Creamos variable de entorno para el directorio de trabajo
 
-WORKDIR $PROJECT_DIR
-
-							
-# Copiamos Gemfile al directorio de trabajo
-
-COPY Gemfile $PROJECT_DIR						
-
-
-# Copiamos Gemfile.lock al directorio de trabajo
-
-COPY Gemfile.lock $PROJECT_DIR						
-
-
-# Instalamos las dependencias incluidas en Gemfile
-
-RUN bundle install 						
-
-
-# Borramos los ficheros de dependencias
-
-RUN rm $PROJECT_DIR/Gemfile
-
-RUN rm $PROJECT_DIR/Gemfile.lock
+ENV HOME_DIR=/home/usuarionormal/
 
 
 # Añadimos usuario sin privilegios de superusuario
@@ -45,9 +23,41 @@ RUN rm $PROJECT_DIR/Gemfile.lock
 RUN adduser -D usuarionormal
 
 
-# Ejecutamos los tests con dicho usuario
+# Cambios a dicho usuario
 
-USER usuarionormal					
+USER usuarionormal
+
+
+# Copiamos Gemfile a la carpeta /home del usuario sin privilegios
+
+COPY Gemfile $HOME_DIR						
+
+
+# Copiamos Gemfile.lock a la carpeta /home del usuario sin privilegios
+
+COPY Gemfile.lock $HOME_DIR	
+
+
+# Establecemos directorio de trabajo carpeta /home del usuario sin privilegios creado
+
+WORKDIR $HOME_DIR
+
+
+# Instalamos las dependencias incluidas en Gemfile
+
+RUN bundle install 				
+						
+
+# Borramos los ficheros de dependencias
+
+RUN rm ${HOME_DIR}Gemfile
+
+RUN rm ${HOME_DIR}Gemfile.lock					
+
+
+# Cambiamos a directorio de trabajo para ejecutar los tests con el task runner
+
+WORKDIR $PROJECT_DIR	
 
 
 # Ejecutamos en la terminal Rake con la tarea "test" para que se ejecuten los tests
