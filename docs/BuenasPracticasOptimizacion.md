@@ -9,3 +9,5 @@ Para optimizar un poco nuestra imagen, hemos hecho lo siguiente:
 + Concatenamos instrucciones **RUN** y **COPY** en una misma para reducir las capas, utilizando **&&**
 
 + Eliminamos los ficheros de dependencias (**Gemfile** y **Gemfile.lock**) una vez hemos instalado las gemas
+
++ No copiamos a los directorios de trabajo los archivos que no vamos a necesitar
