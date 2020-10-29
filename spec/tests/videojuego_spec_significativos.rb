@@ -32,7 +32,7 @@ describe Videojuego do													# Testear clase Videojuego
 		end	
 
 		it 'excepción de media de edad' do
-			expect(vidjuego.consultarMediaEdad()).not_to be_a_kind_of(Float)					# Testear excepción
+			expect{ vidjuego.consultarMediaEdad() }.to raise_error(StandardError)					# Testear excepción
 		end	
 
 	end
