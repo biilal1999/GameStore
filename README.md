@@ -139,6 +139,7 @@ Además, tambíen pueden ver los issues que son historias de usuario:
 - [HU03](https://github.com/biilal1999/GameStore/issues/14)
 - [HU04](https://github.com/biilal1999/GameStore/issues/45)
 
+
 ## Curso de desarrollo
 
 Asignatura [Infraestructura virtual](https://github.com/JJ/IV-20-21) de 4º curso del grado de Ingeniería Informática en la especialidad de Tecnologías de la Información.
