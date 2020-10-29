@@ -7,7 +7,7 @@ describe Videojuego do													# Testear clase Videojuego
 
 	describe '#consultarDiasRestantes' do										# Testear método consultarDiasRestantes()  HU01
 		it 'excepción de dias restantes' do
-			expect(vidjuego.consultarDiasRestantes()).not_to be_a_kind_of(Numeric)					# Testear excepción
+			expect{ vidjuego.consultarDiasRestantes() }.to raise_error(StandardError)					# Testear excepción
 		end
 		
 		it 'dias restantes' do
