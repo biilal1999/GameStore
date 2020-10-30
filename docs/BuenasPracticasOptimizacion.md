@@ -19,6 +19,8 @@ Se han valorado otras opciones como utilizar **.dockerignore** pero no ha result
 
 Además, se ha intentado utilizar la herramienta **squash** basándonos en alguna web como [esta](https://www.back2code.me/2020/02/squashing-docker-images/).
 
+**Docker squash** es una herramienta cuyo objetivo es reducir el número de capas, conservando las instrucciones del [*Dockerfile*](https://github.com/biilal1999/GameStore/blob/master/Dockerfile), haciendo más pequeña la imagen.
+
 Pero como comprobamos en las siguientes dos capturas de pantalla, donde primero construimos la imagen de forma normal y corriente pero en la segunda utilizamos *squash*, el tamañp de la imagen no se reduce.
 
 
