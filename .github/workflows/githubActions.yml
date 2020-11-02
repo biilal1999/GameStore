@@ -10,10 +10,10 @@ jobs:
       - name: Set up Ruby version
         ruby-version: 2.7.2
 
-      - name: Build the image 
+        name: Build the image 
         run: docker build -t gamedocker .
 
-      - name: Run tests
+        name: Run tests
         run: docker run -t -v `pwd`:/test gamedocker:latest
 
 
