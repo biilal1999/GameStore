@@ -10,4 +10,4 @@ build:
 
   post_ci:
     - docker build -t gameship .
-    - docker run -t -v `pwd`:/test gameship:latest
+    - docker run -t -v `pwd`:/test gameship
