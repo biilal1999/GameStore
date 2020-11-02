@@ -29,21 +29,6 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 ## Docker
 
 
-### Imágenes base
-
-[Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/ComparativaImagenes.md) pueden ver la comparativa de tamaños y velocidades (usando **build** y **time**) de las imágenes base **ruby:2.6.6-slim**, **ruby:2.7.2-alpine**, **ruby:2.7.2-buster** y **ruby:3.0.0-preview1-alpine**.
-
-
-#### Elección de la imagen base
-
-[Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/ComparativaImagenes.md#decisi%C3%B3n-final-y-justificaci%C3%B3n-de-la-misma) pueden consultar la decisión final justificada de la elección de nuestra **imagen base**.
-
-
-#### Optimización de la imagen base
-
-[Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/BuenasPracticasOptimizacion.md) puede consultar cómo hemos intentado optimizar nuestra imagen.
-
-
 ### Dockerfile
 
 + Fichero [Dockerfile](https://github.com/biilal1999/GameStore/blob/master/Dockerfile)
