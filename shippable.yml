@@ -7,7 +7,3 @@ build:
   ci:
     - bundle install
     - rake test
-
-  post_ci:
-    - docker build -t gameship .
-    - docker run -t -v `pwd`:/test gameship
