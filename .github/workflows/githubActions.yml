@@ -7,9 +7,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build the image 
-        run: docker build -t GameDocker .
+        run: docker build -t gamedocker .
 
       - name: Run tests
-        run: docker run -t -v `pwd`:/test GameDocker:latest
+        run: docker run -t -v `pwd`:/test gamedocker:latest
 
 
