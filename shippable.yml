@@ -1,9 +1,18 @@
 language: ruby
 
+cache: bundler
+
+rvm:
+  - 2.7.2
+  - 2.7.1
+  - 2.7.0
+  - 2.6.0
+  - 2.5.0
+  - 2.4.0
 
 
 build:
   ci:
-    - checkout
-    - docker build -t gametrav .
-    - docker run -t -v `pwd`:/test gametrav:latest
+    - gem install bundler
+    - bundle install
+    - rake test
