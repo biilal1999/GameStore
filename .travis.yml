@@ -5,22 +5,11 @@ rvm:
   - 2.7.2
 
 
-cache: 
-  - bundler
-
-
 services:
   - docker
 
 
 before_install:
-  - bundle install
-
-
-before_script:
   - docker build -t gametrav .
   - docker run -t -v `pwd`:/test gametrav:latest
 
-
-script:
-  - rake test
