@@ -1,13 +1,19 @@
-language: minimal
+language: ruby
 
 
-services:
-  - docker
+rvm:
+  - 2.7.2
+  - 2.7.1
+  - 2.7.0
+  - 2.6.0
+  - 2.5.0
+  - 2.4.0
 
 
 before_install:
-  - docker build -t gametrav .
+  - gem install bundler
+  - bundle install
 
 
 script:
-  - docker run -t -v `pwd`:/test gametrav:latest
+  - rake test
