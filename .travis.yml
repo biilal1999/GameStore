@@ -1,8 +1,4 @@
-language: ruby
-
-
-rvm:
-  - 2.7.2
+language: minimal
 
 
 services:
