@@ -7,11 +7,6 @@ jobs:
       steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Ruby version
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: 2.7.2
-
       - name: Build the image 
         run: docker build -t gamedocker .
 
