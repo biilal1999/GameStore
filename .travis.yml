@@ -11,5 +11,7 @@ services:
 
 before_install:
   - docker build -t gametrav .
-  - docker run -t -v `pwd`:/test gametrav:latest
 
+
+script:
+  - docker run -t -v `pwd`:/test gametrav:latest
