@@ -1,5 +1,5 @@
 name: githubActions
-on: [push]
+on: [run]
 jobs: 
    build:
       runs-on: ubuntu-latest
@@ -17,11 +17,5 @@ jobs:
 
       - name: Run tests
         run: docker run -t -v `pwd`:/test gamedocker:latest
-
-      - name: Install deps
-        run: bundle install
-
-      - name: Run test
-        run: rake test
 
 
