@@ -48,13 +48,13 @@ class Cliente
 	
 	def obtenerMiEdad()										# Obtiene la edad del cliente a partir de su fecha de nacimiento
 		now = Date.today
-		year = now.year - @fechaNacimiento.year
+		age = now.year - @fechaNacimiento.year
 
-		if (date + year.year) > now
-			year = year - 1
+		if now < @fechaNacimiento + age
+			age -=1
 		end
 
-		return year
+		return age
 	end
 
 	

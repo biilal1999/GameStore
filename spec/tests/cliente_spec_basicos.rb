@@ -23,4 +23,26 @@ describe Cliente do
 			expect{ Cliente.new("Bilal", Date.new(1999, 8, 15), "error") }.to raise_error(ArgumentError)
 		end
 	end
+
+	
+	describe '#cambiarTiendaFavorita' do
+		t = Tienda.new(Ciudades::BARCELONA)
+		error = "error"
+
+		it 'cambio de tienda con expeción' do
+			expect{ cli.cambiarTiendaFavorita(error) }.to raise_error(ArgumentError)
+		end
+
+		it 'cambio de tienda correcto' do
+			cli.cambiarTiendaFavorita(t)
+			expect(cli.tiendaFavorita().ciudad).to eq(t.ciudad)
+		end
+	end
+
+	
+	describe 'obtenerMiEdad' do
+		it 'edad del cliente' do
+			expect(cli.obtenerMiEdad()).to eq(20)
+		end
+	end
 end
