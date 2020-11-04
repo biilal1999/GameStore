@@ -12,11 +12,13 @@ Para usar **Travis** como sistema de integración continua, hemos consultado var
 + [Aquí](https://docs.travis-ci.com/user/languages/minimal-and-generic/#minimal) tienen la documentación nos explica el lenguaje **minimal** que luego explicaremos el porqué lo usamos en nuestro fichero de configuración.
 
 
+
 ## Utilidad
 
 **Travis CI**, como sistema de integración continua, permite conectarte de forma muy sencilla con tu repositorio de *GitHub* y actualizarlo por cada *push* al mismo. También Travis soporta múltiples versiones de múltiples lennguajes como *Node*, *Ruby*, *Python*, etc., además de la construcción de máquinas virtuales donde puedes hacer correr diversos servicios como *MySQL* o *Docker*.
 
 Además, hay que tener en cuenta que **Travis CI** es capaz de ejecutar en paralelo varias construcciones dentro de un mismo *job* (esto es, por ejemplo, cuando definimos un lenguaje con más de una versión), lo cual agiliza bastante el proceso. Esta es una ventaja con la que, por ejemplo, **Shippable** no cuenta.
+
 
 
 ## Construcción de .travis.yml
@@ -39,4 +41,40 @@ Antes de detallar los pasos de la construcción del fichero [.travis.yml](https:
 
 > docker run -t -v `pwd`:/test gametrav:latest
 
-  
+
+
+## Pruebas del funcionamiento de Travis
+
+
+1. Vemos como tenemos *linkeado* Travis con nuestra cuenta de *GitHub*
+
+
+![Link](https://github.com/biilal1999/GameStore/blob/master/docs/img/TravisLogin.png)
+
+
+
+2. Sincronizamos nuestro repositorio [GameStore](https://github.com/biilal1999/GameStore)
+
+
+![Repo](https://github.com/biilal1999/GameStore/blob/master/docs/img/TravisRepo.png)
+
+
+
+3. Está corriendo *Travis* con nuestro *push*
+
+
+![Push](https://github.com/biilal1999/GameStore/blob/master/docs/img/TravisCorriendo.png)
+
+
+
+4. Resultado del **build** en Travis
+
+
+![Build](https://github.com/biilal1999/GameStore/blob/master/docs/img/TravisResultado.png)
+
+
+
+## Enlace de prueba
+
+
+[Aquí](https://travis-ci.com/github/biilal1999/GameStore/jobs/428135805) podemos ver un **job** de Travis con nuestro repositorio, utilizando el mismo fichero **.travis.yml**
