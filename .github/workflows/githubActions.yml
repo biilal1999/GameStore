@@ -22,4 +22,3 @@ jobs:
       - name: Publish to GitHub Container Registry
         run: docker push ghcr.io/biilal1999/gamestore:latest
 
-
