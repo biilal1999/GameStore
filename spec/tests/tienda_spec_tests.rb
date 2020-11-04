@@ -51,11 +51,29 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 		end
 	end
 
+	taux = Tienda.new(Ciudades::VIGO)
+	vidaux = Videojuego.new("PES", Date.new(2021, 3, 4), 0.2, 55)
+	taux.addVideojuego(vidaux)
+
+	describe '#identificarVideojuego' do	
+		it 'videojuego encontrado' do
+			tiendaprueba = Tienda.new(Ciudades::VIGO)
+			vidprueba = Videojuego.new("PES", Date.new(2021, 3, 4), 0.2, 55)
+			tiendaprueba.addVideojuego(vidprueba)	
+			obj = tiendaprueba.identificarVideojuego("PES")
+			expect(obj.obtenerNombre()).to eq("PES")
+			expect((obj.fechaLanzamiento().to_s)).to eq('2021-03-04')
+			expect(obj.descuento).to eq(0.2)
+			expect(obj.precioInicial).to eq(55)
+
+		end
+
+		it 'excepción de videojuego encontrado' do
+			expect{ taux.identificarVideojuego("Battelfield") }.to raise_error(ArgumentError)
+		end
+	end
 
 	describe '#obtenerSigCodigo' do
-		taux = Tienda.new(Ciudades::VIGO)
-		vidaux = Videojuego.new("PES", Date.today, 0.2, 55)
-		taux.addVideojuego(vidaux)
 		cli = Cliente.new("Bilal", Date.new(1999-8-15), taux)
 		cli.comprarVideojuego("PES")
 
@@ -63,7 +81,6 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 			expect(taux.obtenerSigCodigo()).to eq(1)
 		end
 	end
-
 end 
 
 

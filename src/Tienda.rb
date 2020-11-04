@@ -53,8 +53,12 @@ class Tienda
 	def venderProducto (cli, vj)							# Vende un producto modificando las muestras de los videojuegos disponibles de la tienda
 											# Además, añade el videojueg a la lista de videojuegos del cliente identificado por su código
 		for vi in @videojuegos
-			if vi[0] == vj
+			if vi[0].obtenerNombre() == vj.obtenerNombre()
 				vi[1] = vi[1] - 1
+
+				if (vi[1] == 0)
+					@videojuegos.delete(vi)
+				end
 			end
 		end
 
@@ -82,7 +86,7 @@ class Tienda
 			fila = @videojuegos.size		
 			@videojuegos[fila] = Array.new
 			@videojuegos[fila].push(videojuego)
-			@videojuegos[fila].push(0)
+			@videojuegos[fila].push(1)
 		else
 			@videojuegos[ind][1] = @videojuegos[ind][1] + 1
 		end
