@@ -51,6 +51,19 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 		end
 	end
 
+
+	describe '#obtenerSigCodigo' do
+		taux = Tienda.new(Ciudades::VIGO)
+		vidaux = Videojuego.new("PES", Date.today, 0.2, 55)
+		taux.addVideojuego(vidaux)
+		cli = Cliente.new("Bilal", Date.new(1999-8-15), taux)
+		cli.comprarVideojuego("PES")
+
+		it 'índice para el próximo cliente' do
+			expect(taux.obtenerSigCodigo()).to eq(1)
+		end
+	end
+
 end 
 
 

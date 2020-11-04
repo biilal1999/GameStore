@@ -25,7 +25,7 @@ class Tienda
 
 		else 
 			cli = @clientes[@clientes.size-1]
-			res = cli.obtenerCodigo() + 1
+			res = cli[0].obtenerCodigo() + 1
 		end
 
 		
