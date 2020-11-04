@@ -42,7 +42,7 @@ describe Cliente do
 	
 	describe 'obtenerMiEdad' do
 		it 'edad del cliente' do
-			expect(cli.obtenerMiEdad()).to eq(20)
+			expect(cli.obtenerMiEdad()).to eq(21)
 		end
 	end
 end
