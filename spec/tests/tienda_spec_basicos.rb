@@ -1,5 +1,6 @@
 require_relative '../../src/Tienda.rb'
 require_relative '../../src/Videojuego.rb'
+require_relative '../../src/Cliente.rb'
 
 describe Tienda do										# Testear métodos GET básicos/unitarios de la clase 'Tienda'
 	t = Tienda.new(Ciudades::GRANADA)
