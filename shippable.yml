@@ -14,3 +14,4 @@ build:
   ci:
     - bundle install
     - rake test
+
