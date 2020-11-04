@@ -7,3 +7,4 @@ install:
 
 script:
   - docker run -t -v `pwd`:/test gametrav:latest
+
