@@ -59,7 +59,7 @@ class Cliente
 
 	
 	def comprarVideojuego (nombreVideojuego)								# Permite al cliente comprar un videojuego, corresponde con HU05
-		if (@tienda.instance_of?(Tienda) == false)
+		if (@tiendaFavorita.instance_of?(Tienda) == false)
 			raise StandardError.new("El cliente no tiene una tienda asignada")
 		end
 	
@@ -67,10 +67,10 @@ class Cliente
 			raise StandardError.new("El cliente no tiene una fecha de nacimiento asignada")
 		end
 
-		vid = @iienda.identificarVideojuego (nombreVideojuego)
+		vid = @tiendaFavorita.identificarVideojuego (nombreVideojuego)
 		@videojuegosComprados.push(vid)
-		vid.addVenta(year)
-		@tienda.venderProducto(self, vid)
+		vid.addVenta(obtenerMiEdad())
+		@tiendaFavorita.venderProducto(self, vid)
 		cadena = "Videojuego " + nombreVideojuego + " comprado con éxito para " + @nombre
 
 		return cadena	

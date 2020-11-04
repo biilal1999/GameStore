@@ -38,7 +38,7 @@ class Tienda
 
 		for vi in @videojuegos
 			if vi[0].obtenerNombre() == nombreVideojuego
-				obj = vi
+				obj = vi[0]
 			end
 		end
 
