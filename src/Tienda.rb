@@ -1,17 +1,78 @@
 require_relative 'Videojuego.rb'
 require_relative 'Ciudades.rb'
+require_relative 'Cliente.rb'
 
 class Tienda
 		
 	attr_reader:videojuegos
 	attr_reader:ciudad
+	attr_reader:clientes
 		
 
 	def initialize (ciu)
 		@videojuegos = Array.new             			# Array de Array objetos de la clase Videojuego
 		@ciudad = ciu    					# Array de valores de la clase ENUM Ciudades
+		@clientes = Array.new					# Array de clientes de la tienda
 			
 	end
+
+
+	def obtenerSigCodigo()							# Obtiene el código disponible para el siguiente cliente de la tienda
+		res = -1
+	
+		if @clientes.size == 0
+			res = 0
+
+		else 
+			cli = @clientes[@clientes.size-1]
+			res = cli.obtenerCodigo()
+		end
+
+		
+		return res
+	end
+
+
+	def identificarVideojuego(nombreVideojuego)					# Devuelve un objeto videojuego a partir de su nombre
+		obj = nil
+
+		for vi in @videojuegos
+			if vi[0].obtenerNombre() == nombreVideojuego
+				obj = vi
+			end
+		end
+
+		if obj == nil
+			raise ArgumentError.new("El videojuego no está disponible en el catálogo de la tienda")
+		end
+
+		return obj
+	end
+
+
+	def venderProducto (cli, vj)							# Vende un producto modificando las muestras de los videojuegos disponibles de la tienda
+											# Además, añade el videojueg a la lista de videojuegos del cliente identificado por su código
+		for vi in @videojuegos
+			if vi[0] == vj
+				vi[1] = vi[1] - 1
+			end
+		end
+
+		
+		indice = @clientes.index(cli)
+
+		if indice == nil
+			fila = @clientes.size
+			@clientes[fila] = Array.new
+			@clientes[fila].push(cli)
+			@clientes[fila][1] = Array.new
+			@clientes[fila][1].push(vj)
+		
+		else 
+			@clientes[indice][1].push(vj)
+		end
+	end
+		
 
 	
 	def addVideojuego (videojuego)							# Añade objeto videojuego al array

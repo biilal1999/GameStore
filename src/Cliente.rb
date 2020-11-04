@@ -6,14 +6,14 @@ require 'date'
 
 class Cliente
 
-	attr_reader:nombre
-	attr_reader:codigo
-        attr_reader:videojuegosComprados
-        attr_reader:fechaNacimiento
-	attr_reader:tiendaFavorita
+	attr_reader:nombre							# Nombre del cliente (string)
+	attr_reader:codigo							# Código del cliente de la tienda (int)
+        attr_reader:videojuegosComprados					# Array de instancias de Videojuego
+        attr_reader:fechaNacimiento						# fecha tipo Date
+	attr_reader:tiendaFavorita						# tienda favorita del cliente, (Ciudad)
 
        
-    	def initialize (nombre, fecha, tienda)
+    	def initialize (nombre, fecha, tienda)								# Constructor para el cliente
 		if (fecha.instance_of?(Date) == false)
 			raise ArgumentError.new("No es una fecha de cumpleaños válida")
 		end
@@ -31,17 +31,22 @@ class Cliente
 
 
 
-	def cambiarTiendaFavorita (tienda)
+	def cambiarTiendaFavorita (tienda)								# Actualiza la tienda favorita del cliente
 		if (tienda.instance_of?(Tienda) == false)
 			raise ArgumentError.new("No es una tienda existente")
 		end
 
 		@tiendaFavorita = tienda
-		@codigo = @tiendaFavorita.obtenerSigCodigo
+		@codigo = @tiendaFavorita.obtenerSigCodigo()
+	end
+
+
+	def obtenerCodigo()
+		return @codigo
 	end
 
 	
-	def obtenerMiEdad()
+	def obtenerMiEdad()										# Obtiene la edad del cliente a partir de su fecha de nacimiento
 		now = Date.today
 		year = now.year - @fechaNacimiento.year
 
@@ -53,7 +58,7 @@ class Cliente
 	end
 
 	
-	def comprarVideojuego (nombreVideojuego)
+	def comprarVideojuego (nombreVideojuego)								# Permite al cliente comprar un videojuego, corresponde con HU05
 		if (@tienda.instance_of?(Tienda) == false)
 			raise StandardError.new("El cliente no tiene una tienda asignada")
 		end
@@ -65,15 +70,12 @@ class Cliente
 		vid = @iienda.identificarVideojuego (nombreVideojuego)
 		@videojuegosComprados.push(vid)
 		vid.addVenta(year)
-		@tienda.venderProducto(@codigo, vid)
+		@tienda.venderProducto(self, vid)
 		cadena = "Videojuego " + nombreVideojuego + " comprado con éxito para " + @nombre
 
 		return cadena	
 	end
 
+end
 
 
-
-	
-	
-	
