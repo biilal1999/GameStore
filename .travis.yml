@@ -1,7 +1,7 @@
 language: minimal
 
 
-before_script:
+install:
   - docker build -t gametrav .
 
 

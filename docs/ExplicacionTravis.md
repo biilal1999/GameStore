@@ -29,4 +29,7 @@ Antes de detallar los pasos de la construcción del fichero [.travis.yml](https:
     + Opción A. Utilizar **minimal** como lenguaje en nuestro fichero de construcción.
     + Opción B. Utilizar **generic** en lugar de minimal.
 
-    Vamos a optar por la opción A, usaremos minimal. La razón es muy sencilla, y es que 
+    Vamos a optar por la opción A, usaremos `language: minimal`. La razón es muy sencilla, y es que **minimal** ya nos trae lo necesario para trabajar con lo que necesitamos trabajar ahora, que es **Docker**. Pero además, también trae herramientas para control de versiones, para red, Python, gcc y make. *Generic* sin embargo, trae más herramientas como node.js o jvm que lo único que van a conseguir para lo que necesitamos es que se tarde más tiempo en ejecutar Travis.
+
+
+2. Después, siguiendo las buenas prácticas en la construcción del ciclo de vida para *Travis*, declaramos `before_script: docker build -t gametrav .` . Esto  
