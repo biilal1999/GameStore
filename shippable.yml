@@ -13,5 +13,8 @@ rvm:
 build:
   ci:
     - bundle install
+
+  post_ci:
     - rake test
+
 
