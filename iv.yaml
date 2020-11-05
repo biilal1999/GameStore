@@ -1,4 +1,4 @@
 entidad: src/Videojuego.rb
 lenguaje: ruby
-test: spec/tests/tienda_spec_basicos.rb
+test: spec/tests/tienda_spec_tests.rb
 taskfile: Rakefile
