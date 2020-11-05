@@ -46,9 +46,7 @@ Dado que **GitHub Actions** nos ofrece la posibilidad de iniciar sesión en nues
 
     + Construimos nuestra imagen con la directiva **run** (utiliza la *shell* del Sistema Operativo donde se esté ejecutando), utilizando el comando `docker build -t ghcr.io/biilal1999/gamestore:latest .`.
 
-    + Hacemos correr la imagen también con la directiva **run**, aprovechando la shell, utilizando el ya conocido
-
-> docker run -t -v `pwd`:/test ghcr.io/biilal1999/gamestore:latest
+    + Hacemos correr la imagen también con la directiva **run**, aprovechando la shell, utilizando el ya conocido `docker run -t -v `pwd`:/test ghcr.io/biilal1999/gamestore:latest`
 
     + Por último, una vez todo haya ido bien, hacemos **push** de la imagen a nuestro [repositorio de GHCR](https://github.com/users/biilal1999/packages/container/package/gamestore), también usando **run**, utilizando el comando `docker push ghcr.io/biilal1999/gamestore:latest`.
 
