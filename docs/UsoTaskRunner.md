@@ -40,7 +40,7 @@ Dicha orden ejecuta en la terminal (cuando hagamos `docker run`), la orden `rake
 ## GitHub Actions
 
 
-En [.gitHubActions](https://github.com/biilal1999/GameStore/blob/master/.github/workflows/gitHubActions.yml) el uso del **task runner** es idéntico a cómo lo hemos hecho en *travis*, aunque solo varía el nombre de la imagen que construimos de nuestro **Docker**
+En [githubActions.yml](https://github.com/biilal1999/GameStore/blob/master/.github/workflows/githubActions.yml) el uso del **task runner** es idéntico a cómo lo hemos hecho en *travis*, aunque solo varía el nombre de la imagen que construimos de nuestro **Docker**
 
 
 > docker build -t ghcr.io/biilal1999/gamestore:latest .
