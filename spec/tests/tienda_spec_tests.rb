@@ -81,6 +81,37 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 			expect(taux.obtenerSigCodigo()).to eq(1)
 		end
 	end
+
+	describe '#addVideojuego' do
+		it 'La funcion videojuegos disponibles falla' do
+			vi = Videojuego.new("COD", Date.today, 0.4, 70)
+			taux.addVideojuego(vi)
+			taux.addVideojuego(vi)
+			expect(taux.obtenerVideojuegos()).to eq(["COD"])
+		end
+	end
+		
+
+	describe '#venderProducto' do
+		vidaux = Videojuego.new("FORTNITE", Date.today, 0.2, 35)
+		tiendaux = Tienda.new(Ciudades::ZARAGOZA)
+		tiendaux.addVideojuego(vidaux)
+		tiendaux.addVideojuego(vidaux)
+		tiendaux.addVideojuego(vh)
+
+		it 'La funcion videojuegos antes de comprar otro videojuego falla' do
+			expect(tiendaux.obtenerVideojuegos()).to eq(["FORTNITE", "FIFA"])
+			expect(tiendaux.masMuestras()).to eq("FORTNITE")
+		end
+
+		it 'La funcion videojuegos después de comprar el FIFA (una muestra) y FORTNITE (dos muestras) falla' do
+			cliaux = Cliente.new("David", Date.new(1999-6-30), tiendaux)
+			cliaux.comprarVideojuego("FORTNITE")
+			cliaux.comprarVideojuego("FIFA")
+
+			expect(tiendaux.obtenerVideojuegos()).to eq(["FORTNITE"])
+		end
+	end
 end 
 
 
