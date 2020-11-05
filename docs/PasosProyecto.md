@@ -54,3 +54,19 @@
 - Redactar en el archivo [README.md](https://github.com/biilal1999/GameStore/blob/master/README.md) la **justificación de la elección de nuestra imagen base**
 - Modifichar el archivo [README.md](https://github.com/biilal1999/GameStore/blob/master/README.md) para añadir los links correspondientes a este hito
 - Modificar [hito-3.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-3.md) y hacer *Pull Request* con enlace a nuestro proyecto
+
+
+## Hito 4: Integración continua
+
+- Enlazar nuestro [repositorio](https://github.com/biilal1999/GameStore) con **Travis CI**
+    - Construir fichero [.travis.yml](https://github.com/biilal1999/GameStore/blob/master/.travis.yml)
+- Enlazar nuestro [repositorio](https://github.com/biilal1999/GameStore) con **Shippable**
+    - Construir fichero [shippable.yml](https://github.com/biilal1999/GameStore/blob/master/shippable.yml)
+- Construir nuestro fichero [githubActions.yml](https://github.com/biilal1999/GameStore/blob/master/.github/workflows/githubActions.yml)
+- Añadir capturas de pantalla del funcionamiento de los distintos sistemas de **integración continua**
+- Redactar [aquí](https://github.com/biilal1999/GameStore/blob/master/docs/UsoTaskRunner.md) el uso del **task runner**
+- Redactar [aquí](https://github.com/biilal1999/GameStore/blob/master/docs/UsoDocker.md) el uso de **Docker**
+- Añadir una nueva [historia de usuario](https://github.com/biilal1999/GameStore/issues/64)
+    - Implementar sus métodos y testearlos
+- Modifichar el archivo [README.md](https://github.com/biilal1999/GameStore/blob/master/README.md) para añadir los links correspondientes a este hito
+- Modificar [hito-4.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-4.md) y hacer *Pull Request* con enlace a nuestro proyecto
