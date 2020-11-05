@@ -38,8 +38,41 @@ Dado que **GitHub Actions** nos ofrece la posibilidad de iniciar sesión en nues
 
 5. Dicho trabajo se ejecutará en una máquina virtual creada con la última versión de Ubuntu, especificado así con la directiva **runs-on**.
 
-6. Empezamos a definir los pasos(**steps**) para nuestro trabajo:
+6. Empezamos a definir los pasos(**steps**) para nuestro trabajo, teniendo en cuenta que un paso no se ejecutará si el anterior no fue exitoso:
 
-    + Hacemos un *check out* de nuestro repositorio
+    + Hacemos un *check out* de nuestro repositorio.
     
-    + Iniciamos sesión en **GitHub Container Registry**. Para hacer esto, especificamos con **registry** que queremos iniciar sesión ahí. Como cualquier sistema de autenticación, necesitaremos usuario y contraseña. Como usuario, **${{ github.repository_owner }}** nos dice nuestro nick de usuario, y para la contraseña hemos creado dentro de nuestra cuenta de *GitHub*, un **secret** que almacena un **token**. [Aquí]() pueden ver que tenemos el *token* creado y [aquí] como también hemos creado el *secret*, el cual hemos llamado **TOK**. Para usar el *secret TOK* en *GitHub Actions*, utilizamos **${{ secrets.TOK }}**.
+    + Iniciamos sesión en **GitHub Container Registry**. Para hacer esto, especificamos con **registry** que queremos iniciar sesión ahí. Como cualquier sistema de autenticación, necesitaremos usuario y contraseña. Como usuario, **${{ github.repository_owner }}** nos dice nuestro nick de usuario, y para la contraseña hemos creado dentro de nuestra cuenta de *GitHub*, un **secret** que almacena un **token**. [Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/img/Token.png) pueden ver que tenemos el *token* creado y [aquí](https://github.com/biilal1999/GameStore/blob/master/docs/img/Secrets.png) como también hemos creado el *secret*, el cual hemos llamado **TOK**. Para usar el *secret TOK* en *GitHub Actions*, utilizamos **${{ secrets.TOK }}**.
+
+    + Construimos nuestra imagen con la directiva **run** (utiliza la *shell* del Sistema Operativo donde se esté ejecutando), utilizando el comando `docker build -t ghcr.io/biilal1999/gamestore:latest .`.
+
+    + Hacemos correr la imagen también con la directiva **run**, aprovechando la shell, utilizando el ya conocido
+
+> docker run -t -v `pwd`:/test ghcr.io/biilal1999/gamestore:latest
+
+    + Por último, una vez todo haya ido bien, hacemos **push** de la imagen a nuestro [repositorio de GHCR](https://github.com/users/biilal1999/packages/container/package/gamestore), también usando **run**, utilizando el comando `docker push ghcr.io/biilal1999/gamestore:latest`.
+
+
+
+## Pruebas del funcionamiento de nuestro GitHub Actions
+
+
+**GitHub Actions** corriendo después de un *push* a nuestro repositorio
+
+
+![Corriendo](https://github.com/biilal1999/GameStore/blob/master/docs/img/GitHubActionsCorriendo.png)
+
+
+
+**Build** con éxito de nuestro *GitHub Actions*, donde hemos desplegado algunos pasos como el **login** o la ejecución de **tests** para que se pueda observar bien su funcionamiento
+
+
+![Funcionamiento](https://github.com/biilal1999/GameStore/blob/master/docs/img/GitHubActionsFuncionando.png)
+
+
+
+
+## Ejemplo de un run concreto de nuestro GitHub Actions
+
+
+[Aquí](https://github.com/biilal1999/GameStore/runs/1355714543?check_suite_focus=true) lo pueden consultar.
