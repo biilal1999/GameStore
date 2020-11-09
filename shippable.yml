@@ -1,7 +1,5 @@
 language: ruby
 
-cache: bundler
-
 rvm:
   - ruby-head
   - 2.7.2
