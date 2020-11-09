@@ -44,7 +44,7 @@ Dado que vamos a utilizar distintos sistemas de integración continua en este hi
 
 6. También detro de *build*, pero en la subsección **post_ci** ejecutamos `rake test`, haciendo así uso de nuestro gestor de tareas [Rakefile](https://github.com/biilal1999/GameStore/blob/master/Rakefile) para ejecutar los tests de nuestro proyecto. Esta subsección solamente se ejecutará si ha resultado **exitosa la subsección anterior (ci)**.
 
-7. 4. Por último, desactivamos las **notificaciones a nuestro email**, tanto si el **build** de nuestro *shippable.yml* ha resultado exitoso como fallido.
+7. Por último, desactivamos las **notificaciones a nuestro email**, tanto si el **build** de nuestro *shippable.yml* ha resultado exitoso como fallido.
 
 
 

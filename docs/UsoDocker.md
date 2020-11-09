@@ -11,16 +11,22 @@ Este aprovechamiento del contenedor de **Docker** nos ahorrará el tener que esp
 ## Travis CI
 
 
-En nuestro [.travis.yml](https://github.com/biilal1999/GameStore/blob/master/.travis.yml) usamos el lenguaje **minimal**, ya que nos instala lo justo y necesario (el servicio Docker, entre otros). El aprovechamiento de Docker lo llevamos a cabo construyendo la imagen
+En nuestro [.travis.yml](https://github.com/biilal1999/GameStore/blob/master/.travis.yml) usamos el lenguaje **minimal**, ya que nos instala lo justo y necesario (el servicio Docker, entre otros). El aprovechamiento de Docker lo llevamos a cabo descargando la imagen de nuestro [repositorio de Docker Hub](https://hub.docker.com/r/biilal1999/gamestore)
 
 
-> docker build -t gametrav .
+> docker pull biilal1999/gamestore
 
 
-, lo cual nos instala nuestras dependencias, y ejecutando dicha imagen conseguiremos ejecutar los tests, haciendo así uso del **task runner**.
+, que podemos ver instalada correctamente con
 
 
-> docker run -t -v `pwd`:/test gametrav:latest
+> docker images
+
+
+, la cual nos instala nuestras dependencias, y ejecutando dicha imagen conseguiremos ejecutar los tests, haciendo así uso del **task runner**.
+
+
+> docker run -t -v `pwd`:/test biilal1999/gamestore:latest
 
 
 

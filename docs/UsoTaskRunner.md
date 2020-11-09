@@ -16,15 +16,22 @@ Hay dos formas de hacer uso de nuestro gestor de tareas, así que hemos variado 
 En [.travis.yml](https://github.com/biilal1999/GameStore/blob/master/.travis.yml) hemos usado el gestor de tareas construyendo una imagen de nuestro Docker.
 
 
-1. Construimos con:
-
-> docker build -t gametrav .
+1. Descargamos la imagen con:
 
 
-2. Ejecutamos con:
+> docker pull biilal1999/gamestore
 
 
-> docker run -t -v `pwd`:/test gametrav:latest
+2. Listamos las imágenes instaladas con:
+
+
+> docker images 
+
+
+3. Ejecutamos con:
+
+
+> docker run -t -v `pwd`:/test biilal1999/gamestore:latest
 
 
 Y haciendo uso del contenedor de Docker, como en nuestro [Dockerfile](https://github.com/biilal1999/GameStore/blob/master/Dockerfile) tenemos la siguiente orden:
