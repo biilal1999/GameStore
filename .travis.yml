@@ -9,3 +9,9 @@ install:
 script:
   - docker run -t -v `pwd`:/test biilal1999/gamestore:latest
 
+
+notifications:
+   email:
+      on_success: never
+      on_failure: never
+

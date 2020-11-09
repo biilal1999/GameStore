@@ -16,3 +16,7 @@ build:
 
   post_ci:
     - rake test
+
+
+notifications:
+  email: false
