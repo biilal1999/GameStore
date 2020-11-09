@@ -1,4 +1,4 @@
-# JUSTIFIACIÓN SHIPPABLE
+# JUSTIFICACIÓN SHIPPABLE
 
 
 ## Documentación
@@ -30,17 +30,17 @@ Dado que vamos a utilizar distintos sistemas de integración continua en este hi
 
 1. Definimos **Ruby** como lenguaje de programación `language: ruby`.
 
-2. Dado que **bundler** es nuestro manejador de dependencias, la línea `cache: bundler` nos va a permitir almacenar bundler en *caché*, lo cual es tremendamente útil y eficiente a la hora de hacer varias compilaciones con distintas versiones, ya que podemos almacenar en caché las dependencias (gemas de Ruby) y así reducimos el tiempo que se tarda en el **build**.
+2. Definimos utilizando el gestor de veriones **RVM**, las distintas versiones del lenguaje de Ruby en las que funciona nuestra aplicación para cada compilación. Estas versiones son:
 
-3. Definimos utilizando el gestor de veriones **RVM**, las distintas versiones del lenguaje de Ruby en las que funciona nuestra aplicación para cada compilación. Estas versiones son:
+> ruby-head / 2.7.2 / 2.5 / 2.3
 
-> 2.7.2 / 2.7.1 / 2.7.0 / 2.5.0 / 2.4.0
+   En principio, hemos elegido estas versiones ya que nosotros localmente utilizamos la 2.7.2, y hemos seleccionado algunas más. Pero en esto ya entraremos en el siguiente apartado.
 
-   En principio, hemos elegido estas versiones ya que nosotros localmente utilizamos la 2.7.2, y hemos seleccionado algunas contiguas y otras más. Pero en esto ya entraremos en el siguiente apartado.
+3. Declaramos la sección **build** que es donde empezaremos a construir nuestro *job*
 
-4. Declaramos la sección **build** que es donde empezaremos a construir nuestro *job*
+4. Dentro de *build*, en la subsección **ci** escribimos `gem install bundler`, el cual es el comando que utilizamos para instalar la gema **bundler**, que es nuestro manejador de dependencias, puesto que nos permitirá instalar y gestionar las dependencias de nuestro proyecto.
 
-5. Dentro de *build*, en la subsección **ci** escribimos `bundle install`, el cual es el comando que utilizamos con *bundler* para instalar las dependencias incluidas en nuestro [Gemfile](https://github.com/biilal1999/GameStore/blob/master/Gemfile). Como aclaración, no utilizamos `gem install bundler` ya que dicha gema está incluida al haber almacenado **bundler en caché**.
+5. Dentro de *build*, también en la subsección **ci** escribimos `bundle install`, el cual es el comando que utilizamos con *bundler* para instalar las dependencias incluidas en nuestro [Gemfile](https://github.com/biilal1999/GameStore/blob/master/Gemfile).
 
 6. También detro de *build*, pero en la subsección **post_ci** ejecutamos `rake test`, haciendo así uso de nuestro gestor de tareas [Rakefile](https://github.com/biilal1999/GameStore/blob/master/Rakefile) para ejecutar los tests de nuestro proyecto. Esta subsección solamente se ejecutará si ha resultado **exitosa la subsección anterior (ci)**.
 
@@ -48,7 +48,7 @@ Dado que vamos a utilizar distintos sistemas de integración continua en este hi
 
 
 
-## Alternativa en las versiones
+## Versiones de Ruby
 
 
 Podíamos haber incluido más versiones en nuestro fichero de construcción, como por ejemplo la versión **Ruby 2.6.0**. El problema es que esta versión utiliza una versión de **bundler** superior a la 3.0, en definitiva, bastante diferente a la que utilizan las otras versiones de *Ruby*. Hay una solución, y es instalar bundler en la subsección **ci** ejecutando `gem install bundler`, eso solucionaría el problema para la versión 2.6.0 de Ruby, pero también se ejecutaría esta sentencia para el resto de versiones, las cuales **no la necesitan**.
@@ -80,6 +80,10 @@ Teniendo en cuenta además que como hemos comentado anteriormente, *Shippable* n
 2. Reducir el tiempo de construcción, como se puede ver en la comparativa de las imágenes
 
 3. No utilizar *algo repetitivo* para las otras versiones, considerando además que ya **tenemos suficientes**.
+
+
+
+## ¿Almacenamiento en caché?
 
 
 

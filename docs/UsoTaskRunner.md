@@ -49,8 +49,13 @@ Dicha orden ejecuta en la terminal (cuando hagamos `docker run`), la orden `rake
 
 En [shippable.yml](https://github.com/biilal1999/GameStore/blob/master/shippable.yml) **no** usamos el contenedor de Docker para hacer uso del **task runner**, sino que en el propio fichero de construcción debemos instalar las dependencias y ejecutar los tests.
 
+Recordando que tenemos que instalar la **gema de bundler** para poder manejar nuestras dependencias, ya que no sirve de nada almacenar dicha gema en caché puesto que nuestras versiones de *Ruby* no utilizan la misma versión de *bundler*, ejecutamos la orden
 
-Recordando que `cache: bundler` guarda la **gema de bundler** nos omite la necesidad de tener que instalarla, lo que hacemos es simplemente instalar las dependencias incluidas en nuestro [Gemfile](https://github.com/biilal1999/GameStore/blob/master/Gemfile) haciendo uso del manejador de dependencias *bundler*
+
+> gem install bundler
+
+
+Ahora, lo que hacemos es simplemente instalar las dependencias incluidas en nuestro [Gemfile](https://github.com/biilal1999/GameStore/blob/master/Gemfile) haciendo uso del manejador de dependencias *bundler*
 
 
 > bundle install
