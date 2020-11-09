@@ -7,6 +7,20 @@ Dado que en el hito anterior construíamos imágenes de Docker a partir de nuest
 Este aprovechamiento del contenedor de **Docker** nos ahorrará el tener que especificar múltiples versiones de **Ruby** para las diversas compilaciones, ya que en el *Dockerfile* especificamos que la imagen es **ruby:2.7.2-alpine**.
 
 
+Pero antes de nada...
+
+
+## ¿Por qué descargar la imagen y no construirla?
+
+
+En un primer momento, podemos pensar en utilizar el comando `docker build -t gamestore .` para **construir una imagen de nuestro contenedor** a partir de nuestro *Dockerfile*. ¿Esto funcionaría? Por supuesto que sí, pero sin embargo, no es lo más idóneo para aprovechar nuestro contenedor.
+
+
+Recordemos que en el hito anterior, enlazamos nuestro [repositorio de GitHub](https://github.com/biilal1999/GameStore) con nuestro [repositorio de Docker Hub](https://hub.docker.com/r/biilal1999/gamestore), con lo cual nuestro [Dockerfile](https://github.com/biilal1999/GameStore/blob/master/Dockerfile) siempre estará actualizado en **Docker Hub**, tal y como se puede consultar en el [Dockerfile de Docker Hub](https://hub.docker.com/r/biilal1999/gamestore/dockerfile).
+
+
+Una vez explicado todo esto, podemos llegar a la conclusión de que si no cambiamos nuestro *Dockerfile*, no tenemos porqué rehacer el *build* a nuestro contenedor, así que lo más lógico para **aprovechar** el contenedor del Docker es directamente **descargar la última imagen construida** de *Docker Hub*, puesto que ha sido construida a partir del *Dockerfile* más actualizado.
+
 
 ## Travis CI
 
