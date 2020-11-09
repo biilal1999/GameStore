@@ -37,9 +37,12 @@ Antes de detallar los pasos de la construcción del fichero [.travis.yml](https:
 2. Después, siguiendo las buenas prácticas en la construcción del ciclo de vida para *Travis*, declaramos `install: docker pull biilal1999/gamestore` . Esta es la fase de **instalación**, ya que aquí lo que estamos haciendo es descargar la imagen del contenedor de nuestro [repositorio de Docker Hub](https://hub.docker.com/r/biilal1999/gamestore) y, como bien sabemos, dicha imagen ha sido construida a partir de nuestro **Dockerfile**, donde se ejecuta la sentencia `bundle install` que nos instala las dependencias que necesitamos. Además, mostramos las imágenes que tenemos en nuestro sistema, ya sea descargada o construida, con el comando `docker images`.
 
 
-3. Por último, en la fase de **script**, escribimos la sentencia para hacer correr nuestro contenedor, que tal y como se construyó en el hito 3, nos ejecutarà los **tests** utilizando **rake**:
+3. Acto seguido, en la fase de **script**, escribimos la sentencia para hacer correr nuestro contenedor, que tal y como se construyó en el hito 3, nos ejecutarà los **tests** utilizando **rake**:
 
 > docker run -t -v `pwd`:/test biilal1999/gamestore:latest
+
+
+4. Por último, desactivamos las **notificaciones a nuestro email**, tanto si el **build** de nuestro *.travis.yml* ha resultado exitoso como fallido.
 
 
 
@@ -77,4 +80,4 @@ Antes de detallar los pasos de la construcción del fichero [.travis.yml](https:
 ## Enlace de prueba
 
 
-[Aquí](https://travis-ci.com/github/biilal1999/GameStore/jobs/428135805) podemos ver un **job** de Travis con nuestro repositorio, utilizando el mismo fichero **.travis.yml**
+[Aquí](https://travis-ci.com/github/biilal1999/GameStore/builds/199398845) podemos ver un **job** de Travis con nuestro repositorio, utilizando el mismo fichero **.travis.yml**
