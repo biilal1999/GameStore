@@ -1,5 +1,6 @@
 name: githubActions
 on: [push]
+paths: '.travis.yml'
 jobs: 
    build:
       runs-on: ubuntu-latest
@@ -15,7 +16,9 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.TOK }}
 
-      - name: Download the image 
+      
+
+      - name: Build the image 
         run: docker build -t ghcr.io/biilal1999/gamestore:latest .
 
       - name: List the images
