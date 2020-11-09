@@ -123,7 +123,7 @@ Los [*Milestones*](https://github.com/biilal1999/GameStore/milestones) con issue
 
 ## Tareas
 
-Los issues que hemos ido abriendo y cerrando durante la realización del proyecto los pueden consultar [aquí](https://github.com/biilal1999/GameStore/issues)
+Los issues que hemos ido abriendo y cerrando durante la realización del proyecto los pueden consultar [aquí](https://github.com/biilal1999/GameStore/issues).
 
 
 ## Historias de usuario
