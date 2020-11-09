@@ -71,7 +71,7 @@ Es la versión que utilizamos en el desarrollo de nuestro proyecto localmente.
 ### Ruby 2.5
 
 
-Es simplemente, otra versión de Ruby que hemos incluido.
+Es simplemente, otra versión de Ruby que hemos incluido, la cual utiliza una versión del manejador de dependencias **bundler** distinta a nuestra versión *de trabajo*.
 
 
 ### Ruby 2.3
