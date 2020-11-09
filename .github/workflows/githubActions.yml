@@ -16,7 +16,7 @@ jobs:
           password: ${{ secrets.TOK }}
 
       - name: Download the image from Docker Hub 
-        run: docker pull biilal1999/gamestore:latest .
+        run: docker pull biilal1999/gamestore:latest
 
       - name: List the images
         run: docker images
