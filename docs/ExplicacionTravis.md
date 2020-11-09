@@ -34,12 +34,12 @@ Antes de detallar los pasos de la construcción del fichero [.travis.yml](https:
     Vamos a optar por la opción A, usaremos `language: minimal`. La razón es muy sencilla, y es que **minimal** ya nos trae lo necesario para trabajar con lo que necesitamos trabajar ahora, que es **Docker**. Pero además, también trae herramientas para control de versiones, para red, Python, gcc y make. *Generic* sin embargo, trae más herramientas como node.js o jvm que lo único que van a conseguir para lo que necesitamos es que se tarde más tiempo en ejecutar Travis.
 
 
-2. Después, siguiendo las buenas prácticas en la construcción del ciclo de vida para *Travis*, declaramos `install: docker build -t gametrav .` . Esta es la fase de **instalación**, ya que aquí lo que estamos haciendo es construir nuestro contenedor y, como bien sabemos, en nuestro **Dockerfile** se ejecutan la sentencia `bundle install` que nos instala las dependencias que necesitamos.
+2. Después, siguiendo las buenas prácticas en la construcción del ciclo de vida para *Travis*, declaramos `install: docker pull biilal1999/gamestore` . Esta es la fase de **instalación**, ya que aquí lo que estamos haciendo es descargar la imagen del contenedor de nuestro [repositorio de Docker Hub](https://hub.docker.com/r/biilal1999/gamestore) y, como bien sabemos, dicha imagen ha sido construida a partir de nuestro **Dockerfile**, donde se ejecuta la sentencia `bundle install` que nos instala las dependencias que necesitamos. Además, mostramos las imágenes que tenemos en nuestro sistema, ya sea descargada o construida, con el comando `docker images`.
 
 
-3. Por último, en la fase de **script**, escribimos la sentencia para hacer correr nuestro contenedor, que tal y como se ha construido en el paso 2, nos ejecutarà los **tests** utilizando **rake**:
+3. Por último, en la fase de **script**, escribimos la sentencia para hacer correr nuestro contenedor, que tal y como se construyó en el hito 3, nos ejecutarà los **tests** utilizando **rake**:
 
-> docker run -t -v `pwd`:/test gametrav:latest
+> docker run -t -v `pwd`:/test biilal1999/gamestore:latest
 
 
 

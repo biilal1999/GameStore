@@ -24,19 +24,6 @@ En nuestro [.travis.yml](https://github.com/biilal1999/GameStore/blob/master/.tr
 
 
 
-## GitHub Actions
-
-
-En nuestro [githubActions.yml](https://github.com/biilal1999/GameStore/blob/master/.github/workflows/githubActions.yml) el aprovechamiento de **Docker** lo hacemos como en *Travis* (usando así el **task runner**). 
-
-La diferencia de que añadimos paso que hace **push a GitHub Container Registry**, para que se actualice en nuestro [repositorio de GHCR](https://github.com/users/biilal1999/packages/container/package/gamestore) el *Dockerfile* cuando se modifique. Así la imagen siempre estará actualizada.
-
-
-
-![CodigoActions](https://github.com/biilal1999/GameStore/blob/master/docs/img/UsoDocker.png)
-
-
-
 
 ## Shippable
 
