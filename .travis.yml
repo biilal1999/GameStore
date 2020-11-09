@@ -2,7 +2,8 @@ language: minimal
 
 
 install:
-  - docker build -t gametrav .
+  - docker pull biilal1999/gamestore
+  - docker images
 
 
 script:
