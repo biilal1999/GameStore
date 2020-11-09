@@ -11,6 +11,7 @@ rvm:
 
 build:
   ci:
+    - gem install bundler
     - bundle install
 
   post_ci:
