@@ -3,15 +3,15 @@ language: ruby
 cache: bundler
 
 rvm:
-  - 2.2
-  - 2.5
   - ruby-head
   - 2.7.2
+  - 2.5
+  - 2.3
 
 
 build:
   ci:
-    - gem install bundler
+    #- gem install bundler
     - bundle install
 
   post_ci:
