@@ -7,5 +7,5 @@ install:
 
 
 script:
-  - docker run -t -v `pwd`:/test gametrav:latest
+  - docker run -t -v `pwd`:/test biilal1999/gamestore:latest
 
