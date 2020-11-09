@@ -50,40 +50,56 @@ Dado que vamos a utilizar distintos sistemas de integración continua en este hi
 
 ## Versiones de Ruby
 
-
-Podíamos haber incluido más versiones en nuestro fichero de construcción, como por ejemplo la versión **Ruby 2.6.0**. El problema es que esta versión utiliza una versión de **bundler** superior a la 3.0, en definitiva, bastante diferente a la que utilizan las otras versiones de *Ruby*. Hay una solución, y es instalar bundler en la subsección **ci** ejecutando `gem install bundler`, eso solucionaría el problema para la versión 2.6.0 de Ruby, pero también se ejecutaría esta sentencia para el resto de versiones, las cuales **no la necesitan**.
-
-Entramos entonces en el dilema de decidir cuál es mejor opción, si omitir dicha versión considerándola innecesaria, o si tenerla en cuenta teniendo que ejecutar código repetitivo para el resto de versiones. 
-
-Lo que he decidido ha sido hacer una prueba con cada opción, y el resultado es el siguiente.
+Hemos utilizado las siguientes versiones de **Ruby**:
 
 
-### Teniendo en cuenta Ruby 2.6.0 y utilizando gem install bundler
+### ruby-head
 
 
-![ConVersion](https://github.com/biilal1999/GameStore/blob/master/docs/img/ShippableConVersion.png)
+Dicha versión es la última de Ruby, y corresponde con la 3.0.0 . Podemos comprobar esto mostrando su compilacción con *shippable*
 
 
-
-### Sin tener en cuenta Ruby 2.6.0 y NO utilizando gem install bundler
-
-
-![SinVersion](https://github.com/biilal1999/GameStore/blob/master/docs/img/ShippableSinVersion.png)
+![rubyhead](https://github.com/biilal1999/GameStore/blob/master/docs/img/RubyHead.png)
 
 
+### Ruby 2.7.2
 
-Teniendo en cuenta además que como hemos comentado anteriormente, *Shippable* no realiza todas las compilaciones de las distintas versiones de forma paralela, sino secuencial, he decidido **omitir la versión 2.6.0 de Ruby**, así conseguiremos varias cosas:
+
+Es la versión que utilizamos en el desarrollo de nuestro proyecto localmente.
 
 
-1. Aprovechar al completo la caché que hemos utilizado
+### Ruby 2.5
 
-2. Reducir el tiempo de construcción, como se puede ver en la comparativa de las imágenes
 
-3. No utilizar *algo repetitivo* para las otras versiones, considerando además que ya **tenemos suficientes**.
+Es simplemente, otra versión de Ruby que hemos incluido.
+
+
+### Ruby 2.3
+
+
+Esta versión es la más antigua de Ruby con la que funciona nuestro proyecto.
+
+
+También, conviene comentar que hemos intentado probar con versiones **LTS**, pero no han resultado exitosas para nuestro proyecto, como por ejemplo, la versión **Ruby 1.9.3**. Dicha versión, necesita una gema de **bundler** con una versión **superior a la 2.3.0**. Podemos comprobarlo en la siguiente imagen
+
+
+![FalloRuby](https://github.com/biilal1999/GameStore/blob/master/docs/img/FalloRuby.png)
 
 
 
 ## ¿Almacenamiento en caché?
+
+
+**Shippable** nos ofrece la posibilidad de almacenar en **caché nuestra gema bundler**, de la forma `cache: bundler`. Esto nos permite:
+
+
+1. Aumentar la velocidad de las distintas compilaciones con cada una de las versiones, ya que estaría almacenada en caché la gema de nuestro manejador de dependencias.
+
+
+2. Omitir la instrucción `gem install bundler` en la fase de instalación, ya que al utilizar previamente la caché para almacenar la gema bundler, dicha gema almacenada en caché es una versión **específica** de bundler. El problema, es que dicha versión de **bundler** no es válida para todas las *versiones de Ruby* existentes y, por supuesto, tampoco lo es para todas las versiones que utilizamos en nuestro **build**.
+
+
+Por eso, y muy a nuestro pesar, no utilizaremos la *caché* para almacenar *la gema bundler*, y tendremos que instalar una versión de bundler utilizando `gem install bundler` para cada una de nuestras compilaciones.
 
 
 
@@ -121,4 +137,4 @@ Ejemplo de una **compilación para la versión de Ruby 2.7.2**, donde podemos ve
 ## Ejemplo de un run nuestro de Shippable
 
 
-[Aquí](https://app.shippable.com/github/biilal1999/GameStore/runs/51/summary/console) lo pueden consultar.
+[Aquí](https://app.shippable.com/github/biilal1999/GameStore/runs/82/summary/console) lo pueden consultar.
