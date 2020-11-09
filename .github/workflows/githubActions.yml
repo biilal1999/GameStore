@@ -1,32 +1,34 @@
 name: githubActions
-on: [push]
-   paths: '.travis.yml'
-   jobs: 
-      build:
-         runs-on: ubuntu-latest
+on: 
+   push:
+      paths: 
+         - '.travis.yml'
+jobs: 
+   build:
+      runs-on: ubuntu-latest
 
-         steps:
-         - name: Check out repository
-           uses: actions/checkout@v2
+      steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
 
-         - name: Login to GitHub Container Registry
-           uses: docker/login-action@v1
-           with:
-             registry: ghcr.io
-             username: ${{ github.repository_owner }}
-             password: ${{ secrets.TOK }}
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.TOK }}
 
       
 
-         - name: Build the image 
-           run: docker build -t ghcr.io/biilal1999/gamestore:latest .
+      - name: Build the image 
+        run: docker build -t ghcr.io/biilal1999/gamestore:latest .
 
-         - name: List the images
-           run: docker images
+      - name: List the images
+        run: docker images
 
-         - name: Run tests
-           run: docker run -t -v `pwd`:/test ghcr.io/biilal1999/gamestore:latest
+      - name: Run tests
+        run: docker run -t -v `pwd`:/test ghcr.io/biilal1999/gamestore:latest
 
-         - name: Publish to GitHub Container Registry
-           run: docker push ghcr.io/biilal1999/gamestore:latest
+      - name: Publish to GitHub Container Registry
+        run: docker push ghcr.io/biilal1999/gamestore:latest
 
