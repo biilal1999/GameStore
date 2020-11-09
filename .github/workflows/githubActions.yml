@@ -15,12 +15,15 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.TOK }}
 
-      - name: Build the image 
-        run: docker build -t ghcr.io/biilal1999/gamestore:latest .
+      - name: Download the image from Docker Hub 
+        run: docker pull biilal1999/gamestore:latest .
+
+      - name: List the images
+        run: docker images
 
       - name: Run tests
-        run: docker run -t -v `pwd`:/test ghcr.io/biilal1999/gamestore:latest
+        run: docker run -t -v `pwd`:/test biilal1999/gamestore:latest
 
       - name: Publish to GitHub Container Registry
-        run: docker push ghcr.io/biilal1999/gamestore:latest
+        run: docker push biilal1999/gamestore:latest
 
