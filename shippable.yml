@@ -12,7 +12,7 @@ rvm:
 build:
   ci:
     - gem install bundler
-    #- bundle install
+    - bundle install
 
   post_ci:
     - rake test
