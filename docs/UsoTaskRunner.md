@@ -13,7 +13,7 @@ Hay dos formas de hacer uso de nuestro gestor de tareas, así que hemos variado 
 ## Travis CI
 
 
-En [.travis.yml](https://github.com/biilal1999/GameStore/blob/master/.travis.yml) hemos usado el gestor de tareas construyendo una imagen de nuestro Docker.
+En [.travis.yml](https://github.com/biilal1999/GameStore/blob/master/.travis.yml) hemos usado el gestor de tareas descargando una imagen previamente construida de nuestro Docker.
 
 
 1. Descargamos la imagen con:
