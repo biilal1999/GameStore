@@ -21,10 +21,6 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
     + Nuestra carpeta de [tests](https://github.com/biilal1999/GameStore/tree/master/spec/tests)
 
 
-## Fichero iv.yaml
-
-[iv.yaml](https://github.com/biilal1999/GameStore/blob/master/iv.yaml)
-
 
 ## Rúbricas Integración Continua
 
@@ -103,6 +99,11 @@ Hemos usado los dos siguientes sistemas de **integración continua**.
 ## Fichero de gestor de tareas
 
 + Automatizador de tareas [Rakefile](https://github.com/biilal1999/GameStore/blob/master/Rakefile)
+
+
+## Fichero iv.yaml
+
+[iv.yaml](https://github.com/biilal1999/GameStore/blob/master/iv.yaml)
 
 
 ## Pasos para la realización del proyecto
