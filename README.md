@@ -31,7 +31,7 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 
 ## Sistemas de integración continua
 
-Hemos usado tres sistemas de **integración continua** en lugar de dos, ya que veía la posibilidad de realizar acciones diferentes en cada una de ellas.
+Hemos usado los dos siguientes sistemas de **integración continua**.
 
 
 ### Travis CI
@@ -41,15 +41,6 @@ Hemos usado tres sistemas de **integración continua** en lugar de dos, ya que v
 + [Documentación, utilidad, pasos y pruebas](https://github.com/biilal1999/GameStore/blob/master/docs/ExplicacionTravis.md) en la construcción de **.travis.yml**
 
 + Nuestro [perfil](https://travis-ci.com/github/biilal1999/GameStore) de Travis para el repositorio.
-
-
-### GitHub Actions
-
-+ Fichero [githubActions.yml](https://github.com/biilal1999/GameStore/blob/master/.github/workflows/githubActions.yml)
-
-+ [Documentación, utilidad, pasos y pruebas](https://github.com/biilal1999/GameStore/blob/master/docs/ExplicacionGitHubActions.md) en la construcción de **.github/workflows/gitHubActions.yml**
-
-+ Nuestros [Actions](https://github.com/biilal1999/GameStore/actions) para el repositorio.
 
 
 ### Shippable
