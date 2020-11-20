@@ -25,56 +25,18 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 ## Rúbricas Integración Continua
 
 
-## Sistemas de integración continua
-
-Hemos usado los dos siguientes sistemas de **integración continua**.
-
-
-### Travis CI
+## Travis CI
 
 + Fichero [.travis.yml](https://github.com/biilal1999/GameStore/blob/master/.travis.yml)
-
-+ [Documentación, utilidad, pasos y pruebas](https://github.com/biilal1999/GameStore/blob/master/docs/ExplicacionTravis.md) en la construcción de **.travis.yml**
 
 + Nuestro [perfil](https://travis-ci.com/github/biilal1999/GameStore) de Travis para el repositorio.
 
 
-### Shippable
+## Shippable
 
 + Fichero [shippable.yml](https://github.com/biilal1999/GameStore/blob/master/shippable.yml)
 
-+ [Documentación, utilidad, pasos y pruebas](https://github.com/biilal1999/GameStore/blob/master/docs/ExplicacionShippable.md) en la construcción de **shippable.yml**
-
 + Nuestro [perfil](https://app.shippable.com/github/biilal1999/GameStore/dashboard) de Shippable para el repositorio.
-
-
-## Uso del Task Runner
-
-+ [Explicación](https://github.com/biilal1999/GameStore/blob/master/docs/UsoTaskRunner.md) del uso del **task runner** en cada uno de los sistemas de integración continua anteriores
-
-
-## Uso del contenedor de Docker
-
-+ [Explicación](https://github.com/biilal1999/GameStore/blob/master/docs/UsoDocker.md) del uso de **Docker** en alguno de los sistemas de integración continua anteriores
-
-
-## Tests significativos y avance del código
-
-+ Hemos añadido una [historia de usuario](https://github.com/biilal1999/GameStore/issues/64)
-
-+ Hemos creado la clase [Cliente.rb](https://github.com/biilal1999/GameStore/blob/master/src/Cliente.rb) e implementado todos sus métodos
-
-    + Hemos testeado los métodos de la clase en [cliente_spec_basicos.rb](https://github.com/biilal1999/GameStore/blob/master/spec/tests/cliente_spec_basicos.rb) y en [cliente_spec_significativos.rb](https://github.com/biilal1999/GameStore/blob/master/spec/tests/cliente_spec_significativos.rb)
-
-+ Hemos añadido los siguientes métodos a la clase [Tienda.rb](https://github.com/biilal1999/GameStore/blob/master/src/Tienda.rb) y los hemos testeado en [tienda_spec_tests.rb](https://github.com/biilal1999/GameStore/blob/master/spec/tests/tienda_spec_tests.rb)
-
-> obtenerSigCodigo()
-
-> identificarVideojuego(nombreVideojuego)
-
-> venderProducto (cli, vj)
-
-> addVideojuego(videojuego) 
 
 
 
