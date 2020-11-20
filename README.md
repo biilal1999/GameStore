@@ -22,7 +22,7 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 
 
 
-## Rúbricas Integración Continua
+## Integración Continua
 
 
 ## Travis CI
