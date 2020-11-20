@@ -119,6 +119,7 @@ Los [*Milestones*](https://github.com/biilal1999/GameStore/milestones) con issue
 - [Milestone 2](https://github.com/biilal1999/GameStore/milestone/2)
 - [Milestone 3](https://github.com/biilal1999/GameStore/milestone/3)
 - [Milestone 4](https://github.com/biilal1999/GameStore/milestone/4)
+- [Milestone 5](https://github.com/biilal1999/GameStore/milestone/5)
 
 
 ## Tareas
