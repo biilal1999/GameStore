@@ -17,13 +17,13 @@ Handler = Proc.new do |req, res|
 	
 		for vj in info["videojuegos"]
 			
-			if juego.casecmp(vj["nombreVideojuego"]) 
+			if juego.casecmp(vj["nombreVideojuego"]) == 0 
 				vid = vj
 			end
 		end
 
 		
-		if vid == nil
+		if vid.nil?
 			cadena = {error: "El videojuego " + juego + " no existe en el catálogo"}
 		
 		else
