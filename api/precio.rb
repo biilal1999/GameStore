@@ -16,7 +16,7 @@ Handler = Proc.new do |req, res|
 		vid = nil
 	
 		for vj in info["videojuegos"]
-			
+
 			if juego.casecmp(vj["nombreVideojuego"]) == 0 
 				vid = vj
 			end
@@ -48,4 +48,5 @@ Handler = Proc.new do |req, res|
 	res['Content-Type'] = 'application/json; charset=utf-8'
 	res.body = cadena.to_json;
 end
+
 
