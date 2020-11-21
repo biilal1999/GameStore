@@ -57,6 +57,22 @@ class Cliente
 		return age
 	end
 
+
+	def consultarPrecioFinal(j)                                                # Corresponde a la HU02 desplegada en Serverless
+		url = 'https://gamestore.vercel.app/api/precio.rb?v=' + j
+		peticion = Net::HTTP.get(URI(url))
+		datos = JSON.parse(peticion)
+
+		if datos["error"].nil?
+			res = datos["cad"]
+
+		else
+			raise ArgumentError.new(datos["error"])
+		end
+
+		return res
+	end
+
 	
 	def comprarVideojuego (nombreVideojuego)								# Permite al cliente comprar un videojuego, corresponde con HU05
 		if (@tiendaFavorita.instance_of?(Tienda) == false)

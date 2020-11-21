@@ -31,4 +31,16 @@ describe Cliente do
 		end
 
 	end
+
+	
+	describe '#consultarPrecioFinal' do										# Testear método consultarPrecioFinal(j)  HU02 con serverless
+		it 'precio final' do
+			expect(cli.consultarPrecioFinal("FIFA")).to eq("El precio del FIFA era de 70 euros, pero estás de suerte! Porque tenemos para ti un 30.0% de descuento, y lo puedes conseguir por tan solo 49.0 euros")								
+		end
+
+
+		it 'precio final con excepción' do
+			expect{ cli.consultarPrecioFinal("TEKKEN") }.to raise_error(ArgumentError)
+		end
+	end
 end
