@@ -24,7 +24,7 @@ Handler = Proc.new do |req, res|
 
 		
 		if vid == nil
-			cadena = {error: "El videojuego #{juego} no existe en el catálogo"}
+			cadena = {error: "El videojuego " + "juego " + "no existe en el catálogo"}
 		
 		else
 			precio = vid["precioInicial"]
