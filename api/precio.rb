@@ -10,7 +10,7 @@ Handler = Proc.new do |req, res|
 		cadena = {error: "Tiene que enviar por parámetro el nombre del videojuego"}
 
 	else
-		info = JSON.parse(File.read(File.join(File.dirname(__FILE__), 'info.json')))
+		info = JSON.parse(File.read("info.json"))
 
 		encontrado = false
 		vid = nil
