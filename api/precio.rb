@@ -32,7 +32,7 @@ Handler = Proc.new do |req, res|
 			if vid["descuento"] > 0.0
 				desc = vid["descuento"]
 				porcentaje = desc * 100
-				coste = (precio * desc) - precio
+				coste = precio - (precio * desc)
 				msg = "El precio del #{juego} era de #{precio} euros, pero estás de suerte! Porque tenemos para ti un #{porcentaje}% de descuento, y lo puedes conseguir por tan solo #{coste} euros"
 			
 			else
