@@ -2,3 +2,4 @@ entidad: src/Videojuego.rb
 lenguaje: ruby
 test: spec/tests/tienda_spec_tests.rb
 taskfile: Rakefile
+URL: https://gamestore.vercel.app/api/precio.rb?v=FIFA
