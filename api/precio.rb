@@ -17,7 +17,7 @@ Handler = Proc.new do |req, res|
 	
 		for vj in info["videojuegos"]
 
-			if juego.casecmp(vj["nombreVideojuego"])
+			if juego.casecmp(vj["nombreVideojuego"]) == 0
 				vid = vj
 			end
 		end
