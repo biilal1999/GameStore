@@ -6,7 +6,7 @@ Handler = Proc.new do |req, res|
 	cadena = Array.new
 	juego = req.query['v']
 	
-	if videojuego == nil
+	if juego == nil
 		cadena = {error: "Tiene que enviar por parámetro el nombre del videojuego"}
 
 	else
