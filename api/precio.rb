@@ -10,6 +10,7 @@ Handler = Proc.new do |req, res|
 		cadena = {error: "Tiene que enviar por parámetro el nombre del videojuego"}
 
 	else
+		puts juego
 		info = JSON.parse(File.read(File.join(File.dirname(__FILE__), 'info.json')))
 
 		encontrado = false
@@ -24,7 +25,7 @@ Handler = Proc.new do |req, res|
 
 		
 		if vid == nil
-			cadena = {error: "El videojuego " + "juego " + "no existe en el catálogo"}
+			cadena = {error: "El videojuego " + juego + " no existe en el catálogo"}
 		
 		else
 			precio = vid["precioInicial"]
