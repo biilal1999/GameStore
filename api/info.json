@@ -1,0 +1,45 @@
+{
+	"videojuegos":[
+		{
+			"nombreVideojuego":"FIFA",
+			"descuento":0.3,
+			"fechaLanzamiento":"2021-03-15",
+			"precioInicial":70
+		},
+		
+		{
+			"nombreVideojuego":"COD",
+			"descuento":0.0,
+			"fechaLanzamiento":"2020-12-23",
+			"precioInicial":60
+		},
+
+		{
+			"nombreVideojuego":"FORTNITE",
+			"descuento":0.2,
+			"fechaLanzamiento":"2020-12-15",
+			"precioInicial":20
+		},
+
+		{
+			"nombreVideojuego":"LOL",
+			"descuento":0.0,
+			"fechaLanzamiento":"2021-07-10",
+			"precioInicial":50
+		},
+
+		{
+			"nombreVideojuego":"OVERWATCH",
+			"descuento":0.0,
+			"fechaLanzamiento":"2021-03-20",
+			"precioInicial":20
+		},
+
+		{
+			"nombreVideojuego":"GTA",
+			"descuento":0.4,
+			"fechaLanzamiento":"2021-02-17",
+			"precioInicial":40
+		}
+	]
+}	
