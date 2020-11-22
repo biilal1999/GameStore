@@ -11,14 +11,13 @@ Handler = Proc.new do |req, res|
 
 	else
 		info = JSON.parse(File.read(File.join(File.dirname(__FILE__), 'info.json')))
-
-		encontrado = false
 		vid = nil
 	
 		for vj in info["videojuegos"]
 
 			if juego.casecmp(vj["nombreVideojuego"]) == 0
 				vid = vj
+				break
 			end
 		end
 
