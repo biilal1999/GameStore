@@ -71,21 +71,13 @@ class Tienda
 			@clientes[fila].push(cli)
 			@clientes[fila][1] = Array.new
 			@clientes[fila][1].push(vj)
-
-			if vj.garantia.nil? == false
-				fechaGarantia = Date.today + vj.garantia
-				@clientes[fila][2] = Array.new
-				@clientes[fila][2].push(fechaGarantia)
-			end
+			@clientes[fila][2] = Array.new
+			@clientes[fila][2].push(vj.puntos)
 		
 		else 
 			@clientes[indice][1].push(vj)
-
-			if vj.garantia.nil? == false
-				fechaGarantia = Date.today + vj.garantia
-				@clientes[indice][2] = Array.new
-				@clientes[indice][2].push(fechaGarantia)
-			end
+			@clientes[fila][2] = Array.new
+			@clientes[fila][2].push(vj.puntos)
 		end
 	end
 		

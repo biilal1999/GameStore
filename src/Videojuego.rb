@@ -10,26 +10,21 @@ class Videojuego
 	    attr_reader:descuento
 	    attr_reader:edadesVentas
 	    attr_reader:precioInicial
-	    attr_reader:garantia
+	    attr_reader:puntos
 		
 		
-		def initialize (nombre, fecha, desc, precio, garantia = nil)
+		def initialize (nombre, fecha, desc, precio, puntos = 0)
 		    @nombreVideojuego = nombre
 		    @fechaLanzamiento = fecha
 		    @descuento = desc
 		    @edadesVentas = []
 		    @precioInicial = precio
 		    
-		    if garantia.nil?
-			@garantia = garantia
+		    if puntos >= 0
+			@puntos = puntos
 
 		    else
-
-			    if garantia <= 0
-				raise ArgumentError.new("Los días de garantía deben ser mayores que cero")
-			    else
-				@garantia = garantia
-			    end
+			raise ArgumentError.new("Los puntos de un videojuego no pueden ser negativos")
 		    end
 
 		end
