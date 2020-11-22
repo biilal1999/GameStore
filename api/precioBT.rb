@@ -2,7 +2,7 @@ require 'json'
 require 'net/https'
 
 
-TOKEN = ENV['TELEGRAM_BOT']
+TOKEN = process.env.TELEGRAM_BOT
 
 Handler = Proc.new do |req, res|
 
