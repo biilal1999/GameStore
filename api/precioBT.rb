@@ -8,9 +8,8 @@ Handler = Proc.new do |req, res|
 
 	mensaje = "holaaa"
 	recibo = JSON.parse(req.body)
-	chat = recibo["message"]["chat"]["id"]
 
-	vuelta = {msg: mensaje, chat: chat}
+	vuelta = {msg: mensaje}
 	uri = URI("https://api.telegram.org")
 
 	Net::HTTP.start(uri.hostname, uri.port, {use_ssl: true}) do |http|
