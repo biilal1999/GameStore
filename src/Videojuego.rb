@@ -10,14 +10,28 @@ class Videojuego
 	    attr_reader:descuento
 	    attr_reader:edadesVentas
 	    attr_reader:precioInicial
+	    attr_reader:garantia
 		
 		
-		def initialize (nombre, fecha, desc, precio)
+		def initialize (nombre, fecha, desc, precio, garantia = nil)
 		    @nombreVideojuego = nombre
 		    @fechaLanzamiento = fecha
 		    @descuento = desc
 		    @edadesVentas = []
 		    @precioInicial = precio
+		    
+		    if garantia.nil?
+			@garantia = garantia
+
+		    else
+
+			    if garantia <= 0
+				raise ArgumentError.new("Los días de garantía deben ser mayores que cero")
+			    else
+				@garantia = garantia
+			    end
+		    end
+
 		end
 		
 		
