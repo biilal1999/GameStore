@@ -2,13 +2,10 @@ const request = require('request-promise');
 const info = require('./info.json');
 
 
-Function calculaPuntos(cliente){
-
-}
-
 exports.handler = async function (event, context){
 	let body = JSON.parse(event.body);
 	let {chat, msg} = body.message;
+	let cadena = ""; 
 
 	if (msg == "/puntos"){
 		cadena = "¿Bilal? ¿JJ? ¿Mario? ¿Raúl? ¿Qué clientes quieres consultar?";
