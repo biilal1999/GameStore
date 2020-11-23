@@ -10,7 +10,7 @@ exports.handler = async function (event, context){
 
 	if (text == "/puntos"){
 		cadena = "¿Bilal? ¿JJ? ¿Mario? ¿Raúl? ¿Qué clientes quieres consultar?";
-		cadnena += "\n";
+		cadena += "\n";
 		cadena += "Por ejemplo, /puntosBilal";
 	}
 
