@@ -5,6 +5,7 @@ const info = require('./info.json');
 exports.handler = async function (event, context){
 	let body = JSON.parse(event.body);
 	let {chat, text} = body.message;
+	console.log(body.message);
 
 	let cadena = "eeey";
 
