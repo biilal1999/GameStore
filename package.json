@@ -1,0 +1,22 @@
+{
+  "name": "gamestore",
+  "version": "1.0.0",
+  "description": "Bot Telegram",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biilal1999/GameStore.git"
+  },
+  "author": "Bilal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biilal1999/GameStore/issues"
+  },
+  "homepage": "https://github.com/biilal1999/GameStore#readme"
+}
