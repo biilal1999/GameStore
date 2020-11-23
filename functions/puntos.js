@@ -6,11 +6,11 @@ function calcularPuntos(nombre){
 	cadena = ""
 
 	for (let i = 0; i < data["clientes"].length && !encontrado; i++){
-		if (data["clientes"][i]["nombre"] == nombre){
+		if (info["clientes"][i]["nombre"] == nombre){
 			let suma = 0;
 
-			for (let j = 0; j < data["clientes"][i]["videojuegosComprados"].length; j++){
-				suma += data["clientes"][i]["videojuegosComprados"]["puntos"];
+			for (let j = 0; j < info["clientes"][i]["videojuegosComprados"].length; j++){
+				suma += info["clientes"][i]["videojuegosComprados"]["puntos"];
 			}
 
 			encontrado = true
