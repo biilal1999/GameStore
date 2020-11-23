@@ -5,7 +5,7 @@ function calcularPuntos(nombre){
 	var encontrado = false;
 	cadena = ""
 
-	for (let i = 0; i < data["clientes"].length && !encontrado; i++){
+	for (let i = 0; i < info["clientes"].length && !encontrado; i++){
 		if (info["clientes"][i]["nombre"] == nombre){
 			let suma = 0;
 
