@@ -1,7 +1,6 @@
 const info = require('./info.json');
 
-
-async function calcularPuntos(nombre){
+function calcularPuntos(nombre){
 	var encontrado = false;
 	cadena = ""
 	let suma = 0;
@@ -29,6 +28,7 @@ async function calcularPuntos(nombre){
 	return cadena;			
 
 }
+
 
 exports.handler = async function (event, context){
 	
@@ -82,7 +82,7 @@ exports.handler = async function (event, context){
 	}
 
 	catch(error){
-		console.log(error);
+		console.log("Bilal");
 	}
 }
 
