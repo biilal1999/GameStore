@@ -15,5 +15,4 @@ Handler = Proc.new do |req, res|
 	res.status = 200
 	res['Content-Type'] = 'text/text; charset=utf-8'
 	res.body = vuelta.to_json
-	res = Net::HTTP::Get.new("https://api.telegram.org/bot#{TOKEN}/sendMessage")
 end
