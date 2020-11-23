@@ -7,7 +7,6 @@ TOKEN = ENV["TELEGRAM_BOT"]
 Handler = Proc.new do |req, res|
 
 	mensaje = "holaaa"
-	recibo = JSON.parse(req.body)
 
 	vuelta = mensaje
 
