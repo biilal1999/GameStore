@@ -1,15 +1,14 @@
-const request = require('request-promise');
 const info = require('./info.json');
 
 
 exports.handler = async function (event, context){
 	let body = JSON.parse(event.body);
-	let {chat, msg} = body.message;
+	let {chat, text} = body.message;
 	let cadena = ""; 
 
-	console.log(msg);
+	console.log(text);
 
-	if (msg == "/puntos"){
+	if (text == "/puntos"){
 		cadena = "¿Bilal? ¿JJ? ¿Mario? ¿Raúl? ¿Qué clientes quieres consultar?";
 		cadnena += "\n";
 		cadena += "Por ejemplo, /puntosBilal";
