@@ -1,6 +1,36 @@
 const info = require('./info.json');
 
 
+function calcularPuntos(nombre){
+	var encontrado = false;
+	cadena = ""
+
+	for (let i = 0; i < data["clientes"].length && !encontrado; i++){
+		if (data["clientes"][i]["nombre"] == nombre){
+			let suma = 0;
+
+			for (let j = 0; j < data["clientes"][i]["videojuegosComprados"].length; j++){
+				suma += data["clientes"][i]["videojuegosComprados"]["puntos"];
+			}
+
+			encontrado = true
+		}
+	}
+
+	
+	if (encontrado){
+		cadena = "El cliente " + nombre + " tiene " + suma + " puntos acumulados.";
+	}
+
+	else{
+		cadena = "No existe el cliente " + nombre;
+	}
+
+	
+	return cadena;			
+
+}
+
 exports.handler = async function (event, context){
 	let body = JSON.parse(event.body);
 	let {chat, text} = body.message;
@@ -14,8 +44,28 @@ exports.handler = async function (event, context){
 		cadena += "Por ejemplo, /puntosBilal";
 	}
 
+	else if (text == "/puntosBilal"){
+		cadena = calcularPuntos("Bilal");
+	}
+
+	else if (text == "/puntosJJ"){
+		cadena = calcularPuntos("JJ");
+	}
+
+	else if (text == "/puntosMario"){
+		cadena = calcularPuntos("Mario");
+	}
+
+	else if (text == "/puntosRaúl" || text == "/puntosRaul"){
+		cadena = calcularPuntos("Raúl");
+	}
+
 	else{
-		cadena = "eeey";
+		cadena = "Para usar el bot PUNTOS utilice el comando /puntos.";
+		cadena += "\n"
+		cadena += "Por ejemplo, /puntosJJ para saber los puntos que tiene acumulados JJ";
+		cadena += "\n"
+		cadena += "También puedes probar con /puntosBilal , /puntosMario y /puntosRaúl";
 	}
 	
 
