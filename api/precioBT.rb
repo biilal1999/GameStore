@@ -14,10 +14,8 @@ Handler = Proc.new do |req, res|
 	url = "https://api.telegram.org"
 	uri = URI(url)
 
+	res = Net::HTTP::Get.new("https://api.telegram.org/bot#{TOKEN}/sendMessage", {'Content-Type' => 'application/json; charset=utf-8'})
 	res.status = 200
-	res['Content-Type'] = 'application/json; charset=utf-8'
 	res.body = vuelta.to_json
-	
-	return { statusCode: 200 }
 	
 end
