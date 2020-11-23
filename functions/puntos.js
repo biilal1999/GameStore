@@ -4,11 +4,10 @@ const info = require('./info.json');
 function calcularPuntos(nombre){
 	var encontrado = false;
 	cadena = ""
+	let suma = 0;
 
 	for (let i = 0; i < info["clientes"].length && !encontrado; i++){
 		if (info["clientes"][i]["nombre"] == nombre){
-			let suma = 0;
-
 			for (let j = 0; j < info["clientes"][i]["videojuegosComprados"].length; j++){
 				suma += info["clientes"][i]["videojuegosComprados"]["puntos"];
 			}
