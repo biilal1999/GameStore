@@ -11,13 +11,12 @@ Handler = Proc.new do |req, res|
 	id = recibo["message"]["chat"]["id"]
 
 	vuelta = {msg: mensaje, chat: id}
-	uri = URI("https://api.telegram.org")
+	url = "https://api.telegram.org"
+	uri = URI(url)
 
-	Net::HTTP.start(uri.hostname, uri.port, {use_ssl: true}) do |http|
-            res = Net::HTTP::Get.new("/bot#{TOKEN}/sendMessage", {'Content-Type' => 'application/json; charset=utf-8'})
-            res.body = vuelta.to_json
-            http.request(res)
-        end
+	res.status = 200
+	res['Content-Type'] = 'application/json; charset=utf-8'
+	res.body = vuelta.to_json
 	
 	return { statusCode: 200 }
 	
