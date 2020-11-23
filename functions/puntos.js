@@ -12,14 +12,14 @@ const info = require('./info.json');
 
 			return {
 				statusCode: 200,
-				body: JSON.stringify({text: cadena, method: 'sendMessage', chat_id:chat.id})
+				body: JSON.stringify({text: cadena, method: 'sendMessage', chat_id:chat.id}),
 				headers:{
 					'Content-Type': 'application/json'
 				}
 			};
 		}
 
-		catch(erroe){
+		catch(error){
 		}
 	}
 
