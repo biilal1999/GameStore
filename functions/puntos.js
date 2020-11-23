@@ -1,7 +1,7 @@
 const info = require('./info.json');
 
 
-function calcularPuntos(nombre){
+async function calcularPuntos(nombre){
 	var encontrado = false;
 	cadena = ""
 	let suma = 0;
