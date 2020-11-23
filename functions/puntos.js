@@ -82,7 +82,7 @@ exports.handler = async function (event, context){
 	}
 
 	catch(error){
-		console.log("Bilal");
+		console.log("Error al extraer los datos del mensaje");
 	}
 }
 
