@@ -1,6 +1,11 @@
-const info = require('./info.json');
+// Importamos el archivo .json
 
-function calcularPuntos(nombre){
+const info = require('./info.json');							
+
+
+// Función que te busca los puntos de un usuario concreto 
+
+function calcularPuntos(nombre){  										
 	var encontrado = false;
 	cadena = ""
 	let suma = 0;
@@ -30,12 +35,14 @@ function calcularPuntos(nombre){
 }
 
 
-exports.handler = async function (event, context){
+exports.handler = async function (event){
 
+	// Obtenemos el cuerpo del mensaje, y lo separamos en el chat y en el texto enviado
 	let body = JSON.parse(event.body);
 	let {chat, text} = body.message;
 	let cadena = ""; 
 
+	// Establecemos casos para cada comando enviado
 
 	if (text == "/puntos"){
 		cadena = "¿Bilal? ¿JJ? ¿Mario? ¿Raúl? ¿Qué clientes quieres consultar?";
@@ -64,10 +71,16 @@ exports.handler = async function (event, context){
 		cadena += "\n"
 		cadena += "Por ejemplo, /puntosJJ para saber los puntos que tiene acumulados JJ";
 		cadena += "\n"
-		cadena += "También puedes probar con /puntosBilal , /puntosMario y con /puntosRaúl";
+		cadena += "También puedes probar con: \n";
+		cadena += "---> /puntosBilal";
+		cadena += "\n";
+		cadena += "---> /puntosMario";
+		cadena += "\n";
+		cadena += "---> /puntosRaúl";
 	}
 		
 
+	// A devolver en Netlify expecificando el texto, el chat y el método
 	return {
 		statusCode: 200,
 		body: JSON.stringify({text: cadena, method: 'sendMessage', chat_id:chat.id}),
