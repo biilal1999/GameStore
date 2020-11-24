@@ -1,4 +1,4 @@
-## Función desplegada en Vercel
+# Función desplegada en Vercel
 
 
 La función que hemos desplegado en **Vercel** la hemos implementado con el lenguaje **Ruby**, el cual estamos utilizando para el desarrollo de nuestro proyecto [GameStore](https://github.com/biilal1999/GameStore). Esta función informa al cliente del precio de un videojuego buscado por su nombre.
