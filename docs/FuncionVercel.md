@@ -46,10 +46,14 @@ Se han seguido los siguientes pasos en la implementación de la función [precio
 
 Esta función referencia a nuestra [HU02](https://github.com/biilal1999/GameStore/issues/13).
 
+
 En nuestro fichero de la clase [Cliente.rb](https://github.com/biilal1999/GameStore/blob/master/src/Cliente.rb), dentro de nuestro método 
 
 
-< consultarPrecioFinal(j) ,
+> consultarPrecioFinal(j) ,
 
 
-hacemos uso de
+hacemos uso de la clase **net/http** que nos permite hacer peticiones HTTP utilizando el método **URI**, parseando el resultado devuelto en *formato json*, y devolviendo el resultado satisfactorio o una excepción en el caso de que hubiese un error.
+
+
+Pero como todo código que no esté testeado es **código roto**, en nuestro fichero de tests [cliente_spec_significativos.rb](https://github.com/biilal1999/GameStore/blob/master/spec/tests/cliente_spec_significativos.rb) testeamos el método implementado.
