@@ -76,7 +76,7 @@ exports.handler = async function (event){
 		cadena += "\n";
 		cadena += "---> /puntosMario";
 		cadena += "\n";
-		cadena += "---> /puntosRaúl";
+		cadena += "---> /puntosRaul";
 	}
 		
 
