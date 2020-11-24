@@ -64,7 +64,7 @@ exports.handler = async function (event, context){
 		cadena += "\n"
 		cadena += "Por ejemplo, /puntosJJ para saber los puntos que tiene acumulados JJ";
 		cadena += "\n"
-		cadena += "También puedes probar con /puntosBilal , /puntosMario y /puntosRaúl";
+		cadena += "También puedes probar con /puntosBilal , /puntosMario y con /puntosRaúl";
 	}
 		
 
