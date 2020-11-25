@@ -70,3 +70,17 @@
     - Implementar sus métodos y testearlos
 - Modifichar el archivo [README.md](https://github.com/biilal1999/GameStore/blob/master/README.md) para añadir los links correspondientes a este hito
 - Modificar [hito-4.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-4.md) y hacer *Pull Request* con enlace a nuestro proyecto
+
+
+## Hito 5: Uso de sistemas serverless
+
+- Enlazar nuestro [repositorio](https://github.com/biilal1999/GameStore) con **Vercel**
+    - Construir nuestro fichero [precio.rb](https://github.com/biilal1999/GameStore/blob/master/api/precio.rb) para desplegarlo en **Vercel**
+- Enlazar nuestro [repositorio](https://github.com/biilal1999/GameStore) con **Netlify**
+    - Construir nuestro fichero [puntos.js](https://github.com/biilal1999/GameStore/blob/master/functions/puntos.js)
+- Construir nuestro fichero [5.json](https://github.com/biilal1999/GameStore/blob/master/5.json) con la información que devuelve nuestro [precio.rb](https://github.com/biilal1999/GameStore/blob/master/api/precio.rb) para desplegarlo en **Vercel**
+- Añadir capturas de pantalla del funcionamiento de nuestro bot
+- Redactar [aquí](https://github.com/biilal1999/GameStore/blob/master/docs/FuncionVercel.md) la implementación del desarrollo de la función en **Vercel**
+- Redactar [aquí](https://github.com/biilal1999/GameStore/blob/master/docs/FuncionNetlify.md) la implementación del desarrollo de la función en **Netlify** y su integración con el **bot de Telegram**
+- Modifichar el archivo [README.md](https://github.com/biilal1999/GameStore/blob/master/README.md) para añadir los links correspondientes a este hito
+- Modificar [hito-5.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-5.md) y hacer *Pull Request* con enlace a nuestro proyecto
