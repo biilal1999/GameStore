@@ -86,6 +86,14 @@ También ponemos nuestro **TOKEN del bot** que nos ha proporcionado **BotFather*
 Puedes comprobar si lo deseas el funcionamiento de nuestro bot [PuntosGameBot](https://t.me/PuntosGameBot)
 
 
+Aquí te dejo una prueba del funcionamiento del mismo
+
+
+
+![Prueba](https://github.com/biilal1999/GameStore/blob/master/docs/img/PruebaTelegram.png)
+
+
+
 
 
 ## Integración con nuestro proyecto
