@@ -83,7 +83,7 @@ También ponemos nuestro **TOKEN del bot** que nos ha proporcionado **BotFather*
 ### ¿Quieres usar nuestro bot?
 
 
-Puedes comprobar si lo deseas el funcionamiento de nuestro bot [PuntosGameBot](t.me/PuntosGameBot)
+Puedes comprobar si lo deseas el funcionamiento de nuestro bot [PuntosGameBot](https://t.me/PuntosGameBot)
 
 
 
@@ -106,3 +106,9 @@ Hemos añadido a la clase [Videojuego.rb](https://github.com/biilal1999/GameStor
 para que añada los puntos obtenidos al cliente una vez se le haya vendido el **videojuego**.
 
 
+
+
+### Uso de Node con ¿dependencias?
+
+
+Hemos utilizado **Node** como lenguaje para implementar esta función, pero no nos ha hecho falta los ficheros de dependencias **package.json** y **package-lock.json**, que corresponderían respectivamente con [Gemfile](https://github.com/biilal1999/GameStore/blob/master/Gemfile) y [Gemfile.lock](https://github.com/biilal1999/GameStore/blob/master/Gemfile.lock) para **Ruby**, puesto que no hemos necesitado dependencias de **Node** a la hora de implementar esta función.
