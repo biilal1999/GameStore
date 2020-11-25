@@ -69,7 +69,7 @@ Nuestro bot no tiene de momento ninguna acción definida. Es decir, si le mandam
 Para eso sirve el **WEBHOOK**, pues escribiendo en la **URL de nuestro navegador lo siguiente:
 
 
-> https://api.telegram.org/bot{miTokenBot}?url=https://gamestorebot.netlify.app/.netlify/functions/puntos
+> https://api.telegram.org/bot{miTokenBot}/setWebhook?url=https://gamestorebot.netlify.app/.netlify/functions/puntos
 
 
 
