@@ -24,6 +24,56 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 
 
 
+## Rúbricas Serverless
+
+
+Como **sistemas Serverles** hemos utilizado
+
+
+### Vercel
+
++ Documentación sobre la [conexión y despliegue en Vercel](https://github.com/biilal1999/GameStore/blob/master/docs/ExplicacionVercel.md)
+
++ Implementada la función con el lenguaje de nuestro proyecto, **Ruby**
+
++ Función [precio.rb](https://github.com/biilal1999/GameStore/blob/master/api/precio.rb)
+
++ Documentación sobre la [función implementada](https://github.com/biilal1999/GameStore/blob/master/docs/FuncionVercel.md)
+
++ Nuestro [proyecto desplegado](https://gamestore.vercel.app/) en **Vercel**
+
++ Nuestro [5.json](https://github.com/biilal1999/GameStore/blob/master/5.json) con la salida de la [petición url](https://gamestore.vercel.app/api/precio.rb?v=FIFA)
+
++ Integrada con la [HU02](https://github.com/biilal1999/GameStore/issues/13)
+
+
+
+### Netlify
+
++ Documentación sobre la [conexión y despliegue en Netlify](https://github.com/biilal1999/GameStore/blob/master/docs/ExplicacionNetlify.md)
+
++ Implementada la función con un lenguaje **DISTINTO** al de nuestro proyecto, **Node**
+
++ Función [puntos.js](https://github.com/biilal1999/GameStore/blob/master/functions/puntos.js)
+
++ Documentación sobre la [función implementada](https://github.com/biilal1999/GameStore/blob/master/docs/FuncionNetlify.md)
+
++ El [código de nuestra función](https://gamestorebot.netlify.app/functions/puntos.js) en nuestro **site de Netlify**
+
++ Integrada con la [HU06](https://github.com/biilal1999/GameStore/issues/82)
+
+
+
+#### Bot de Telegram en Netlify
+
++ Documentación sobre la [integración con un bot de Telegram](https://github.com/biilal1999/GameStore/blob/master/docs/FuncionNetlify.md#integraci%C3%B3n-con-un-bot-de-telegram)
+
++ Nuestro [PuntosGameBot](https://t.me/PuntosGameBot)
+
+
+
+
+
 ## Integración Continua
 
 
