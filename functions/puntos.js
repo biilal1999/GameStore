@@ -38,8 +38,9 @@ function calcularPuntos(nombre){
 exports.handler = async function (event){
 
 	// Obtenemos el cuerpo del mensaje, y lo separamos en el chat y en el texto enviado
-	let body = JSON.parse(event.body);
-	let {chat, text} = body.message;
+	let msg = JSON.parse(event.body);
+	let text = msg.message.text;
+	let chat_id = msg.message.chat.id;
 	let cadena = ""; 
 
 	// Establecemos casos para cada comando enviado
@@ -83,7 +84,7 @@ exports.handler = async function (event){
 	// A devolver en Netlify expecificando el texto, el chat y el método
 	return {
 		statusCode: 200,
-		body: JSON.stringify({text: cadena, method: 'sendMessage', chat_id:chat.id}),
+		body: JSON.stringify({text: cadena, method: 'sendMessage', chat_id:chat_id}),
 		headers:{
 			'Content-Type': 'application/json'
 		}
