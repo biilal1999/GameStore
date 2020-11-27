@@ -46,6 +46,7 @@ Como **sistemas Serverles** hemos utilizado
 
 + Integrada con la [HU02](https://github.com/biilal1999/GameStore/issues/13)
 
++ Fichero [vercel.json](https://github.com/biilal1999/GameStore/blob/master/vercel.json) para desactivar las **notificaciones de Vercel** al correo por cada **deploy**
 
 
 ### Netlify
