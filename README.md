@@ -116,7 +116,7 @@ Los issues que hemos ido abriendo y cerrando durante la realización del proyect
 
 ## Historias de usuario
 
-Además, tambíen pueden ver los issues que son historias de usuario:
+Además, tambíen pueden ver los issues que son **historias de usuario**:
 
 - [HU01](https://github.com/biilal1999/GameStore/issues/12)
 - [HU02](https://github.com/biilal1999/GameStore/issues/13)
