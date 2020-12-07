@@ -5,6 +5,6 @@ require 'json'
 class PruebaSinatra < Sinatra::Base
 
 	get '/' do
-		"Hola Sinatra!"
+		"Hola  de nuevo Sinatra!"
 	end
 end
