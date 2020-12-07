@@ -34,12 +34,12 @@ class Dator
         raise "Método 'crearTienda(ciudad)' debe ser implementado"
     end
 
-    def insertarVideojuegoTienda(ciudad, nombreVideojuego)
-        raise "Método 'insertarVideojuegoTienda(ciudad, nombreVideojuego)' debe ser implementado"
+    def insertarVideojuegoTienda(ciudad, vid)
+        raise "Método 'insertarVideojuegoTienda(ciudad, vid)' debe ser implementado"
     end
 
     def obtenerMasStocks(ciudad)
         raise "Método 'obtenerMasStocks(ciudad)' debe ser implementado"
     end
-    
+
 end
