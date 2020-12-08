@@ -18,16 +18,16 @@ class Dator
         raise "Método 'saberDiasRestantes(vid)' debe ser implementado"
     end
 
-    def encontrarUsuario(usu)
-        raise "Método 'encontrarUsuario(usu)' debe ser implementado"
+    def encontrarCliente(cli)
+        raise "Método 'encontrarCliente(cli)' debe ser implementado"
     end
 
-    def usuarioCompraVideojuego(usu, vid)
-        raise "Método 'usuarioCompraVideojuego(usu, vid)' debe ser implementado"
+    def clienteCompraVideojuego(cli, vid)
+        raise "Método 'clienteCompraVideojuego(cli, vid)' debe ser implementado"
     end
 
-    def saberPuntos(usu, vid)
-        raise "Método 'saberPuntos(usu, vid)' debe ser implementado"
+    def saberPuntos(cli, vid)
+        raise "Método 'saberPuntos(cli, vid)' debe ser implementado"
     end
 
     def crearTienda(ciudad)

@@ -8,7 +8,9 @@ requiere_relative "Dator.rb"
 class ArrayDator < Dator
 
     def initialize
-
+        @tiendas = Array.new
+        @clientes = Array.new
+        @videojuegos = Array.new
     end
 
 

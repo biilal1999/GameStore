@@ -1,3 +1,3 @@
-require './src/api.rb'
+require './src/Api.rb'
 
-run PruebaSinatra
+run ApiGame
