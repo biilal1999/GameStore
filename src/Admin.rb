@@ -2,12 +2,14 @@ require_relative 'ArrayDator.rb'
 
 class Admin
 
-    def initialize(dator)
-        @dator = dator
+    attr_reader :dator
+
+    def initialize(obj)
+        @dator = obj
     end
 
     def existeTienda
-        @dator.existeTienda
+        return @dator.existeTienda
     end
 
     def nuevoVideojuego(nombre, fecha, desc, precio)

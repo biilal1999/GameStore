@@ -1,12 +1,16 @@
 class Dator
 
-    def initialize()
-        if self.initialize == Dator
-            raise "Clase no instanciable"
-        end
+    attr_reader :tiendas
+    attr_reader :clientes
+    attr_reader :videojuegos
+
+
+    def initialize
+        raise "Clase no instanciable"
     end
 
     def existeTienda
+        raise "Método 'existeTienda' debe ser implementado"
     end
 
     def nuevoVideojuego(nombre, fecha, desc, precio)
