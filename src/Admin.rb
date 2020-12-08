@@ -12,6 +12,14 @@ class Admin
         return @dator.existeTienda
     end
 
+    def comprobarTienda(ciudad)
+        return @dator.comprobarTienda(ciudad)
+    end
+
+    def tiendaValida(ciudad)
+        return @dator.tiendaValida(ciudad)
+    end
+
     def nuevoVideojuego(nombre, fecha, desc, precio)
         @dator.nuevoVideojuego(nombre, fecha, desc, precio)
     end

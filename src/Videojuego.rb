@@ -58,12 +58,12 @@ class Videojuego
 		    suma = 0
 		    ventas = @edadesVentas.length
 
-                    if ventas == 0
-                       raise StandardError.new("No hay ventas de momento para el videojuego")
+            if ventas == 0
+            	raise StandardError.new("No hay ventas de momento para el videojuego")
 		    end
 
 		    for edad in @edadesVentas
-                       suma = suma + edad
+            	suma = suma + edad
 		    end
 
 		    media = ((suma * 1.0) / ventas)

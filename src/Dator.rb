@@ -13,6 +13,14 @@ class Dator
         raise "Método 'existeTienda' debe ser implementado"
     end
 
+    def comprobarTienda(ciudad)
+        raise "Método 'comprobarTienda(ciudad)' debe ser implementado"
+    end
+
+    def tiendaValida(ciudad)
+        raise "Método 'tiendaValida(ciudad)' debe ser implementado"
+    end
+
     def nuevoVideojuego(nombre, fecha, desc, precio)
         raise "Método 'nuevoVideojuego(nombre, fecha, desc, precio)' debe ser implementado"
     end
