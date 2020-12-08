@@ -13,5 +13,14 @@ class ArrayDator < Dator
         @videojuegos = Array.new
     end
 
+    def existeTienda
+        existe = false
+
+        if @tiendas.size > 0
+            existe = true
+        end
+
+        return existe
+    end
 
 end

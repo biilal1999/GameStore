@@ -6,6 +6,10 @@ class Admin
         @dator = dator
     end
 
+    def existeTienda
+        @dator.existeTienda
+    end
+
     def nuevoVideojuego(nombre, fecha, desc, precio)
         @dator.nuevoVideojuego(nombre, fecha, desc, precio)
     end

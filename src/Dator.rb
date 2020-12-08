@@ -6,6 +6,9 @@ class Dator
         end
     end
 
+    def existeTienda
+    end
+
     def nuevoVideojuego(nombre, fecha, desc, precio)
         raise "Método 'nuevoVideojuego(nombre, fecha, desc, precio)' debe ser implementado"
     end
