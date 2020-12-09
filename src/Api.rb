@@ -32,20 +32,28 @@ class ApiGame < Sinatra::Base
 			cadena.to_json
 		end
 
-		if @admin.tiendaValida(city) == false
-			status 404
-			cadena = { :error => "La ciudad #{city} no es válida"}
-			content_type 'application/json'
-			cadena.to_json
-
-		else
-
-			if @admin.comprobarTienda(city) == true
+		begin
+			if @admin.tiendaValida(city) == false
 				status 404
-				cadena = { :error => "La ciudad #{city} ya existe. Pruebe con otra"}
+				cadena = { :error => "La ciudad #{city} no es válida"}
 				content_type 'application/json'
 				cadena.to_json
+
+			else
+
+				if @admin.comprobarTienda(city) == true
+					status 404
+					cadena = { :error => "La ciudad #{city} ya existe. Pruebe con otra"}
+					content_type 'application/json'
+					cadena.to_json
+				end
 			end
+
+		rescue => e
+			status 400
+			cadena = { :error => "Ruta introducida incorrectamente"}
+			content_type 'application/json'
+			cadena.to_json
 		end
 	end
 
