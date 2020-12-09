@@ -8,7 +8,7 @@ class Cliente
 
 	attr_reader:nombre							# Nombre del cliente (string)
 	attr_reader:codigo							# Código del cliente de la tienda (int)
-    attr_accessor:videojuegosComprados					# Array de instancias de Videojuego
+    attr_reader:videojuegosComprados					# Array de instancias de Videojuego
     attr_reader:fechaNacimiento						# fecha tipo Date
 	attr_reader:tiendaFavorita						# tienda favorita del cliente, (Ciudad)
 

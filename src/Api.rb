@@ -16,6 +16,31 @@ class ApiGame < Sinatra::Base
 			status 200
 			content_type 'application/json'
 			cadena.to_json
+
+		else
+			cadena = { :info => "Crack" }
+			status 200
+			content_type 'application/json'
+			cadena.to_json
+		end
+	end
+
+
+	get '/precio/:videojuego/:tienda' do
+		nvid = params['videojuego']
+		nti = params['tienda']
+
+		if @admin.comprobarTienda(nti) == false
+			status 400
+			cadena = { :error => "Ruta introducida incorrectamente!!!"}
+			content_type 'application/json'
+			cadena.to_json
+
+		else
+			cadena = { :info => "Empiece  disponibles son Granada, Madrid, Barcelona, Sevilla, Valencia, Vigo y Zaragoza"}
+			status 200
+			content_type 'application/json'
+			cadena.to_json
 		end
 	end
 

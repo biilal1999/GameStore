@@ -3,32 +3,32 @@ require_relative 'Ciudades.rb'
 require_relative 'Cliente.rb'
 
 class Tienda
-		
+
 	attr_reader:videojuegos
 	attr_reader:ciudad
 	attr_reader:clientes
-		
+
 
 	def initialize (ciu)
 		@videojuegos = Array.new             			# Array de Array objetos de la clase Videojuego
 		@ciudad = ciu    					# Array de valores de la clase ENUM Ciudades
 		@clientes = Array.new					# Array de clientes de la tienda
-			
+
 	end
 
 
 	def obtenerSigCodigo()							# Obtiene el código disponible para el siguiente cliente de la tienda
 		res = -1
-	
+
 		if @clientes.size == 0
 			res = 0
 
-		else 
+		else
 			cli = @clientes[@clientes.size-1]
 			res = cli[0].obtenerCodigo() + 1
 		end
 
-		
+
 		return res
 	end
 
@@ -62,8 +62,16 @@ class Tienda
 			end
 		end
 
-		
-		indice = @clientes.index(cli)
+
+		# indice = @clientes.index(cli)
+
+		indice = nil
+
+		for i in (0..clientes.size-1)
+			if clientes[i][0].obtenerCodigo == cli.obtenerCodigo
+				indice = i
+			end
+		end
 
 		if indice == nil
 			fila = @clientes.size
@@ -73,21 +81,21 @@ class Tienda
 			@clientes[fila][1].push(vj)
 			@clientes[fila][2] = Array.new
 			@clientes[fila][2].push(vj.puntos)
-		
-		else 
+
+		else
 			@clientes[indice][1].push(vj)
-			@clientes[fila][2] = Array.new
-			@clientes[fila][2].push(vj.puntos)
+			@clientes[indice][2] = Array.new
+			@clientes[indice][2].push(vj.puntos)
 		end
 	end
-		
 
-	
+
+
 	def addVideojuego (videojuego)							# Añade objeto videojuego al array
 		ind = indiceVideojuego(videojuego)
-		
-		if (ind == -1)							
-			fila = @videojuegos.size		
+
+		if (ind == -1)
+			fila = @videojuegos.size
 			@videojuegos[fila] = Array.new
 			@videojuegos[fila].push(videojuego)
 			@videojuegos[fila].push(1)
@@ -107,7 +115,7 @@ class Tienda
 		return productos
 	end
 
-	
+
 	def indiceVideojuego(vid)									# Método para saber si en esta tienda ya tenemos ese videojuego
 		numFilas = @videojuegos.size
 		indice = -1
@@ -127,11 +135,11 @@ class Tienda
 	def masMuestras()										# Corresponde a la HU04
 		if @videojuegos.size == 0
 			raise StandardError.new("No hay videojuegos actualmente en la tienda")
-		
+
 		else
 			res = @videojuegos[0][0].obtenerNombre()
 			num = @videojuegos[0][1]
-			
+
 			for i in 0..(@videojuegos.size - 1)
 				if @videojuegos[i][1] > num
 					num = @videojuegos[i][1]
@@ -142,6 +150,5 @@ class Tienda
 
 		return res
 	end
-			
-end
 
+end

@@ -11,6 +11,22 @@
         			"puntos": 11
         		},
 
+                {
+        			"nombreVideojuego":"FIFA",
+        			"descuento":0.3,
+        			"fechaLanzamiento":"2021-03-15",
+        			"precioInicial":70,
+        			"puntos": 11
+        		},
+
+                {
+        			"nombreVideojuego":"FIFA",
+        			"descuento":0.3,
+        			"fechaLanzamiento":"2021-03-15",
+        			"precioInicial":70,
+        			"puntos": 11
+        		},
+
         		{
         			"nombreVideojuego":"COD",
         			"descuento":0.0,
@@ -72,14 +88,6 @@
         					"fechaLanzamiento":"2021-03-15",
         					"precioInicial":70,
         					"puntos": 11
-        				},
-
-        				{
-        					"nombreVideojuego":"GTA",
-        					"descuento":0.4,
-        					"fechaLanzamiento":"2021-02-17",
-        					"precioInicial":40,
-        					"puntos": 15
         				},
 
         				{

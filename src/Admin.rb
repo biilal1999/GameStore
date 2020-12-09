@@ -22,43 +22,35 @@ class Admin
             @tiendas[fila] = Array.new
             ciu = i["ciudad"]
             t = Tienda.new(ciu)
-            @tiendas[fila].push(t)
-            @tiendas[fila][1] = Array.new
-            @tiendas[fila][2] = Array.new
+            @tiendas[fila] = t
 
             for j in i["videojuegos"]
                 nombre = j["nombreVideojuego"]
                 descuento = j["descuento"]
                 fecha = j["fechaLanzamiento"]
-                fecha = fecha.to_date
+                fecha = Date.parse(fecha)
                 precio = j["precioInicial"]
                 puntos = j["puntos"]
 
                 v = Videojuego.new(nombre, fecha, descuento, precio, puntos)
-                @tiendas[fila][1].push(v)
+                @tiendas[fila].addVideojuego(v)
             end
 
             for k in i["clientes"]
                 nom = k["nombre"]
-                codigo = k["codigo"]
-                vec = Array.new
+                cli = Cliente.new(nom, Date.today, t)
 
                 for l in k["videojuegosComprados"]
                     nombre = l["nombreVideojuego"]
                     descuento = l["descuento"]
                     fecha = l["fechaLanzamiento"]
-                    fecha = fecha.to_date
+                    fecha = Date.parse(fecha)
                     precio = l["precioInicial"]
                     puntos = l["puntos"]
 
                     v = Videojuego.new(nombre, fecha, descuento, precio, puntos)
-                    vec.push(v)
+                    t.venderProducto(cli, v)
                 end
-
-                cli = Cliente.new(nom, Date.today, t)
-                cli.videojuegosComprados = vec
-
-                @tiendas[fila][2].push(cli)
             end
         end
     end
