@@ -37,7 +37,7 @@ class Tienda
 		obj = nil
 
 		for vi in @videojuegos
-			if vi[0].obtenerNombre() == nombreVideojuego
+			if nombreVideojuego.casecmp(vi[0].obtenerNombre()) == 0
 				obj = vi[0]
 			end
 		end

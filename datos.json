@@ -54,7 +54,7 @@
         		{
         			"nombreVideojuego":"OVERWATCH",
         			"descuento":0.0,
-        			"fechaLanzamiento":"2021-03-20",
+        			"fechaLanzamiento":"2019-03-20",
         			"precioInicial":20,
         			"puntos": 0
         		},
@@ -81,6 +81,7 @@
         		{
         			"nombre":"Bilal",
         			"codigo":0,
+                    "fechaNacimiento":"1999-08-15",
         			"videojuegosComprados":[
         				{
         					"nombreVideojuego":"FIFA",
@@ -104,6 +105,7 @@
         		{
         			"nombre":"JJ",
         			"codigo":1,
+                    "fechaNacimiento":"1955-08-13",
         			"videojuegosComprados":[
         				{
         					"nombreVideojuego":"OVERWATCH",
@@ -119,6 +121,7 @@
         		{
         			"nombre":"Mario",
         			"codigo":2,
+                    "fechaNacimiento":"1990-07-25",
         			"videojuegosComprados":[
         				{
         					"nombreVideojuego":"GTA",
@@ -135,6 +138,7 @@
         		{
         			"nombre":"Raúl",
         			"codigo":3,
+                    "fechaNacimiento":"1993-02-17",
         			"videojuegosComprados":[
         				{
         					"nombreVideojuego":"FORTNITE",
@@ -214,6 +218,7 @@
         		{
         			"nombre":"Fran",
         			"codigo":0,
+                    "fechaNacimiento":"1983-04-12",
         			"videojuegosComprados":[
         				{
         					"nombreVideojuego":"FIFA",

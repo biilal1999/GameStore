@@ -31,16 +31,52 @@ class ApiGame < Sinatra::Base
 		nti = params['tienda']
 
 		if @admin.comprobarTienda(nti) == false
-			status 400
-			cadena = { :error => "Ruta introducida incorrectamente!!!"}
+			status 404
+			cadena = { :error => "La tienda no existe!"}
 			content_type 'application/json'
 			cadena.to_json
 
 		else
-			cadena = { :info => "Empiece  disponibles son Granada, Madrid, Barcelona, Sevilla, Valencia, Vigo y Zaragoza"}
-			status 200
+			begin
+				precio = @admin.saberPrecioFinal(nvid, nti)
+				status 200
+				cadena = { :info => "El precio final del videojuego #{nvid} es de #{precio} euros"}
+				content_type 'application/json'
+				cadena.to_json
+
+			rescue => e
+				status 404
+				cadena = { :error => "El videojuego #{nvid} no existe en esta tienda"}
+				content_type 'application/json'
+				cadena.to_json
+			end
+		end
+	end
+
+	get '/dias/:videojuego/:tienda' do
+		nvid = params['videojuego']
+		nti = params['tienda']
+
+		if @admin.comprobarTienda(nti) == false
+			status 404
+			cadena = { :error => "La tienda no existe!"}
 			content_type 'application/json'
 			cadena.to_json
+
+		else
+			begin
+				dias = @admin.saberDiasRestantes(nvid, nti)
+				status 200
+				cadena = { :info => "Quedan solo #{dias} días para que salga el #{nvid}"}
+				content_type 'application/json'
+				cadena.to_json
+
+			rescue => e
+				status 404
+				cadena = { :error => "No hay disponible un #{nvid} con fecha de salida pendiente en esta tienda"}
+				content_type 'application/json'
+				cadena.to_json
+			end
 		end
 	end
 

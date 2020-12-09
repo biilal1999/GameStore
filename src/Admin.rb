@@ -38,7 +38,9 @@ class Admin
 
             for k in i["clientes"]
                 nom = k["nombre"]
-                cli = Cliente.new(nom, Date.today, t)
+                cumple = k["fechaNacimiento"]
+                cumple = Date.parse(cumple)
+                cli = Cliente.new(nom, cumple, t)
 
                 for l in k["videojuegosComprados"]
                     nombre = l["nombreVideojuego"]
@@ -99,16 +101,34 @@ class Admin
         return res
     end
 
+    def encontrarTienda(nti)
+        obj = nil
+
+        for i in @tiendas
+            if nti.casecmp(i.ciudad) == 0
+                obj = i
+            end
+        end
+
+        return obj
+    end
+
     def nuevoVideojuego(nombre, fecha, desc, precio)
         raise "Método 'nuevoVideojuego(nombre, fecha, desc, precio)' debe ser implementado"
     end
 
-    def saberPrecioFinal(vid)
-        raise "Método 'nuevoVideojuego(nombre, fecha, desc, precio)' debe ser implementado"
+    def saberPrecioFinal(nom, ti)
+        t = encontrarTienda(ti)
+        v = t.identificarVideojuego(nom)
+        precio = v.consultarPrecioFinal
+
+        return precio
     end
 
-    def saberDiasRestantes(vid)
-        raise "Método 'saberDiasRestantes(vid)' debe ser implementado"
+    def saberDiasRestantes(nom, ti)
+        t = encontrarTienda(ti)
+        v = t.identificarVideojuego(nom)
+        dias = v.consultarDiasRestantes
     end
 
     def encontrarCliente(cli)
