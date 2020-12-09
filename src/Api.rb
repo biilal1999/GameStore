@@ -81,6 +81,61 @@ class ApiGame < Sinatra::Base
 	end
 
 
+	get '/edad/:videojuego/:tienda' do
+		nvid = params['videojuego']
+		nti = params['tienda']
+
+		if @admin.comprobarTienda(nti) == false
+			status 404
+			cadena = { :error => "La tienda no existe!"}
+			content_type 'application/json'
+			cadena.to_json
+
+		else
+			begin
+				edad = @admin.saberEdadMedia(nvid, nti)
+				status 200
+				cadena = { :info => "La edad media de compra para el #{nvid} es de #{edad} años"}
+				content_type 'application/json'
+				cadena.to_json
+
+			rescue => e
+				status 404
+				cadena = { :error => "No hay ventas en esta tienda para el #{nvid}"}
+				content_type 'application/json'
+				cadena.to_json
+			end
+		end
+	end
+
+
+	get '/stock/:tienda' do
+		nti = params['tienda']
+
+		if @admin.comprobarTienda(nti) == false
+			status 404
+			cadena = { :error => "La tienda no existe!"}
+			content_type 'application/json'
+			cadena.to_json
+
+		else
+			begin
+				juego = @admin.obtenerMasStocks(nti)
+				status 200
+				cadena = { :info => "El videojuego con más unidades disponibles en esta tienda es el #{juego}"}
+				content_type 'application/json'
+				cadena.to_json
+
+			rescue => e
+				status 404
+				cadena = { :error => "No hay videojuegos disponibles en esta tienda"}
+				content_type 'application/json'
+				cadena.to_json
+			end
+		end
+	end
+
+
 	post '/tienda' do
 		begin
 			datos = JSON.parse(request.body.read)

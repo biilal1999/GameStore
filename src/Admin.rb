@@ -129,6 +129,16 @@ class Admin
         t = encontrarTienda(ti)
         v = t.identificarVideojuego(nom)
         dias = v.consultarDiasRestantes
+
+        return dias
+    end
+
+    def saberEdadMedia(nom, ti)
+        t = encontrarTienda(ti)
+        v = t.identificarVideojuego(nom)
+        edad = v.consultarMediaEdad
+
+        return edad
     end
 
     def encontrarCliente(cli)
@@ -159,7 +169,10 @@ class Admin
     end
 
     def obtenerMasStocks(ciudad)
-        raise "Método 'obtenerMasStocks(ciudad)' debe ser implementado"
+        t = encontrarTienda(ciudad)
+        juego = t.masMuestras
+
+        return juego
     end
 
 end

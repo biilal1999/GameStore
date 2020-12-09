@@ -87,6 +87,12 @@ class Tienda
 			@clientes[indice][2] = Array.new
 			@clientes[indice][2].push(vj.puntos)
 		end
+
+		for vi in @videojuegos
+			if vi[0].obtenerNombre == vj.obtenerNombre
+				vi[0].addVenta(cli.obtenerMiEdad)
+			end
+		end
 	end
 
 
