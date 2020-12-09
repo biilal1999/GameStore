@@ -1,0 +1,8 @@
+@ciudades = Array.new
+@ciudades.push("Granada")
+@ciudades.push("Madrid")
+@ciudades.push("Barcelona")
+@ciudades.push("Sevilla")
+@ciudades.push("Valencia")
+@ciudades.push("Zaragoza")
+@ciudades.push("Vigo")
