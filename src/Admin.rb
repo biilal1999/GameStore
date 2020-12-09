@@ -3,7 +3,6 @@ require_relative 'Videojuego.rb'
 require_relative 'Ciudades.rb'
 require_relative 'Tienda.rb'
 require_relative 'Cliente.rb'
-require_relative 'Dator.rb'
 
 class Admin
 
@@ -14,8 +13,6 @@ class Admin
 
     def initialize
         @tiendas = Array.new
-        @clientes = Array.new
-        @videojuegos = Array.new
 
         @ciudades = Array.new
         @ciudades.push("Granada")
@@ -45,7 +42,7 @@ class Admin
             res = false
 
             for t in @tiendas
-                if t.ciudad == ciu
+                if ciudad.casecmp(t.ciudad) == 0
                     res = true
                 end
             end
@@ -96,7 +93,14 @@ class Admin
     end
 
     def crearTienda(ciudad)
-        raise "Método 'crearTienda(ciudad)' debe ser implementado"
+        for i in (0..@ciudades.size - 1)
+            if ciudad.casecmp(@ciudades[i])
+                ciu = @ciudades[i].downcase
+                ciu = ciu.capitalize
+                t = Tienda.new(ciu)
+                @tiendas.push(t)
+            end
+        end
     end
 
     def insertarVideojuegoTienda(ciudad, vid)
