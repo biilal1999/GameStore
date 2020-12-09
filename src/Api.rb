@@ -1,14 +1,12 @@
 require 'sinatra'
 require 'json'
-require_relative 'ArrayDator.rb'
 require_relative 'Admin.rb'
 
 
 class ApiGame < Sinatra::Base
 
 	before do
-		@dator = ArrayDator.new
-		@admin = Admin.new(@dator)
+		@admin = Admin.new
 	end
 
 
