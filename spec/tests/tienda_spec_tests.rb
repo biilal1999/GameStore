@@ -14,6 +14,7 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 			expect(t.obtenerVideojuegos()).to eq(["GTA", "FIFA"])
 		end
 	end
+	
 
 	describe '#ciudades' do										# Testear ciudad con sede del array del ENUM 'Ciudades'
 		it 'sede de la tienda' do

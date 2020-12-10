@@ -105,7 +105,6 @@ class Tienda
 	end
 
 
-
 	def addVideojuego (videojuego)							# Añade objeto videojuego al array
 		ind = indiceVideojuego(videojuego)
 
