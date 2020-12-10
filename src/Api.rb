@@ -7,7 +7,7 @@ require_relative 'ArrayDator.rb'
 class ApiGame < Sinatra::Base
 
 	configure do
-		@@dator = ArrayDator.new("../datsos.json")
+		@@dator = ArrayDator.new("../datos.json")
 		@@admin = Admin.new(@@dator)
 	end
 
