@@ -20,7 +20,7 @@ class ApiGame < Sinatra::Base
 			cadena.to_json
 
 		else
-			cadena = { :info => "Crack" }
+			cadena = { :info => "Empiece a usar nuestra API" }
 			status 200
 			content_type 'application/json'
 			cadena.to_json
@@ -219,7 +219,7 @@ class ApiGame < Sinatra::Base
 	end
 
 
-	post '/renovar' do
+	post '/nuevo' do
 		datos = JSON.parse(request.body.read)
 		nti = datos['tienda']
 		nvi = datos['videojuego']
