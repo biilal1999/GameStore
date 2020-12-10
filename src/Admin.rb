@@ -8,6 +8,8 @@ require_relative 'ArrayDator.rb'
 
 class Admin
 
+    attr_reader :dator
+
     def initialize(dator)
         @dator = dator
     end
@@ -28,8 +30,8 @@ class Admin
         @dator.encontrarTienda(nti)
     end
 
-    def nuevoVideojuego(nombre, fecha, desc, precio, ciudad)
-        @dator.nuevoVideojuego(nombre, fecha, desc, precio, ciudad)
+    def nuevoVideojuego(nombre, desc, precio, puntos, ciudad)
+        @dator.nuevoVideojuego(nombre, desc, precio, puntos, ciudad)
     end
 
     def saberPrecioFinal(nom, ti)

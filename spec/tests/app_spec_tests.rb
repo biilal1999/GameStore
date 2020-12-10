@@ -2,7 +2,7 @@ require_relative '../../src/Api.rb'
 require 'rack/test'
 
 
-describe 'ApiGame' do
+describe ApiGame do
     include Rack::Test::Methods
 
     def app
