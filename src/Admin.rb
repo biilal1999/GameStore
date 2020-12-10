@@ -141,16 +141,22 @@ class Admin
         return edad
     end
 
-    def encontrarCliente(cli)
-        raise "Método 'encontrarCliente(cli)' debe ser implementado"
+    def existeCliente(cli, ti)
+        t = encontrarTienda(ti)
+        c = t.buscarCliente(cli)
+
+        return t
     end
 
     def clienteCompraVideojuego(cli, vid)
         raise "Método 'clienteCompraVideojuego(cli, vid)' debe ser implementado"
     end
 
-    def saberPuntos(cli, vid)
-        raise "Método 'saberPuntos(cli, vid)' debe ser implementado"
+    def saberPuntos(cli, ti)
+        t = existeCliente(cli, ti)
+        puntos = t.obtenerPuntosAcumulados(cli)
+
+        return puntos
     end
 
     def crearTienda(ciudad)

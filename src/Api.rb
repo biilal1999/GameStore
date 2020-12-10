@@ -136,6 +136,33 @@ class ApiGame < Sinatra::Base
 	end
 
 
+	get '/puntos/:cliente/:tienda' do
+		nti = params['tienda']
+		ncl = params['cliente']
+
+		if @admin.comprobarTienda(nti) == false
+			status 404
+			cadena = { :error => "La tienda no existe!"}
+			content_type 'application/json'
+			cadena.to_json
+
+		else
+			begin
+				puntos = @admin.saberPuntos(ncl, nti)
+				status 200
+				cadena = { :info => "El cliente #{ncl.capitalize} tiene un total de #{puntos} puntos acumulados"}
+				content_type 'application/json'
+				cadena.to_json
+
+			rescue => e
+				status 404
+				cadena = { :error => "El cliente #{ncl.capitalize} no está registrado en esta tienda"}
+				content_type 'application/json'
+				cadena.to_json
+			end
+		end
+	end
+
 	post '/tienda' do
 		begin
 			datos = JSON.parse(request.body.read)

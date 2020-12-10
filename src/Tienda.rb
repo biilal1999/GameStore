@@ -84,7 +84,6 @@ class Tienda
 
 		else
 			@clientes[indice][1].push(vj)
-			@clientes[indice][2] = Array.new
 			@clientes[indice][2].push(vj.puntos)
 		end
 
@@ -155,6 +154,39 @@ class Tienda
 		end
 
 		return res
+	end
+
+
+	def buscarCliente(nomCliente)
+		cli = nil
+
+		for i in (0..@clientes.size - 1)
+			if nomCliente.casecmp(@clientes[i][0].nombre) == 0
+				cli = @clientes[i][0]
+			end
+		end
+
+		if cli.nil?
+			raise ArgumentError.new("No existe este cliente en nuesta tienda")
+
+		else
+			return cli
+		end
+	end
+
+
+	def obtenerPuntosAcumulados(nomCliente)
+		puntos = 0
+
+		for i in (0..@clientes.size - 1)
+			if nomCliente.casecmp(@clientes[i][0].nombre) == 0
+				for j in (0..@clientes[i][2].size - 1)
+					puntos = puntos + @clientes[i][2][j]
+				end
+			end
+		end
+
+		return puntos
 	end
 
 end
