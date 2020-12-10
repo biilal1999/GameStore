@@ -1,17 +1,19 @@
 require 'sinatra'
 require 'json'
 require_relative 'Admin.rb'
+require_relative 'ArrayDator.rb'
 
 
 class ApiGame < Sinatra::Base
 
-	before do
-		@admin = Admin.new
+	configure do
+		@@dator = ArrayDator.new("../datos.json")
+		@@admin = Admin.new(@@dator)
 	end
 
 
 	get '/' do
-		if @admin.existeTienda == false
+		if @@admin.existeTienda == false
 			cadena = { :info => "Empiece creando una tienda para usar nuestra API, usando la petición /tienda y un parámetro ciudad por POST. Las ciudades disponibles son Granada, Madrid, Barcelona, Sevilla, Valencia, Vigo y Zaragoza"}
 			status 200
 			content_type 'application/json'
@@ -30,7 +32,7 @@ class ApiGame < Sinatra::Base
 		nvid = params['videojuego']
 		nti = params['tienda']
 
-		if @admin.comprobarTienda(nti) == false
+		if @@admin.comprobarTienda(nti) == false
 			status 404
 			cadena = { :error => "La tienda no existe!"}
 			content_type 'application/json'
@@ -38,7 +40,7 @@ class ApiGame < Sinatra::Base
 
 		else
 			begin
-				precio = @admin.saberPrecioFinal(nvid, nti)
+				precio = @@admin.saberPrecioFinal(nvid, nti)
 				status 200
 				cadena = { :info => "El precio final del videojuego #{nvid} es de #{precio} euros"}
 				content_type 'application/json'
@@ -57,7 +59,7 @@ class ApiGame < Sinatra::Base
 		nvid = params['videojuego']
 		nti = params['tienda']
 
-		if @admin.comprobarTienda(nti) == false
+		if @@admin.comprobarTienda(nti) == false
 			status 404
 			cadena = { :error => "La tienda no existe!"}
 			content_type 'application/json'
@@ -65,7 +67,7 @@ class ApiGame < Sinatra::Base
 
 		else
 			begin
-				dias = @admin.saberDiasRestantes(nvid, nti)
+				dias = @@admin.saberDiasRestantes(nvid, nti)
 				status 200
 				cadena = { :info => "Quedan solo #{dias} días para que salga el #{nvid}"}
 				content_type 'application/json'
@@ -85,7 +87,7 @@ class ApiGame < Sinatra::Base
 		nvid = params['videojuego']
 		nti = params['tienda']
 
-		if @admin.comprobarTienda(nti) == false
+		if @@admin.comprobarTienda(nti) == false
 			status 404
 			cadena = { :error => "La tienda no existe!"}
 			content_type 'application/json'
@@ -93,7 +95,7 @@ class ApiGame < Sinatra::Base
 
 		else
 			begin
-				edad = @admin.saberEdadMedia(nvid, nti)
+				edad = @@admin.saberEdadMedia(nvid, nti)
 				status 200
 				cadena = { :info => "La edad media de compra para el #{nvid} es de #{edad} años"}
 				content_type 'application/json'
@@ -112,7 +114,7 @@ class ApiGame < Sinatra::Base
 	get '/stock/:tienda' do
 		nti = params['tienda']
 
-		if @admin.comprobarTienda(nti) == false
+		if @@admin.comprobarTienda(nti) == false
 			status 404
 			cadena = { :error => "La tienda no existe!"}
 			content_type 'application/json'
@@ -120,7 +122,7 @@ class ApiGame < Sinatra::Base
 
 		else
 			begin
-				juego = @admin.obtenerMasStocks(nti)
+				juego = @@admin.obtenerMasStocks(nti)
 				status 200
 				cadena = { :info => "El videojuego con más unidades disponibles en esta tienda es el #{juego}"}
 				content_type 'application/json'
@@ -140,7 +142,7 @@ class ApiGame < Sinatra::Base
 		nti = params['tienda']
 		ncl = params['cliente']
 
-		if @admin.comprobarTienda(nti) == false
+		if @@admin.comprobarTienda(nti) == false
 			status 404
 			cadena = { :error => "La tienda no existe!"}
 			content_type 'application/json'
@@ -148,7 +150,7 @@ class ApiGame < Sinatra::Base
 
 		else
 			begin
-				puntos = @admin.saberPuntos(ncl, nti)
+				puntos = @@admin.saberPuntos(ncl, nti)
 				status 200
 				cadena = { :info => "El cliente #{ncl.capitalize} tiene un total de #{puntos} puntos acumulados"}
 				content_type 'application/json'
@@ -176,7 +178,7 @@ class ApiGame < Sinatra::Base
 		end
 
 		begin
-			if @admin.tiendaValida(city) == false
+			if @@admin.tiendaValida(city) == false
 				status 404
 				cadena = { :error => "La ciudad #{city} no es válida"}
 				content_type 'application/json'
@@ -184,16 +186,16 @@ class ApiGame < Sinatra::Base
 
 			else
 
-				if @admin.comprobarTienda(city) == true
+				if @@admin.comprobarTienda(city) == true
 					status 404
 					cadena = { :error => "La ciudad #{city} ya existe. Pruebe con otra"}
 					content_type 'application/json'
 					cadena.to_json
 
 				else
-					@admin.crearTienda(city)
+					@@admin.crearTienda(city)
 
-					if @admin.comprobarTienda(city) == true
+					if @@admin.comprobarTienda(city) == true
 						status 200
 						cadena = { :info => "La tienda con sede en #{city} ha sido creada con éxito"}
 						content_type 'application/json'
