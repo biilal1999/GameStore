@@ -55,6 +55,7 @@ class ApiGame < Sinatra::Base
 		end
 	end
 
+
 	get '/dias/:videojuego/:tienda' do
 		nvid = params['videojuego']
 		nti = params['tienda']
@@ -201,8 +202,8 @@ class ApiGame < Sinatra::Base
 						content_type 'application/json'
 						cadena.to_json
 					else
-						status 404
-						cadena = { :error => "Cómeme los huevos"}
+						status 400
+						cadena = { :error => "No se ha podido crear la tienda"}
 						content_type 'application/json'
 						cadena.to_json
 					end
@@ -214,6 +215,76 @@ class ApiGame < Sinatra::Base
 			cadena = { :error => "Ruta introducida incorrectamente"}
 			content_type 'application/json'
 			cadena.to_json
+		end
+	end
+
+
+	post '/renovar' do
+		datos = JSON.parse(request.body.read)
+		nti = datos['tienda']
+		nvi = datos['videojuego']
+		ndes = datos['descuento'].to_f
+		npr = datos['precio'].to_f
+		npu = datos['puntos'].to_i
+
+		if ndes < 0.0 or ndes > 1.0 or npr < 0.0 or npu < 0
+			status 404
+			cadena = { :error => "Datos enviados incorrectamente"}
+			content_type 'application/json'
+			cadena.to_json
+
+		else
+
+			if @@admin.comprobarTienda(nti) == false
+				status 404
+				cadena = { :error => "La tienda no existe!"}
+				content_type 'application/json'
+				cadena.to_json
+
+			else
+				begin
+					@@admin.nuevoVideojuego(nvi, ndes, npr, npu, nti)
+					status 200
+					cadena = { :info => "El videojuego #{nvi} ha sido añadido al cátalogo"}
+					content_type 'application/json'
+					cadena.to_json
+
+				rescue => e
+					status 404
+					cadena = { :error => "No se pueden encargar más unidades del videojuego #{nvi} ya que todavía quedan en stock"}
+					content_type 'application/json'
+					cadena.to_json
+				end
+			end
+		end
+	end
+
+
+	post '/insertar' do
+		datos = JSON.parse(request.body.read)
+		nti = datos['tienda']
+		nvi = datos['videojuego']
+
+		if @@admin.comprobarTienda(nti) == false
+			status 404
+			cadena = { :error => "La tienda no existe!"}
+			content_type 'application/json'
+			cadena.to_json
+
+		else
+			begin
+				@@admin.insertarVideojuegoTienda(nti, nvi)
+				status 200
+				cadena = { :info => "Ha sido añadida al catálogo una nueva unidad del videojuego #{nvi}"}
+				content_type 'application/json'
+				cadena.to_json
+
+			rescue => e
+				status 404
+				cadena = { :error => "Error al añadir una nueva unidad del videojuego #{nvi}, ya que no existe en el catálogo de la tienda"}
+				content_type 'application/json'
+				cadena.to_json
+			end
 		end
 	end
 

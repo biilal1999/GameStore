@@ -54,6 +54,15 @@ class ArrayDator
                 end
             end
         end
+
+        @ciudades = Array.new
+        @ciudades.push("Granada")
+        @ciudades.push("Madrid")
+        @ciudades.push("Barcelona")
+        @ciudades.push("Sevilla")
+        @ciudades.push("Valencia")
+        @ciudades.push("Zaragoza")
+        @ciudades.push("Vigo")
     end
 
     def existeTienda
@@ -112,8 +121,24 @@ class ArrayDator
         return obj
     end
 
-    def nuevoVideojuego(nombre, fecha, desc, precio)
-        raise "Método 'nuevoVideojuego(nombre, fecha, desc, precio)' debe ser implementado"
+    def nuevoVideojuego(nombre, desc, precio, puntos, ciudad)
+        t = encontrarTienda(ciudad)
+        v = Videojuego.new(nombre, Date.new(2021, 12, 15), desc, precio, puntos)
+        nomvid = t.obtenerVideojuegos
+
+        esta = false
+
+        for i in nomvid
+            if i.casecmp(nombre) == 0
+                esta = true
+            end
+        end
+
+        if esta == false
+            t.addVideojuego(v)
+        else
+            raise ArgumentError.new("El videojuego ya existía")
+        end
     end
 
     def saberPrecioFinal(nom, ti)
@@ -160,7 +185,7 @@ class ArrayDator
 
     def crearTienda(ciudad)
         for i in (0..@ciudades.size - 1)
-            if ciudad.casecmp(@ciudades[i])
+            if ciudad.casecmp(@ciudades[i]) == 0
                 ciu = @ciudades[i].downcase
                 ciu = ciu.capitalize
                 t = Tienda.new(ciu)
@@ -170,7 +195,9 @@ class ArrayDator
     end
 
     def insertarVideojuegoTienda(ciudad, vid)
-        raise "Método 'insertarVideojuegoTienda(ciudad, vid)' debe ser implementado"
+        t = encontrarTienda(ciudad)
+        v = t.identificarVideojuego(vid)
+        t.addVideojuego(v)
     end
 
     def obtenerMasStocks(ciudad)

@@ -22,8 +22,8 @@ class Dator
         raise "Método 'encontrarTienda(nti)' debe ser implementado"
     end
 
-    def nuevoVideojuego(nombre, fecha, desc, precio)
-        raise "Método 'nuevoVideojuego(nombre, fecha, desc, precio)' debe ser implementado"
+    def nuevoVideojuego(nombre, desc, precio, puntos, ciudad)
+        raise "Método 'nuevoVideojuego(nombre, desc, precio, puntos, ciudad)' debe ser implementado"
     end
 
     def saberPrecioFinal(nom, ti)
@@ -60,5 +60,9 @@ class Dator
 
     def obtenerMasStocks(ciudad)
         raise "Método 'obtenerMasStocks(ciudad)' debe ser implementado"
+    end
+
+    def eliminarVideojuego(ciudad, vid)
+        raise "Método 'eliminarVideojuego(ciudad, vid)' debe ser implementado"
     end
 end

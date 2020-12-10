@@ -28,8 +28,8 @@ class Admin
         @dator.encontrarTienda(nti)
     end
 
-    def nuevoVideojuego(nombre, fecha, desc, precio)
-        @dator.nuevoVideojuego(nombre, fecha, desc, precio)
+    def nuevoVideojuego(nombre, fecha, desc, precio, ciudad)
+        @dator.nuevoVideojuego(nombre, fecha, desc, precio, ciudad)
     end
 
     def saberPrecioFinal(nom, ti)
