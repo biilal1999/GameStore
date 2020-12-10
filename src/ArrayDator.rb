@@ -199,13 +199,20 @@ class ArrayDator < Dator
     end
 
     def crearTienda(ciudad)
+        flag = false
+
         for i in (0..@ciudades.size - 1)
             if ciudad.casecmp(@ciudades[i]) == 0
                 ciu = @ciudades[i].downcase
                 ciu = ciu.capitalize
                 t = Tienda.new(ciu)
                 @tiendas.push(t)
+                flag = true
             end
+        end
+
+        if flag == false
+            raise ArgumentError.new("No se puede crear una tienda en #{ciudad}")
         end
     end
 
@@ -217,6 +224,11 @@ class ArrayDator < Dator
 
     def obtenerMasStocks(ciudad)
         t = encontrarTienda(ciudad)
+
+        if t.nil?
+            raise ArgumentError.new("No existe tienda en #{ciudad}")
+        end
+        
         juego = t.masMuestras
 
         return juego
