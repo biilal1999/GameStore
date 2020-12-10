@@ -48,8 +48,8 @@ class Admin
         @dator.existeCliente(cli, ti)
     end
 
-    def clienteCompraVideojuego(cli, vid)
-        @dator.clienteCompraVideojuego(cli, vid)
+    def clienteCompraVideojuego(cli, vid, ciu)
+        @dator.clienteCompraVideojuego(cli, vid, ciu)
     end
 
     def saberPuntos(cli, ti)
@@ -68,4 +68,7 @@ class Admin
         @dator.obtenerMasStocks(ciudad)
     end
 
+    def eliminarVideojuego(ciudad, vid)
+        @dator.eliminarVideojuego(ciudad, vid)
+    end
 end

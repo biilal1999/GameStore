@@ -6,7 +6,7 @@ require_relative 'Tienda.rb'
 require_relative 'Cliente.rb'
 require_relative 'Dator.rb'
 
-class ArrayDator
+class ArrayDator < Dator
 
     attr_reader :ciudades
     attr_reader :tiendas
@@ -172,8 +172,23 @@ class ArrayDator
         return t
     end
 
-    def clienteCompraVideojuego(cli, vid)
-        raise "Método 'clienteCompraVideojuego(cli, vid)' debe ser implementado"
+    def clienteCompraVideojuego(cli, vid, ciu)
+        t = encontrarTienda(ciu)
+        arrayClientes = t.clientes
+
+        c = nil
+
+        for obj in arrayClientes
+            if obj[0].nombre == cli
+                c = obj[0]
+            end
+        end
+
+        if c.nil?
+            c = Cliente.new(cli, Date.today, t)
+        end
+
+        c.comprarVideojuego(vid)
     end
 
     def saberPuntos(cli, ti)
@@ -205,6 +220,13 @@ class ArrayDator
         juego = t.masMuestras
 
         return juego
+    end
+
+
+    def eliminarVideojuego(ciudad, vid)
+        t = encontrarTienda(ciudad)
+        v = t.identificarVideojuego(vid)
+        t.eliminarVideojuego(v)
     end
 
 end

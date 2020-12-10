@@ -288,4 +288,63 @@ class ApiGame < Sinatra::Base
 		end
 	end
 
+
+	delete '/eliminar' do
+		datos = JSON.parse(request.body.read)
+		nti = datos['tienda']
+		nvi = datos['videojuego']
+
+		if @@admin.comprobarTienda(nti) == false
+			status 404
+			cadena = { :error => "La tienda no existe!"}
+			content_type 'application/json'
+			cadena.to_json
+
+		else
+			begin
+				@@admin.eliminarVideojuego(nti, nvi)
+				status 200
+				cadena = { :info => "Ha sido eliminada una unidad del videojuego #{nvi}"}
+				content_type 'application/json'
+				cadena.to_json
+
+			rescue => e
+				status 404
+				cadena = { :error => "No se puede eliminar el videojuego #{nvi} de la tienda porque ya no quedan unidades"}
+				content_type 'application/json'
+				cadena.to_json
+			end
+		end
+	end
+
+
+	post '/comprar' do
+		datos = JSON.parse(request.body.read)
+		nti = datos['tienda']
+		nvi = datos['videojuego']
+		ncl = datos['cliente']
+
+		if @@admin.comprobarTienda(nti) == false
+			status 404
+			cadena = { :error => "La tienda no existe!"}
+			content_type 'application/json'
+			cadena.to_json
+
+		else
+			begin
+				@@admin.clienteCompraVideojuego(ncl, nvi, nti)
+				status 200
+				cadena = { :info => "El cliente #{ncl} ha comprado el videojuego #{nvi}"}
+				content_type 'application/json'
+				cadena.to_json
+
+			rescue => e
+				status 404
+				cadena = { :error => "No hay unidades disponibles para comprar el videojuego #{nvi}"}
+				content_type 'application/json'
+				cadena.to_json
+			end
+		end
+	end
+
 end

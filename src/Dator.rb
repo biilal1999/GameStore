@@ -42,8 +42,8 @@ class Dator
         raise "Método 'existeCliente(cli, ti)' debe ser implementado"
     end
 
-    def clienteCompraVideojuego(cli, vid)
-        raise "Método 'clienteCompraVideojuego(cli, vid)' debe ser implementado"
+    def clienteCompraVideojuego(cli, vid, ciu)
+        raise "Método 'clienteCompraVideojuego(cli, vid, ciu)' debe ser implementado"
     end
 
     def saberPuntos(cli, ti)
