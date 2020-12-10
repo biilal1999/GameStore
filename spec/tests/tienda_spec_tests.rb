@@ -15,7 +15,6 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 		end
 	end
 
-
 	describe '#ciudades' do										# Testear ciudad con sede del array del ENUM 'Ciudades'
 		it 'sede de la tienda' do
 			expect(t.ciudad).to eq(:Granada)
@@ -25,7 +24,7 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 	vh = Videojuego.new("FIFA", Date.today, 0.3, 70)
 	t.addVideojuego(vh)
 
-	describe '#masMuestras' do									
+	describe '#masMuestras' do
 		it 'videojuego con más muestras' do							# Testear método para HU04 resultado correcto
 			expect(t.masMuestras()).to eq("FIFA")
 		end
@@ -33,7 +32,7 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 
 	describe '#masMuestras' do
 		tienda = Tienda.new(Ciudades::BARCELONA)
-		
+
 		it 'excepción de más muestras' do							# Testear excepción para HU04
 			expect{ tienda.masMuestras() }.to raise_error(StandardError)
 		end
@@ -41,7 +40,7 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 
 	describe '#indiceVideojuego' do
 		vj = Videojuego.new("COD", Date.today, 0.5, 60)
-		
+
 		it 'índice para el FIFA' do
 			expect(t.indiceVideojuego(vi)).to eq(1)						# Testear método auxiliar para HU04 con resultado correcto
 		end
@@ -55,11 +54,11 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 	vidaux = Videojuego.new("PES", Date.new(2021, 3, 4), 0.2, 55)
 	taux.addVideojuego(vidaux)
 
-	describe '#identificarVideojuego' do	
+	describe '#identificarVideojuego' do
 		it 'videojuego encontrado' do
 			tiendaprueba = Tienda.new(Ciudades::VIGO)
 			vidprueba = Videojuego.new("PES", Date.new(2021, 3, 4), 0.2, 55)
-			tiendaprueba.addVideojuego(vidprueba)	
+			tiendaprueba.addVideojuego(vidprueba)
 			obj = tiendaprueba.identificarVideojuego("PES")
 			expect(obj.obtenerNombre()).to eq("PES")
 			expect((obj.fechaLanzamiento().to_s)).to eq('2021-03-04')
@@ -90,7 +89,7 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 			expect(taux.obtenerVideojuegos()).to eq(["COD"])
 		end
 	end
-		
+
 
 	describe '#venderProducto' do
 		vidaux = Videojuego.new("FORTNITE", Date.today, 0.2, 35)
@@ -112,6 +111,4 @@ describe Tienda do										# Testear métodos GET básicos/unitarios de la clas
 			expect(tiendaux.obtenerVideojuegos()).to eq(["FORTNITE"])
 		end
 	end
-end 
-
-
+end

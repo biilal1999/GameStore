@@ -75,9 +75,6 @@ class Tienda
 			end
 		end
 
-
-		# indice = @clientes.index(cli)
-
 		indice = nil
 
 		for i in (0..clientes.size-1)
