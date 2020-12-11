@@ -3,9 +3,12 @@ require 'json'
 require 'logger'
 require_relative 'Admin.rb'
 require_relative 'ArrayDator.rb'
+require_relative 'MiddlewareRuta.rb'
 
 
 class ApiGame < Sinatra::Base
+
+	use MiddlewareRuta
 
   	fichero = File.join(File.dirname(__FILE__), './../log/bitacora.log')
   	logger = ::Logger.new(fichero)
@@ -24,7 +27,7 @@ class ApiGame < Sinatra::Base
 			cadena.to_json
 
 		else
-			logger.info "Accedo a la página principal"
+			logger.info "Acceso a la página principal"
 			cadena = { :info => "Empiece a usar nuestra API" }
 			status 200
 			content_type 'application/json'
