@@ -20,3 +20,12 @@ RSpec::Core::RakeTask.new("test") do |t|
 	t.pattern = ['spec/tests/*_spec_*.rb']
 	t.verbose = false							# Para no mostrar en pantalla la ruta de los archivos de los tests
 end
+
+
+
+
+desc "Construir la aplicación"
+
+task :build do
+	true
+end
