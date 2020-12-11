@@ -88,6 +88,11 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 + Automatizador de tareas [Rakefile](https://github.com/biilal1999/GameStore/blob/master/Rakefile)
 
 
+## Fichero de dependencias
+
++ Dependencias manejadas con **bundler** en el archivo [Gemfile](https://github.com/biilal1999/GameStore/blob/master/Gemfile)
+
+
 ## Fichero iv.yaml
 
 [iv.yaml](https://github.com/biilal1999/GameStore/blob/master/iv.yaml)
@@ -125,6 +130,8 @@ Además, tambíen pueden ver los issues que son **historias de usuario**:
 - [HU04](https://github.com/biilal1999/GameStore/issues/45)
 - [HU05](https://github.com/biilal1999/GameStore/issues/64)
 - [HU06](https://github.com/biilal1999/GameStore/issues/82)
+- [HU07](https://github.com/biilal1999/GameStore/issues/89)
+- [HU08](https://github.com/biilal1999/GameStore/issues/91)
 
 
 ## Curso de desarrollo
