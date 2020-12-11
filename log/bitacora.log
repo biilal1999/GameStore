@@ -1,3 +1,33 @@
 I, [2020-12-11T17:27:02.312102 #10268]  INFO -- : Se ha querido consultar el precio del videojuego fifa para la tienda con sede en Granada
 I, [2020-12-11T17:27:28.993461 #10268]  INFO -- : Se ha querido consultar los puntos acumulados que tiene el cliente bilal en la tienda con sede en Granada
 I, [2020-12-11T18:31:19.658610 #10268]  INFO -- : Se ha querido consultar los puntos acumulados que tiene el cliente erger en la tienda con sede en Ehyt
+I, [2020-12-11T17:59:48.991855 #7]  INFO -- : Accedo a la página principal
+I, [2020-12-11T17:59:49.004218 #7]  INFO -- : Se ha querido consultar el precio del videojuego fifa para la tienda con sede en Granada
+I, [2020-12-11T17:59:49.008266 #7]  INFO -- : Se ha querido consultar el precio del videojuego cs para la tienda con sede en Granada
+I, [2020-12-11T17:59:49.010380 #7]  INFO -- : Se han querido consultar los días restantes del videojuego gta para la tienda con sede en Granada
+I, [2020-12-11T17:59:49.011447 #7]  INFO -- : Se han querido consultar los días restantes del videojuego lol para la tienda con sede en Granada
+I, [2020-12-11T17:59:49.013443 #7]  INFO -- : Se han querido consultar la edad media del videojuego fifa para la tienda con sede en Granada
+I, [2020-12-11T17:59:49.014463 #7]  INFO -- : Se han querido consultar la edad media del videojuego gta para la tienda con sede en Barcelona
+I, [2020-12-11T17:59:49.016487 #7]  INFO -- : Se ha querido consultar el videojuego con más unidades en stock para la tienda con sede en Granada
+I, [2020-12-11T17:59:49.018933 #7]  INFO -- : Se ha querido consultar los puntos acumulados que tiene el cliente Bilal en la tienda con sede en Granada
+I, [2020-12-11T17:59:49.020016 #7]  INFO -- : Se ha querido consultar los puntos acumulados que tiene el cliente Juan en la tienda con sede en Granada
+I, [2020-12-11T17:59:49.027630 #7]  INFO -- : Se ha añadido la tienda con sede en Vigo
+I, [2020-12-11T17:59:49.030438 #7]  INFO -- : Se ha pedido al proveedor el videojuego Tekken para la tienda con sede en Granada
+I, [2020-12-11T17:59:49.032374 #7]  INFO -- : Se ha añadido una nueva unidad al stock del videojuego FIFA para la tienda con sede en Granada
+I, [2020-12-11T17:59:49.034421 #7]  INFO -- : Se ha eliminado una unidad del videojuego FIFA para la tienda con sede en Granada
+I, [2020-12-11T17:59:49.036476 #7]  INFO -- : El cliente Jj ha comprado en la tienda Granada el videojuego Fifa
+I, [2020-12-11T17:59:55.811112 #6]  INFO -- : Accedo a la página principal
+I, [2020-12-11T17:59:55.823773 #6]  INFO -- : Se ha querido consultar el precio del videojuego fifa para la tienda con sede en Granada
+I, [2020-12-11T17:59:55.827921 #6]  INFO -- : Se ha querido consultar el precio del videojuego cs para la tienda con sede en Granada
+I, [2020-12-11T17:59:55.830063 #6]  INFO -- : Se han querido consultar los días restantes del videojuego gta para la tienda con sede en Granada
+I, [2020-12-11T17:59:55.831219 #6]  INFO -- : Se han querido consultar los días restantes del videojuego lol para la tienda con sede en Granada
+I, [2020-12-11T17:59:55.834811 #6]  INFO -- : Se han querido consultar la edad media del videojuego fifa para la tienda con sede en Granada
+I, [2020-12-11T17:59:55.835931 #6]  INFO -- : Se han querido consultar la edad media del videojuego gta para la tienda con sede en Barcelona
+I, [2020-12-11T17:59:55.837656 #6]  INFO -- : Se ha querido consultar el videojuego con más unidades en stock para la tienda con sede en Granada
+I, [2020-12-11T17:59:55.840336 #6]  INFO -- : Se ha querido consultar los puntos acumulados que tiene el cliente Bilal en la tienda con sede en Granada
+I, [2020-12-11T17:59:55.841399 #6]  INFO -- : Se ha querido consultar los puntos acumulados que tiene el cliente Juan en la tienda con sede en Granada
+I, [2020-12-11T17:59:55.848699 #6]  INFO -- : Se ha añadido la tienda con sede en Vigo
+I, [2020-12-11T17:59:55.851202 #6]  INFO -- : Se ha pedido al proveedor el videojuego Tekken para la tienda con sede en Granada
+I, [2020-12-11T17:59:55.852789 #6]  INFO -- : Se ha añadido una nueva unidad al stock del videojuego FIFA para la tienda con sede en Granada
+I, [2020-12-11T17:59:55.854361 #6]  INFO -- : Se ha eliminado una unidad del videojuego FIFA para la tienda con sede en Granada
+I, [2020-12-11T17:59:55.856328 #6]  INFO -- : El cliente Jj ha comprado en la tienda Granada el videojuego Fifa

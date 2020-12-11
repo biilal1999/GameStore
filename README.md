@@ -21,6 +21,7 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
     + Nuestra carpeta de [tests](https://github.com/biilal1999/GameStore/tree/master/spec/tests)
 + Nuestra carpeta [api](https://github.com/biilal1999/GameStore/tree/master/api)
 + Nuestra carpeta [functions](https://github.com/biilal1999/GameStore/tree/master/functions)
++ Nuestra carpeta [log](https://github.com/biilal1999/GameStore/tree/master/log)
 
 
 
