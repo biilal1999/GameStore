@@ -7,16 +7,12 @@ require_relative 'ArrayDator.rb'
 
 class ApiGame < Sinatra::Base
 
+  	fichero = File.join(File.dirname(__FILE__), './../log/bitacora.log')
+  	logger = ::Logger.new(fichero)
+
 	configure do
 		@@dator = ArrayDator.new("../datos.json")
 		@@admin = Admin.new(@@dator)
-	end
-
-
-	configure :development, :production do
-		@@logger = Logger.new(File.open("./log/bitacora.log", 'a'), 'daily')
-		@@logger.level = Logger::INFO
-		set :logger, @@logger
 	end
 
 
@@ -41,7 +37,7 @@ class ApiGame < Sinatra::Base
 		nvid = params['videojuego']
 		nti = params['tienda']
 
-		logger.info "Se ha querido consultar el precio del videojuego #{nvid} para la tienda con sede en #{nti}"
+		logger.info "Se ha querido consultar el precio del videojuego #{nvid} para la tienda con sede en #{nti.capitalize}"
 
 		if @@admin.comprobarTienda(nti) == false
 			status 404
@@ -71,7 +67,7 @@ class ApiGame < Sinatra::Base
 		nvid = params['videojuego']
 		nti = params['tienda']
 
-		logger.info "Se han querido consultar los días restantes del videojuego #{nvid} para la tienda con sede en #{nti}"
+		logger.info "Se han querido consultar los días restantes del videojuego #{nvid} para la tienda con sede en #{nti.capitalize}"
 
 		if @@admin.comprobarTienda(nti) == false
 			status 404
@@ -101,7 +97,7 @@ class ApiGame < Sinatra::Base
 		nvid = params['videojuego']
 		nti = params['tienda']
 
-		logger.info "Se han querido consultar la edad media del videojuego #{nvid} para la tienda con sede en #{nti}"
+		logger.info "Se han querido consultar la edad media del videojuego #{nvid} para la tienda con sede en #{nti.capitalize}"
 
 		if @@admin.comprobarTienda(nti) == false
 			status 404
@@ -130,7 +126,7 @@ class ApiGame < Sinatra::Base
 	get '/stock/:tienda' do
 		nti = params['tienda']
 
-		logger.info "Se ha querido consultar el videojuego con más unidades en stock para la tienda con sede en #{nti}"
+		logger.info "Se ha querido consultar el videojuego con más unidades en stock para la tienda con sede en #{nti.capitalize}"
 
 		if @@admin.comprobarTienda(nti) == false
 			status 404
@@ -160,7 +156,7 @@ class ApiGame < Sinatra::Base
 		nti = params['tienda']
 		ncl = params['cliente']
 
-		logger.info "Se ha querido consultar los puntos acumulados que tiene el cliente #{ncl} en la tienda con sede en #{nti}"
+		logger.info "Se ha querido consultar los puntos acumulados que tiene el cliente #{ncl.capitalize} en la tienda con sede en #{nti.capitalize}"
 
 		if @@admin.comprobarTienda(nti) == false
 			status 404

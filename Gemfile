@@ -13,3 +13,7 @@ gem "rake", "~> 13.0"
 gem "sinatra"
 
 gem "rack-test"
+
+gem "rack", "~> 2.2"
+
+gem "sinatra-logger", "~> 0.3.2"

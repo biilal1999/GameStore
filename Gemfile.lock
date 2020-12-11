@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    concurrent-ruby (1.1.7)
     diff-lcs (1.4.4)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
@@ -24,21 +25,28 @@ GEM
       rspec-support (~> 3.9.0)
     rspec-support (3.9.3)
     ruby2_keywords (0.0.2)
+    semantic_logger (4.7.4)
+      concurrent-ruby (~> 1.0)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
+    sinatra-logger (0.3.2)
+      semantic_logger
+      sinatra
     tilt (2.0.10)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  rack (~> 2.2)
   rack-test
   rake (~> 13.0)
   rspec (~> 3.9)
   sinatra
+  sinatra-logger (~> 0.3.2)
 
 BUNDLED WITH
    2.1.4
