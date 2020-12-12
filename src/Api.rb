@@ -11,8 +11,7 @@ class ApiGame < Sinatra::Base
 	use MiddlewareRuta
 
 	configure do
-		fichero = File.join(File.dirname(__FILE__), './../log/bitacora.log')
-	  	$logger = ::Logger.new(fichero)
+	  	$logger = ::Logger.new(STDOUT)
 		@@dator = ArrayDator.new("../datos.json")
 		@@admin = Admin.new(@@dator)
 	end

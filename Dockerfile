@@ -25,7 +25,12 @@ RUN adduser -D usuarionormal
 
 # Damos privilegios de usuario a nuestro GEM_HOME , que es /usr/local/bundle
 
-RUN chown usuarionormal $GEM_HOME && chmod 775 $GEM_HOME
+RUN chown usuarionormal $GEM_HOME && chmod 751 $GEM_HOME
+
+
+# Cambios a dicho usuario
+
+USER usuarionormal
 
 
 # Copiamos Gemfile a la carpeta /home del usuario sin privilegios
@@ -36,12 +41,6 @@ COPY Gemfile $HOME_DIR
 # Copiamos Gemfile.lock a la carpeta /home del usuario sin privilegios
 
 COPY Gemfile.lock $HOME_DIR
-
-
-
-# Cambios a dicho usuario
-
-USER usuarionormal
 
 
 # Establecemos directorio de trabajo carpeta /home del usuario sin privilegios creado
@@ -62,13 +61,6 @@ RUN rm ${HOME_DIR}Gemfile && rm ${HOME_DIR}Gemfile.lock
 # Cambiamos a directorio de trabajo para ejecutar los tests con el task runner
 
 WORKDIR $PROJECT_DIR
-
-
-# Damos permiso a nuesta carpeta de montaje /test en modo root
-
-USER root
-
-RUN chmod 775 $PROJECT_DIR
 
 
 # Ejecutamos en la terminal Rake con la tarea "test" para que se ejecuten los tests
