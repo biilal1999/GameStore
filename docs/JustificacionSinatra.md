@@ -142,3 +142,26 @@ run API
 
 ```
 
+
+
+Ahora, definimos una clase **Api.rb** con lo siguiente
+
+
+```
+# Api.rb
+
+require_relative 'sinatra'
+
+class API < Sinatra::Base
+
+	get '/hola' do
+		status 200
+		content_type 'text/plain'
+		"Hello World"
+	end
+end
+
+```
+
+
+Lo cual significa que cuando hagamos una petición a la API tal que `curl http:$HOST:$PUERTO/hola` el resultado que obtendremos será un "Hola Mundo" con código 200 => **OK** y en formato **texto plano**.
