@@ -10,7 +10,7 @@ class ApiGame < Sinatra::Base
 
 	use MiddlewareRuta
 
-	configure :production do
+	configure :production, :development do
 		fichero = File.join(File.dirname(__FILE__), './../log/bitacora.log')
 	  	logger = ::Logger.new(fichero)
 	end
