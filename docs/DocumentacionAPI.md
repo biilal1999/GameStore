@@ -255,4 +255,65 @@ Esta capa es la correspondiente a nuestra [Api.rb](https://github.com/biilal1999
 
 
 
+## Buenas prácticas
 
+
+### Logs
+
+
+Para cumplir con la [HU09](https://github.com/biilal1999/GameStore/issues/94) hemos empezando instalando, haciendo uso de nuestro manejador de dependencias **bundler**, la gema **logger**, con `bundle add logger` para añadirlo a nuestro [Gemfile](https://github.com/biilal1999/GameStore/blob/master/Gemfile), y luego instalándola con `bundle install`. 
+
+
+Después, en el bloque
+
+
+> configure do             end
+
+
+, que dicho bloque en el código especifica que las líneas de código pertenecientes se ejecutan tanto en **desarrollo como en produccón**, usamos la clase **Logger** para generar así un *log*, y especificamos que la salida será en la **terminal** con el comando `Logger.new(STDOUT)`. 
+
+
+Ya simplemente, en cada ruta definida en **Api.rb**, con `logger.info "algo"` nos imprimiría en la terminal "algo".
+
+
+**Aclaración**: De primeras, habíamos hecho la salida en un fichero **log**, pero no hemos continuado con esta opción porque me daba un problema de permisos para escribir en él, ya que tenemos programado nuestro [Dockerfile](https://github.com/biilal1999/GameStore/blob/master/Dockerfile) que los **tests los ejecuta un usuario sin permisos de root**. 
+
+
+
+### Middleware
+
+
+Hemos implementado la clase [MiddlewareRuta.rb](https://github.com/biilal1999/GameStore/blob/master/src/MiddlewareRuta.rb). Esta clase hace uso de la gema **rack**. Rack es una interfaz que proporciona ya algunos *middlewares* para hacer uso de ellos. 
+
+Nosotros, haciendo uso de **Rack**, hemos implementado un **middleware** que analiza cada ruta HTTP pedida por el cliente web, de tal forma de que si por ejemplo el cliente envía al servidor una ruta **INCOMPLETA** por **GET**, el server le devolverá al cliente un mensaje en **texto plano** informando de que debe completar la petición con los parámetros correspondientes para hacer la consulta. De nuevo, vemos un ejemplo.
+
+
+Pongamos que el usuario hace la petición `curl http://localhost:9292/precio` , ya sabemos que la ruta es incompleta porque no hemos pasado los parámetros a buscar, ni del **videojuego** ni de la **tienda**. Entonces, se ejecutará lo siguiente:
+
+
+```
+
+def call(env)
+        status, headers, response = @midd.call(env)
+
+        if env['REQUEST_PATH'] == '/precio' or env['REQUEST_PATH'] == '/dias' or env['REQUEST_PATH'] == '/edad' or env['REQUEST_PATH'] == '/stocks' or env['REQUEST_PATH'] == '/puntos'
+            cad = StringIO.new("Debe completar la url #{env['REQUEST_PATH']} con lo necesario para realizar la consulta")
+            h = {"Content-Type" => "text/plain"}
+            [status, h, cad]
+
+        else
+            [status, headers, response]
+        end
+end
+
+```
+
+
+Donde obtenemos de **env** el **status**, **header** y **response** de la respuesta a enviar al cliente web. Si la ruta es incompleta, se modificará el **header** y el **response** para informar, por texto plano, al cliente de que debe completar la ruta **env['REQUEST_PATH']**.
+
+
+
+Hay que tener en cuenta que el **midleware** se ejecuta siempre, en cada llamada a la **API**, con lo cuál entrará a analizar todas las rutas enviadas.. Esto se hace declarando el comando `use MiddlewareRuta` en **Api.rb**.
+
+
+Si la petición sí tiene la ruta completa, se devuelve exactamente lo que devolvería si no tuviésemos nuestro **middleware**.
