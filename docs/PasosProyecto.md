@@ -84,3 +84,14 @@
 - Redactar [aquí](https://github.com/biilal1999/GameStore/blob/master/docs/FuncionNetlify.md) la implementación del desarrollo de la función en **Netlify** y su integración con el **bot de Telegram**
 - Modifichar el archivo [README.md](https://github.com/biilal1999/GameStore/blob/master/README.md) para añadir los links correspondientes a este hito
 - Modificar [hito-5.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-5.md) y hacer *Pull Request* con enlace a nuestro proyecto
+
+
+## Hito 6: Diseño y test de un microservicio
+
+- Documentar la elección de **Sinatra** como framework
+- Construcción de nuestra **API** y su configuración
+- Documentación de nuestra **API**
+- Realizar **tests de integración**
+- Documentar los **tests de integración**
+- Modifichar el archivo [README.md](https://github.com/biilal1999/GameStore/blob/master/README.md) para añadir los links correspondientes a este hito
+- Modificar [hito-6.md](https://github.com/JJ/IV-20-21/blob/master/proyectos/hito-6.md) y hacer *Pull Request* con enlace a nuestro proyecto
