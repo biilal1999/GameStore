@@ -227,4 +227,32 @@ Donde obtenemos el objeto **t** de la clase **Tienda** correspondiente a la ciud
 ### Capa de lógica de negocio
 
 
-Esta capa sirve como interfaz para que
+Esta capa sirve como interfaz para que nuestra **capa de aplicación** conecte con nuestra **capa de acceso a datos**. Para llevar esto a cabo, hemos implementado una clase manejadora [Admin.rb](https://github.com/biilal1999/GameStore/blob/master/src/Admin.rb) .
+
+
+En **Admin.rb** simplemente crearemos una instancia **@dator** de **ArrayDator.rb** , y en los métodos (que tienen la misma cabecera que su correspondiente en la clase dateadora), llamaremos a los de la clase dateadora. Como explicado así suena un poco lioso, vamos a ver un ejemplo:
+
+
+
+```
+
+def obtenerMasStocks(ciudad)
+        @dator.obtenerMasStocks(ciudad)
+end
+
+
+```
+
+
+
+### Capa de aplicación
+
+
+Esta capa es la correspondiente a nuestra [Api.rb](https://github.com/biilal1999/GameStore/blob/master/src/Api.rb) , que como hemos explicado anteriormente implementa las distintas rutas de nuestra **API**, y dentro de ellas, hace uso de una instancia de la **clase manejadora** para obtener, a partir de los datos almacenados en memoria, lo que se va a devolver al **cliente web**.
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+language: ruby
+
+rvm:
+  - ruby-head
+  - 2.7.2
+
+
+build:
+  ci:
+    - gem install bundler
+    - bundle install
+
+  post_ci:
+    - rake test
+
+
+notifications:
+  email: false
