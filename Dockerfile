@@ -42,6 +42,8 @@ COPY Gemfile.lock $HOME_DIR
 # Damos permisos
 
 RUN chmod 777 $HOME_DIR
+RUN chmod 777 $HOME_DIR/Gemfile.lock
+RUN chmod 777 $HOME_DIR/Gemfile
 
 
 
@@ -68,6 +70,15 @@ RUN rm ${HOME_DIR}Gemfile && rm ${HOME_DIR}Gemfile.lock
 # Cambiamos a directorio de trabajo para ejecutar los tests con el task runner
 
 WORKDIR $PROJECT_DIR
+
+
+USER root
+
+
+RUN chmod 775 $PROJECT_DIR
+
+
+USER usuarionormal
 
 
 # Ejecutamos en la terminal Rake con la tarea "test" para que se ejecuten los tests
