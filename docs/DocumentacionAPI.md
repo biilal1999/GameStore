@@ -283,6 +283,13 @@ Ya simplemente, en cada ruta definida en **Api.rb**, con `logger.info "algo"` no
 ### Middleware
 
 
+#### Documentación
+
+[Aquí](https://www.rubyguides.com/2018/09/rack-middleware/) podemos consultar la documentación de la que he echado mano para implementar mi middleware con Rack
+
+
+
+
 Hemos implementado la clase [MiddlewareRuta.rb](https://github.com/biilal1999/GameStore/blob/master/src/MiddlewareRuta.rb). Esta clase hace uso de la gema **rack**. Rack es una interfaz que proporciona ya algunos *middlewares* para hacer uso de ellos. 
 
 Nosotros, haciendo uso de **Rack**, hemos implementado un **middleware** que analiza cada ruta HTTP pedida por el cliente web, de tal forma de que si por ejemplo el cliente envía al servidor una ruta **INCOMPLETA** por **GET**, el server le devolverá al cliente un mensaje en **texto plano** informando de que debe completar la petición con los parámetros correspondientes para hacer la consulta. De nuevo, vemos un ejemplo.
