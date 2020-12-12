@@ -25,12 +25,7 @@ RUN adduser -D usuarionormal
 
 # Damos privilegios de usuario a nuestro GEM_HOME , que es /usr/local/bundle
 
-RUN chown usuarionormal $GEM_HOME && chmod 751 $GEM_HOME
-
-
-# Cambios a dicho usuario
-
-USER usuarionormal
+RUN chown usuarionormal $GEM_HOME && chmod 775 $GEM_HOME
 
 
 # Copiamos Gemfile a la carpeta /home del usuario sin privilegios
@@ -41,6 +36,19 @@ COPY Gemfile $HOME_DIR
 # Copiamos Gemfile.lock a la carpeta /home del usuario sin privilegios
 
 COPY Gemfile.lock $HOME_DIR
+
+
+# Damos permisos a las dependencias
+
+RUN chmod 777 $HOME_DIR
+RUN chmod 777 $HOME_DIR/Gemfile
+RUN chmod 777 $HOME_DIR/Gemfile.lock
+
+
+
+# Cambios a dicho usuario
+
+USER usuarionormal
 
 
 # Establecemos directorio de trabajo carpeta /home del usuario sin privilegios creado
