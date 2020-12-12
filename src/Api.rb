@@ -182,6 +182,7 @@ class ApiGame < Sinatra::Base
 		end
 	end
 
+
 	post '/tienda' do
 		begin
 			datos = JSON.parse(request.body.read)

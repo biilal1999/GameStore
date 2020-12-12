@@ -133,6 +133,9 @@ Además, tambíen pueden ver los issues que son **historias de usuario**:
 - [HU06](https://github.com/biilal1999/GameStore/issues/82)
 - [HU07](https://github.com/biilal1999/GameStore/issues/89)
 - [HU08](https://github.com/biilal1999/GameStore/issues/91)
+- [HU09](https://github.com/biilal1999/GameStore/issues/94)
+- [HU10](https://github.com/biilal1999/GameStore/issues/95)
+- [HU11](https://github.com/biilal1999/GameStore/issues/96)
 
 
 ## Curso de desarrollo
