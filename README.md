@@ -42,7 +42,7 @@ Nuestro **Framework** es **Sinatra**.
 ### API
 
 
-[Explicación](https://github.com/biilal1999/GameStore/blob/master/docs/DocumentacionAPI.md)
+[Explicación](https://github.com/biilal1999/GameStore/blob/master/docs/DocumentacionAPI.md) de la **construcción de la API**.
 
 
 
@@ -94,7 +94,7 @@ Nuestro **Framework** es **Sinatra**.
 + [Fichero de tests](https://github.com/biilal1999/GameStore/blob/master/spec/tests/app_spec_tests.rb)
 
 
-+ [Explicación]()
++ [Explicación](https://github.com/biilal1999/GameStore/blob/master/docs/DocumentacionTestsIntegracion.md) de los **tests de integración**.
 
 
 
