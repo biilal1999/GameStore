@@ -21,7 +21,96 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
     + Nuestra carpeta de [tests](https://github.com/biilal1999/GameStore/tree/master/spec/tests)
 + Nuestra carpeta [api](https://github.com/biilal1999/GameStore/tree/master/api)
 + Nuestra carpeta [functions](https://github.com/biilal1999/GameStore/tree/master/functions)
-+ Nuestra carpeta [log](https://github.com/biilal1999/GameStore/tree/master/log)
+
+
+
+
+
+## Microservicio
+
+
+### Framework
+
+Nuestro **Framework** es **Sinatra**.
+
+
+[Aquí](https://github.com/biilal1999/GameStore/blob/master/docs/JustificacionSinatra.md) puede ver la justificación técnica y su uso.
+
+
+
+
+### API
+
+
+[Explicación](https://github.com/biilal1999/GameStore/blob/master/docs/DocumentacionAPI.md)
+
+
+
+#### Capa de aplicación
+
+
++ Clase [Api.rb](https://github.com/biilal1999/GameStore/blob/master/src/Api.rb) 
+
+
++ Sus tests [app_spec_tests.rb](https://github.com/biilal1999/GameStore/blob/master/spec/tests/app_spec_tests.rb)
+
+
+
+#### Capa de lógica de negocio
+
+
++ Clase manejadora [Admin.rb](https://github.com/biilal1999/GameStore/blob/master/src/Admin.rb)
+
+
++ Sus tests [admin_spec_tests.rb](https://github.com/biilal1999/GameStore/blob/master/spec/tests/admin_spec_tests.rb)
+
+
+
+#### Capa de acceso a datos
+
+
++ Clase dateadora implementada [ArrayDator.rb](https://github.com/biilal1999/GameStore/blob/master/src/ArrayDator.rb)
+
+
++ Clase dateadora sin implementar [Dator.rb](https://github.com/biilal1999/GameStore/blob/master/src/Dator.rb)
+
+
++ Sus tests [dator_spec_tests.rb](https://github.com/biilal1999/GameStore/blob/master/spec/tests/dator_spec_tests.rb)
+
+
+
+
+### Buenas prácticas
+
+
++ [Buenas prácticas](https://github.com/biilal1999/GameStore/blob/master/docs/DocumentacionAPI.md#buenas-pr%C3%A1cticas) en la API
+
++ Clase middlware [MiddlewareRuta.rb](https://github.com/biilal1999/GameStore/blob/master/src/MiddlewareRuta.rb)
+
+
+### Tests de integración
+
+
++ [Fichero de tests](https://github.com/biilal1999/GameStore/blob/master/spec/tests/app_spec_tests.rb)
+
+
++ [Explicación]()
+
+
+
+
+
+
+## Fichero de gestor de tareas
+
++ Automatizador de tareas [Rakefile](https://github.com/biilal1999/GameStore/blob/master/Rakefile)
+
+
+## Fichero de dependencias
+
++ Dependencias manejadas con **bundler** en el archivo [Gemfile](https://github.com/biilal1999/GameStore/blob/master/Gemfile)
+
+
 
 
 
@@ -82,16 +171,6 @@ Son muchas las ocasiones en las que hemos querido comprar algún videojuego y lo
 
 + Nuestro [repositorio](https://github.com/users/biilal1999/packages/container/package/gamestore) en **GitHub Container Registry**
 
-
-
-## Fichero de gestor de tareas
-
-+ Automatizador de tareas [Rakefile](https://github.com/biilal1999/GameStore/blob/master/Rakefile)
-
-
-## Fichero de dependencias
-
-+ Dependencias manejadas con **bundler** en el archivo [Gemfile](https://github.com/biilal1999/GameStore/blob/master/Gemfile)
 
 
 ## Fichero iv.yaml
