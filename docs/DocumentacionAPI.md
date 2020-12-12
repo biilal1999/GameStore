@@ -4,7 +4,7 @@
 ## Documentación
 
 
-Ya que nuestra API está hecha con el framework **Sinatra**, hemos tenido que echar mano de [documentación](http://sinatrarb.com/documentation.html) de la misma.
+Ya que nuestra [Api.rb](https://github.com/biilal1999/GameStore/blob/master/src/Api.rb) está hecha con el framework **Sinatra**, hemos tenido que echar mano de [documentación](http://sinatrarb.com/documentation.html) de la misma.
 
 
 
@@ -94,3 +94,66 @@ Con esta ruta solicitamos saber los días restantes para la salida de un videoju
 
 
 Con esta ruta solicitamos saber la edad media de compra de un videojuego en una tienda determinada, a partir del nombre del videojuego y la sede de la tienda. Está relacionada con la [HU03](https://github.com/biilal1999/GameStore/issues/14)
+
+
+
+
+> get '/stock/:tienda' do
+
+
+
+Con esta ruta solicitamos saber el videojuego con más unidades en **stock** de una tienda determinada, a partir de la sede de la tienda. Está relacionada con la [HU04](https://github.com/biilal1999/GameStore/issues/45)
+
+
+
+
+> get '/puntos/:cliente/:tienda' do
+
+
+
+Con resta ruta solicitamos saber los puntos que tiene acumulados un determinado **cliente** en una tienda, a partir de la sede de la tienda y del nombre del cliente. Está relacionada con la [HU06](https://github.com/biilal1999/GameStore/issues/82)
+
+
+
+
+> post '/tienda' do
+
+
+
+Con resta ruta buscamos añadir una nueva tienda a **GameStore**, a partir de la sede de la tienda, enviado por **POST**. Está relacionada con la [HU11](https://github.com/biilal1999/GameStore/issues/96)
+
+
+
+
+> post '/nuevo' do
+
+
+
+Con resta ruta buscamos añadir un videojuego **que no teníamos**, al almacén, a partir del nombre del videojuego y de la sede de la tienda, enviado por **POST**. Está relacionada con la [HU10](https://github.com/biilal1999/GameStore/issues/95)
+
+
+
+
+> post '/insertar' do
+
+
+
+Con resta ruta buscamos incrementar una unidad en stock de un videojuego **que sí teníamos**, a partir del nombre del videojuego y de la sede de la tienda, enviado por **POST**. Está relacionada con la [HU08](https://github.com/biilal1999/GameStore/issues/91)
+
+
+
+
+> post '/comprar' do
+
+
+
+Con esta ruta buscamos que un cliente pueda comprar un videojuego en una tienda, a partir del nombre del cliente, del nombre del videojuego y de la sede de la tienda, enviado todo por **POST**. Está relacionada con la [HU05](https://github.com/biilal1999/GameStore/issues/64)
+
+
+
+
+> delete '/eliminar' do
+
+
+
+Con esta ruta buscamos eliminar una unidad de un videojuego de una tienda determinada, ambas cosas enviadas al **server** por **DELETE**. Está relacionada con la [HU07](https://github.com/biilal1999/GameStore/issues/89) .
