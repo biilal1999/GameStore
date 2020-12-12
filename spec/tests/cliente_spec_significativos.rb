@@ -13,7 +13,7 @@ describe Cliente do
 	t.addVideojuego(vi)
 
 	describe '#comprarVideojuego()' do
-		
+
 		it 'cliente con fecha inválida' do
 			expect{ Cliente.new("Bilal", "error", Tienda.new(Ciudades::GRANADA)) }.to raise_error(StandardError)
 		end
@@ -30,17 +30,5 @@ describe Cliente do
 			expect{ cli.comprarVideojuego("PES") }.to raise_error(ArgumentError)
 		end
 
-	end
-
-	
-	describe '#consultarPrecioFinal' do										# Testear método consultarPrecioFinal(j)  HU02 con serverless
-		it 'precio final' do
-			expect(cli.consultarPrecioFinal("FIFA")).to eq("El precio del FIFA era de 70 euros, pero estás de suerte! Porque tenemos para ti un 30.0% de descuento, y lo puedes conseguir por tan solo 49.0 euros")								
-		end
-
-
-		it 'precio final con excepción' do
-			expect{ cli.consultarPrecioFinal("TEKKEN") }.to raise_error(ArgumentError)
-		end
 	end
 end
