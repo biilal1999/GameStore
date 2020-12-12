@@ -311,3 +311,6 @@ I, [2020-12-12T16:15:00.414312 #6]  INFO -- : Se ha pedido al proveedor el video
 I, [2020-12-12T16:15:00.416610 #6]  INFO -- : Se ha añadido una nueva unidad al stock del videojuego FIFA para la tienda con sede en Granada
 I, [2020-12-12T16:15:00.418701 #6]  INFO -- : Se ha eliminado una unidad del videojuego FIFA para la tienda con sede en Granada
 I, [2020-12-12T16:15:00.420664 #6]  INFO -- : El cliente Jj ha comprado en la tienda Granada el videojuego Fifa
+I, [2020-12-12T18:16:24.386263 #23489]  INFO -- : Se ha querido consultar el precio del videojuego fifa para la tienda con sede en Granada
+I, [2020-12-12T18:29:00.014675 #23621]  INFO -- : Se ha querido consultar el precio del videojuego fifa para la tienda con sede en Granada
+I, [2020-12-12T18:29:54.201997 #23621]  INFO -- : Se ha querido consultar el precio del videojuego fifa para la tienda con sede en Granada

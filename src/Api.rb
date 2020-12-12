@@ -12,7 +12,7 @@ class ApiGame < Sinatra::Base
 
 	configure :production, :development do
 		fichero = File.join(File.dirname(__FILE__), './../log/bitacora.log')
-	  	logger = ::Logger.new(fichero)
+	  	$logger = ::Logger.new(fichero)
 	end
 
 	configure do
@@ -29,7 +29,7 @@ class ApiGame < Sinatra::Base
 			cadena.to_json
 
 		else
-			logger.info "Acceso a la página principal"
+			$logger.info "Acceso a la página principal"
 			cadena = { :info => "Empiece a usar nuestra API" }
 			status 200
 			content_type 'application/json'
@@ -42,7 +42,7 @@ class ApiGame < Sinatra::Base
 		nvid = params['videojuego']
 		nti = params['tienda']
 
-		logger.info "Se ha querido consultar el precio del videojuego #{nvid} para la tienda con sede en #{nti.capitalize}"
+		$logger.info "Se ha querido consultar el precio del videojuego #{nvid} para la tienda con sede en #{nti.capitalize}"
 
 		if @@admin.comprobarTienda(nti) == false
 			status 404
@@ -72,7 +72,7 @@ class ApiGame < Sinatra::Base
 		nvid = params['videojuego']
 		nti = params['tienda']
 
-		logger.info "Se han querido consultar los días restantes del videojuego #{nvid} para la tienda con sede en #{nti.capitalize}"
+		$logger.info "Se han querido consultar los días restantes del videojuego #{nvid} para la tienda con sede en #{nti.capitalize}"
 
 		if @@admin.comprobarTienda(nti) == false
 			status 404
@@ -102,7 +102,7 @@ class ApiGame < Sinatra::Base
 		nvid = params['videojuego']
 		nti = params['tienda']
 
-		logger.info "Se han querido consultar la edad media del videojuego #{nvid} para la tienda con sede en #{nti.capitalize}"
+		$logger.info "Se han querido consultar la edad media del videojuego #{nvid} para la tienda con sede en #{nti.capitalize}"
 
 		if @@admin.comprobarTienda(nti) == false
 			status 404
@@ -131,7 +131,7 @@ class ApiGame < Sinatra::Base
 	get '/stock/:tienda' do
 		nti = params['tienda']
 
-		logger.info "Se ha querido consultar el videojuego con más unidades en stock para la tienda con sede en #{nti.capitalize}"
+		$logger.info "Se ha querido consultar el videojuego con más unidades en stock para la tienda con sede en #{nti.capitalize}"
 
 		if @@admin.comprobarTienda(nti) == false
 			status 404
@@ -161,7 +161,7 @@ class ApiGame < Sinatra::Base
 		nti = params['tienda']
 		ncl = params['cliente']
 
-		logger.info "Se ha querido consultar los puntos acumulados que tiene el cliente #{ncl.capitalize} en la tienda con sede en #{nti.capitalize}"
+		$logger.info "Se ha querido consultar los puntos acumulados que tiene el cliente #{ncl.capitalize} en la tienda con sede en #{nti.capitalize}"
 
 		if @@admin.comprobarTienda(nti) == false
 			status 404
@@ -217,7 +217,7 @@ class ApiGame < Sinatra::Base
 					@@admin.crearTienda(city)
 
 					if @@admin.comprobarTienda(city) == true
-						logger.info "Se ha añadido la tienda con sede en #{city.capitalize}"
+						$logger.info "Se ha añadido la tienda con sede en #{city.capitalize}"
 						status 200
 						cadena = { :info => "La tienda con sede en #{city} ha sido creada con éxito"}
 						content_type 'application/json'
@@ -265,7 +265,7 @@ class ApiGame < Sinatra::Base
 			else
 				begin
 					@@admin.nuevoVideojuego(nvi, ndes, npr, npu, nti)
-					logger.info "Se ha pedido al proveedor el videojuego #{nvi} para la tienda con sede en #{nti.capitalize}"
+					$logger.info "Se ha pedido al proveedor el videojuego #{nvi} para la tienda con sede en #{nti.capitalize}"
 					status 200
 					cadena = { :info => "El videojuego #{nvi} ha sido añadido al cátalogo"}
 					content_type 'application/json'
@@ -297,7 +297,7 @@ class ApiGame < Sinatra::Base
 			begin
 
 				@@admin.insertarVideojuegoTienda(nti, nvi)
-				logger.info "Se ha añadido una nueva unidad al stock del videojuego #{nvi} para la tienda con sede en #{nti.capitalize}"
+				$logger.info "Se ha añadido una nueva unidad al stock del videojuego #{nvi} para la tienda con sede en #{nti.capitalize}"
 				status 200
 				cadena = { :info => "Ha sido añadida al catálogo una nueva unidad del videojuego #{nvi}"}
 				content_type 'application/json'
@@ -327,7 +327,7 @@ class ApiGame < Sinatra::Base
 		else
 			begin
 				@@admin.eliminarVideojuego(nti, nvi)
-				logger.info "Se ha eliminado una unidad del videojuego #{nvi} para la tienda con sede en #{nti.capitalize}"
+				$logger.info "Se ha eliminado una unidad del videojuego #{nvi} para la tienda con sede en #{nti.capitalize}"
 				status 200
 				cadena = { :info => "Ha sido eliminada una unidad del videojuego #{nvi}"}
 				content_type 'application/json'
@@ -358,7 +358,7 @@ class ApiGame < Sinatra::Base
 		else
 			begin
 				@@admin.clienteCompraVideojuego(ncl, nvi, nti)
-				logger.info "El cliente #{ncl.capitalize} ha comprado en la tienda #{nti.capitalize} el videojuego #{nvi.capitalize}"
+				$logger.info "El cliente #{ncl.capitalize} ha comprado en la tienda #{nti.capitalize} el videojuego #{nvi.capitalize}"
 				status 200
 				cadena = { :info => "El cliente #{ncl} ha comprado el videojuego #{nvi}"}
 				content_type 'application/json'
@@ -372,5 +372,4 @@ class ApiGame < Sinatra::Base
 			end
 		end
 	end
-
 end
