@@ -2,6 +2,12 @@ require "rspec/core/rake_task"
 
 
 
+desc "Por defecto se ejecutan los tests"
+
+task default: %w[test]
+
+
+
 
 
 desc "Instalar las dependencias"

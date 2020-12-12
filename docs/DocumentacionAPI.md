@@ -157,3 +157,74 @@ Con esta ruta buscamos que un cliente pueda comprar un videojuego en una tienda,
 
 
 Con esta ruta buscamos eliminar una unidad de un videojuego de una tienda determinada, ambas cosas enviadas al **server** por **DELETE**. Está relacionada con la [HU07](https://github.com/biilal1999/GameStore/issues/89) .
+
+
+
+
+## Diseño por capas
+
+
+
+Además del fichero [Api.rb](https://github.com/biilal1999/GameStore/blob/master/src/Api.rb), también tenemos para esta **API** los ficheros:
+
+
++ [Admin.rb](https://github.com/biilal1999/GameStore/blob/master/src/Admin.rb)
+
++ [ArrayDator.rb](https://github.com/biilal1999/GameStore/blob/master/src/ArrayDator.rb)
+
++ [Dator.rb](https://github.com/biilal1999/GameStore/blob/master/src/Dator.rb)
+
+
+
+
+### Capa de datos
+
+
+En esta capa es donde **se acceden a los datos figurados en fuentes externas**. Nosotros para esta API que hemos hecho, simplemente leemos datos de un **JSON** ([datos.json](https://github.com/biilal1999/GameStore/blob/master/datos.json)), no escribimos en él. 
+
+
+Nuestra clase [Dator.rb](https://github.com/biilal1999/GameStore/blob/master/src/Dator.rb) define métodos sin implementar, del cuál heredarán diversas clases para implementarlos.
+
+
+Nuestra clase [ArrayDator.rb](https://github.com/biilal1999/GameStore/blob/master/src/ArrayDator.rb) hereda de **Dator.rb** e implementa sus métodos. Esta clase se encarga de:
+
+
+1. Leer del archivo **JSON** anteriormente enlazado
+
+2. Almacenar esa información en estructuras de datos guardadas en memoria (**NO PERSISTENCIA**), en concreto en un **array** (de ahí el nombre **ArrayDator**). 
+
+3. Modificar esas estructuras de datos almacenadas en memoria con la información que el usuario envíe de acuerdo con las **rutas** anteriormente explicadas.
+
+4. Conectar con las clases de nuestro proyecto y, aprovechar sus métodos implementados para realizar las distintas operaciones.
+
+
+Ejemplo:
+
+
+```
+
+def obtenerMasStocks(ciudad)
+        t = encontrarTienda(ciudad)
+
+        if t.nil?
+            raise ArgumentError.new("No existe tienda en #{ciudad}")
+        end
+        
+        juego = t.masMuestras
+
+        return juego
+end
+
+
+```
+
+
+Donde obtenemos el objeto **t** de la clase **Tienda** correspondiente a la ciudad pasada como parámetro (gracias a nuestra información en las estructuras de datos), y utilizar el método `masMuestras()` de la clase [Tienda.rb](https://github.com/biilal1999/GameStore/blob/master/src/Tienda.rb) para obtener lo que deseamos.
+
+
+
+
+### Capa de lógica de negocio
+
+
+Esta capa sirve como interfaz para que
