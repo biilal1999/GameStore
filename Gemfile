@@ -17,3 +17,5 @@ gem "rack-test"
 gem "rack", "~> 2.2"
 
 gem "sinatra-logger", "~> 0.3.2"
+
+gem "etcdv3", "~> 0.10.2"
