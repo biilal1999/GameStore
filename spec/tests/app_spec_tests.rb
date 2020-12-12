@@ -208,5 +208,4 @@ describe ApiGame do
             expect(last_response.body).to eq(({:error => "No hay unidades disponibles para comprar el videojuego COD"}).to_json)
         end
     end
-
 end
