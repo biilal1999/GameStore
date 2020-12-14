@@ -6,6 +6,7 @@ require_relative 'ArrayDator.rb'
 require_relative 'MiddlewareRuta.rb'
 
 
+
 class ApiGame < Sinatra::Base
 
 	use MiddlewareRuta
