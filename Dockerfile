@@ -18,8 +18,10 @@ ENV PROJECT_DIR=/test
 ENV HOME_DIR=/home/usuarionormal/
 
 
-chmod a+w /log
-chmod a+w /log/bitacora.log
+# Doy permisos a archivo de log
+
+RUN chmod a+w /log
+RUN chmod a+w /log/bitacora.log
 
 
 # Añadimos usuario sin privilegios de superusuario
